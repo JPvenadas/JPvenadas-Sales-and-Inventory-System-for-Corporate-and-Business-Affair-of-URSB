@@ -11,7 +11,6 @@ C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\bin\Debug\ITE_5_Project.xml
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\bin\Debug\Google.Protobuf.dll
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\bin\Debug\K4os.Compression.LZ4.Streams.dll
-C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\bin\Debug\MaterialSkin.dll
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\bin\Debug\MySql.Data.dll
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\bin\Debug\Renci.SshNet.dll
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\bin\Debug\Ubiety.Dns.Core.dll

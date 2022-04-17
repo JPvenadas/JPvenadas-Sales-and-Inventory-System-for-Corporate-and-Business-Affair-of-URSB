@@ -15,5 +15,11 @@ Module SystemModule
         cmd.Connection = con
     End Sub
 
+    Sub exitsystem()
+        Dim answer = MsgBox("Do you really want to exit", vbYesNo + vbQuestion, "Exit")
+        If answer = vbYes Then
+            End
+        End If
+    End Sub
 
 End Module
