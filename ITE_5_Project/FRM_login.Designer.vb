@@ -35,7 +35,7 @@ Partial Class FRM_login
         Me.TXT_username.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.TXT_username.Hint = "Username"
         Me.TXT_username.LeadingIcon = Nothing
-        Me.TXT_username.Location = New System.Drawing.Point(94, 114)
+        Me.TXT_username.Location = New System.Drawing.Point(94, 131)
         Me.TXT_username.MaxLength = 50
         Me.TXT_username.MouseState = MaterialSkin.MouseState.OUT
         Me.TXT_username.Multiline = False
@@ -54,7 +54,7 @@ Partial Class FRM_login
         Me.TXT_password.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.TXT_password.Hint = "Password"
         Me.TXT_password.LeadingIcon = Nothing
-        Me.TXT_password.Location = New System.Drawing.Point(94, 190)
+        Me.TXT_password.Location = New System.Drawing.Point(94, 207)
         Me.TXT_password.MaxLength = 50
         Me.TXT_password.MouseState = MaterialSkin.MouseState.OUT
         Me.TXT_password.Multiline = False
@@ -93,6 +93,7 @@ Partial Class FRM_login
         Me.Controls.Add(Me.TXT_password)
         Me.Controls.Add(Me.TXT_username)
         Me.Name = "FRM_login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()

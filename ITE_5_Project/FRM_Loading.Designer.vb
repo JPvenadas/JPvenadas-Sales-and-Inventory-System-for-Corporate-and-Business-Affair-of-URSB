@@ -38,6 +38,7 @@ Partial Class FRM_Loading
         '
         'Timer1
         '
+        Me.Timer1.Interval = 40
         '
         'FRM_Loading
         '
@@ -46,6 +47,7 @@ Partial Class FRM_Loading
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ProgressBar)
         Me.Name = "FRM_Loading"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FRM_Loading"
         Me.ResumeLayout(False)
 
