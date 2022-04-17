@@ -1,0 +1,211 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ITE_5_Project
+</name>
+</assembly>
+<members>
+<member name="T:ITE_5_Project.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ITE_5_Project.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ITE_5_Project.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_categoriesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_collegesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_coursesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_productsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_stocksDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_studentsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_usersDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_categoriesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_collegesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_coursesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_productsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_stocksRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_studentsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_usersRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_categoriesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_collegesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_coursesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_productsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_stocksRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_studentsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSet.tbl_usersRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_categoriesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_collegesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_coursesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_productsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_stocksTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_studentsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_usersTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ITE_5_Project.db_inventoryDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ITE_5_Project.db_inventoryDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ITE_5_Project.db_inventoryDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ITE_5_Project.db_inventoryDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ITE_5_Project.db_inventoryDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ITE_5_Project.db_inventoryDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ITE_5_Project.db_inventoryDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ITE_5_Project.db_inventoryDataSetTableAdapters.TableAdapterManager.UpdateAll(ITE_5_Project.db_inventoryDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ITE_5_Project.db_inventoryDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>
