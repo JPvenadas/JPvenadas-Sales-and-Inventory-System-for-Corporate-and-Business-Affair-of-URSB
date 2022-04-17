@@ -135,6 +135,42 @@
     <Compile Include="UC_home.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UC_products.Designer.vb">
+      <DependentUpon>UC_products.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_products.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_reports.Designer.vb">
+      <DependentUpon>UC_reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_reports.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_settings.Designer.vb">
+      <DependentUpon>UC_settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_settings.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_stocks.Designer.vb">
+      <DependentUpon>UC_stocks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_stocks.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_students.Designer.vb">
+      <DependentUpon>UC_students.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_students.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_transactions.Designer.vb">
+      <DependentUpon>UC_transactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_transactions.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UC_users.Designer.vb">
       <DependentUpon>UC_users.vb</DependentUpon>
     </Compile>

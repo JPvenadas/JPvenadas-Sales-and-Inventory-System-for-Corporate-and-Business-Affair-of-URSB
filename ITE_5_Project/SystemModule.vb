@@ -22,10 +22,9 @@ Module SystemModule
         End If
     End Sub
 
-    Sub attachControls()
-        Dim home As New UC_users
-        home.Parent = FRM_mainmenu.TAB_user
-        home.Show()
-        home.Dock = DockStyle.Fill
+    Sub attachControls(usercontrol, parentlocation)
+        usercontrol.Parent = parentlocation
+        usercontrol.Show()
+        usercontrol.Dock = DockStyle.Fill
     End Sub
 End Module

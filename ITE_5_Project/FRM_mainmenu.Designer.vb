@@ -26,7 +26,6 @@ Partial Class FRM_mainmenu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FRM_mainmenu))
         Me.MaterialTabControl1 = New MaterialSkin.Controls.MaterialTabControl()
         Me.TAB_home = New System.Windows.Forms.TabPage()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TAB_user = New System.Windows.Forms.TabPage()
         Me.TAB_students = New System.Windows.Forms.TabPage()
         Me.TAB_products = New System.Windows.Forms.TabPage()
@@ -36,7 +35,6 @@ Partial Class FRM_mainmenu
         Me.TAB_settings = New System.Windows.Forms.TabPage()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.MaterialTabControl1.SuspendLayout()
-        Me.TAB_home.SuspendLayout()
         Me.SuspendLayout()
         '
         'MaterialTabControl1
@@ -62,7 +60,6 @@ Partial Class FRM_mainmenu
         '
         'TAB_home
         '
-        Me.TAB_home.Controls.Add(Me.Panel2)
         Me.TAB_home.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.TAB_home.ImageKey = "icons8-home-96.png"
         Me.TAB_home.Location = New System.Drawing.Point(4, 39)
@@ -73,14 +70,6 @@ Partial Class FRM_mainmenu
         Me.TAB_home.Text = "Home"
         Me.TAB_home.ToolTipText = "Home"
         Me.TAB_home.UseVisualStyleBackColor = True
-        '
-        'Panel2
-        '
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(3, 3)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1039, 537)
-        Me.Panel2.TabIndex = 0
         '
         'TAB_user
         '
@@ -189,7 +178,6 @@ Partial Class FRM_mainmenu
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menu"
         Me.MaterialTabControl1.ResumeLayout(False)
-        Me.TAB_home.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -204,5 +192,4 @@ Partial Class FRM_mainmenu
     Friend WithEvents TAB_reports As TabPage
     Friend WithEvents TAB_settings As TabPage
     Friend WithEvents ImageList1 As ImageList
-    Friend WithEvents Panel2 As Panel
 End Class
