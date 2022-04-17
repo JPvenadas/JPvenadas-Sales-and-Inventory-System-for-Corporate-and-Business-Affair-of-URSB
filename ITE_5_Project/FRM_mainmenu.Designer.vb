@@ -26,6 +26,7 @@ Partial Class FRM_mainmenu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FRM_mainmenu))
         Me.MaterialTabControl1 = New MaterialSkin.Controls.MaterialTabControl()
         Me.TAB_home = New System.Windows.Forms.TabPage()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TAB_user = New System.Windows.Forms.TabPage()
         Me.TAB_students = New System.Windows.Forms.TabPage()
         Me.TAB_products = New System.Windows.Forms.TabPage()
@@ -35,6 +36,7 @@ Partial Class FRM_mainmenu
         Me.TAB_settings = New System.Windows.Forms.TabPage()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.MaterialTabControl1.SuspendLayout()
+        Me.TAB_home.SuspendLayout()
         Me.SuspendLayout()
         '
         'MaterialTabControl1
@@ -60,6 +62,7 @@ Partial Class FRM_mainmenu
         '
         'TAB_home
         '
+        Me.TAB_home.Controls.Add(Me.Panel2)
         Me.TAB_home.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.TAB_home.ImageKey = "icons8-home-96.png"
         Me.TAB_home.Location = New System.Drawing.Point(4, 39)
@@ -68,7 +71,16 @@ Partial Class FRM_mainmenu
         Me.TAB_home.Size = New System.Drawing.Size(1045, 543)
         Me.TAB_home.TabIndex = 0
         Me.TAB_home.Text = "Home"
+        Me.TAB_home.ToolTipText = "Home"
         Me.TAB_home.UseVisualStyleBackColor = True
+        '
+        'Panel2
+        '
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(3, 3)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1039, 537)
+        Me.Panel2.TabIndex = 0
         '
         'TAB_user
         '
@@ -79,6 +91,7 @@ Partial Class FRM_mainmenu
         Me.TAB_user.Size = New System.Drawing.Size(1045, 543)
         Me.TAB_user.TabIndex = 1
         Me.TAB_user.Text = "Users"
+        Me.TAB_user.ToolTipText = "Students"
         Me.TAB_user.UseVisualStyleBackColor = True
         '
         'TAB_students
@@ -89,6 +102,7 @@ Partial Class FRM_mainmenu
         Me.TAB_students.Size = New System.Drawing.Size(1045, 543)
         Me.TAB_students.TabIndex = 2
         Me.TAB_students.Text = "Students"
+        Me.TAB_students.ToolTipText = "Students"
         Me.TAB_students.UseVisualStyleBackColor = True
         '
         'TAB_products
@@ -99,6 +113,7 @@ Partial Class FRM_mainmenu
         Me.TAB_products.Size = New System.Drawing.Size(1045, 543)
         Me.TAB_products.TabIndex = 3
         Me.TAB_products.Text = "Products"
+        Me.TAB_products.ToolTipText = "Products"
         Me.TAB_products.UseVisualStyleBackColor = True
         '
         'TAB_stocks
@@ -109,6 +124,7 @@ Partial Class FRM_mainmenu
         Me.TAB_stocks.Size = New System.Drawing.Size(1045, 543)
         Me.TAB_stocks.TabIndex = 4
         Me.TAB_stocks.Text = "Product Stocks"
+        Me.TAB_stocks.ToolTipText = "Stocks"
         Me.TAB_stocks.UseVisualStyleBackColor = True
         '
         'TAB_transaction
@@ -118,7 +134,8 @@ Partial Class FRM_mainmenu
         Me.TAB_transaction.Name = "TAB_transaction"
         Me.TAB_transaction.Size = New System.Drawing.Size(1045, 543)
         Me.TAB_transaction.TabIndex = 5
-        Me.TAB_transaction.Text = "Sales and Transaction"
+        Me.TAB_transaction.Text = "Transactions"
+        Me.TAB_transaction.ToolTipText = "Sales Transaction"
         Me.TAB_transaction.UseVisualStyleBackColor = True
         '
         'TAB_reports
@@ -129,6 +146,7 @@ Partial Class FRM_mainmenu
         Me.TAB_reports.Size = New System.Drawing.Size(1045, 543)
         Me.TAB_reports.TabIndex = 6
         Me.TAB_reports.Text = "Reports"
+        Me.TAB_reports.ToolTipText = "Reports"
         Me.TAB_reports.UseVisualStyleBackColor = True
         '
         'TAB_settings
@@ -139,6 +157,7 @@ Partial Class FRM_mainmenu
         Me.TAB_settings.Size = New System.Drawing.Size(1045, 543)
         Me.TAB_settings.TabIndex = 7
         Me.TAB_settings.Text = "Settings"
+        Me.TAB_settings.ToolTipText = "Settings"
         Me.TAB_settings.UseVisualStyleBackColor = True
         '
         'ImageList1
@@ -170,6 +189,7 @@ Partial Class FRM_mainmenu
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menu"
         Me.MaterialTabControl1.ResumeLayout(False)
+        Me.TAB_home.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -184,4 +204,5 @@ Partial Class FRM_mainmenu
     Friend WithEvents TAB_reports As TabPage
     Friend WithEvents TAB_settings As TabPage
     Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents Panel2 As Panel
 End Class

@@ -22,9 +22,13 @@ Partial Class FRM_login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FRM_login))
         Me.TXT_username = New MaterialSkin.Controls.MaterialTextBox()
         Me.BTN_login = New MaterialSkin.Controls.MaterialButton()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.BTN_close = New MaterialSkin.Controls.MaterialButton()
+        Me.TXT_password = New MaterialSkin.Controls.MaterialTextBox2()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -32,11 +36,6 @@ Partial Class FRM_login
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.BTN_close = New MaterialSkin.Controls.MaterialButton()
-        Me.TXT_password = New MaterialSkin.Controls.MaterialTextBox()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,7 +45,7 @@ Partial Class FRM_login
         Me.TXT_username.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.TXT_username.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TXT_username.Depth = 0
-        Me.TXT_username.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_username.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.TXT_username.Hint = "Username"
         Me.TXT_username.LeadingIcon = Nothing
         Me.TXT_username.Location = New System.Drawing.Point(627, 308)
@@ -79,93 +78,6 @@ Partial Class FRM_login
         Me.BTN_login.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
         Me.BTN_login.UseAccentColor = False
         Me.BTN_login.UseVisualStyleBackColor = True
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
-        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.Label10)
-        Me.Panel2.Controls.Add(Me.Panel1)
-        Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(552, 661)
-        Me.Panel2.TabIndex = 5
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft JhengHei UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(69, 613)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 14)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Binangonan, Rizal"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Microsoft JhengHei UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(69, 593)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(140, 14)
-        Me.Label10.TabIndex = 9
-        Me.Label10.Text = "University of Rizal System"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Location = New System.Drawing.Point(30, 588)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(33, 43)
-        Me.Panel1.TabIndex = 5
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(46, 314)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(317, 24)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "for Corporate and Business Affair"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(46, 272)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(266, 24)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Sales and Inventory System "
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei UI", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(42, 133)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(264, 47)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Welcome To..."
         '
         'Label6
         '
@@ -227,22 +139,119 @@ Partial Class FRM_login
         'TXT_password
         '
         Me.TXT_password.AnimateReadOnly = False
-        Me.TXT_password.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.TXT_password.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TXT_password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.TXT_password.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
         Me.TXT_password.Depth = 0
         Me.TXT_password.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_password.HideSelection = True
         Me.TXT_password.Hint = "Password"
         Me.TXT_password.LeadingIcon = Nothing
-        Me.TXT_password.Location = New System.Drawing.Point(626, 376)
-        Me.TXT_password.MaxLength = 50
+        Me.TXT_password.Location = New System.Drawing.Point(626, 381)
+        Me.TXT_password.MaxLength = 32767
         Me.TXT_password.MouseState = MaterialSkin.MouseState.OUT
-        Me.TXT_password.Multiline = False
         Me.TXT_password.Name = "TXT_password"
-        Me.TXT_password.Size = New System.Drawing.Size(354, 50)
-        Me.TXT_password.TabIndex = 2
-        Me.TXT_password.Text = ""
+        Me.TXT_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
+        Me.TXT_password.PrefixSuffixText = Nothing
+        Me.TXT_password.ReadOnly = False
+        Me.TXT_password.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_password.SelectedText = ""
+        Me.TXT_password.SelectionLength = 0
+        Me.TXT_password.SelectionStart = 0
+        Me.TXT_password.ShortcutsEnabled = True
+        Me.TXT_password.Size = New System.Drawing.Size(355, 48)
+        Me.TXT_password.TabIndex = 11
+        Me.TXT_password.TabStop = False
+        Me.TXT_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.TXT_password.TrailingIcon = Nothing
         Me.TXT_password.UseAccent = False
+        Me.TXT_password.UseSystemPasswordChar = True
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.Panel2.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources._2a585b3cbbe437f9b0ddc6d020743031
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.Label10)
+        Me.Panel2.Controls.Add(Me.Panel1)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(552, 661)
+        Me.Panel2.TabIndex = 5
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft JhengHei UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(69, 613)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(101, 14)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = "Binangonan, Rizal"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft JhengHei UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(69, 593)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(140, 14)
+        Me.Label10.TabIndex = 9
+        Me.Label10.Text = "University of Rizal System"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.download_removebg_preview
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Location = New System.Drawing.Point(30, 588)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(33, 43)
+        Me.Panel1.TabIndex = 5
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(46, 314)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(317, 24)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "for Corporate and Business Affair"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(46, 272)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(266, 24)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "Sales and Inventory System "
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei UI", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(42, 133)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(264, 47)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Welcome To..."
         '
         'FRM_login
         '
@@ -250,11 +259,11 @@ Partial Class FRM_login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1059, 661)
+        Me.Controls.Add(Me.TXT_password)
         Me.Controls.Add(Me.BTN_close)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TXT_password)
         Me.Controls.Add(Me.TXT_username)
         Me.Controls.Add(Me.BTN_login)
         Me.Controls.Add(Me.Panel2)
@@ -282,5 +291,5 @@ Partial Class FRM_login
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents BTN_close As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents TXT_password As MaterialSkin.Controls.MaterialTextBox
+    Friend WithEvents TXT_password As MaterialSkin.Controls.MaterialTextBox2
 End Class

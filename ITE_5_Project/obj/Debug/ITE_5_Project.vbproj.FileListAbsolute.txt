@@ -28,3 +28,5 @@ C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.xml
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.pdb
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.FRM_Loading.resources
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.FRM_mainmenu.resources
+C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.UC_home.resources
+C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.UC_users.resources

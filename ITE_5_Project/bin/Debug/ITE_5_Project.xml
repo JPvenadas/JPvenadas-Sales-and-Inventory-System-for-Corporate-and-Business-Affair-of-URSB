@@ -22,6 +22,16 @@ ITE_5_Project
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:ITE_5_Project.My.Resources.Resources._2a585b3cbbe437f9b0ddc6d020743031">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ITE_5_Project.My.Resources.Resources.download_removebg_preview">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="T:ITE_5_Project.db_inventoryDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.
