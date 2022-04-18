@@ -6,6 +6,7 @@ Module SystemModule
     'Logged in User'
     Public loggedUserName
     Public loggedUserType
+    Public clickedkey
 
     Public dr As MySqlDataReader
     Sub openCon()

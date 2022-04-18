@@ -134,6 +134,12 @@
     <Compile Include="SUBFRM_adduser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SUBFRM_edituser.Designer.vb">
+      <DependentUpon>SUBFRM_edituser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUBFRM_edituser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SystemModule.vb" />
     <Compile Include="UC_home.Designer.vb">
       <DependentUpon>UC_home.vb</DependentUpon>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SUBFRM_adduser.resx">
       <DependentUpon>SUBFRM_adduser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUBFRM_edituser.resx">
+      <DependentUpon>SUBFRM_edituser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_home.resx">
       <DependentUpon>UC_home.vb</DependentUpon>

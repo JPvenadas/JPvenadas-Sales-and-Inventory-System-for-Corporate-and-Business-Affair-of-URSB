@@ -25,7 +25,7 @@ Partial Class UC_users
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DGV_users = New System.Windows.Forms.DataGridView()
         Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LoginNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,23 +38,23 @@ Partial Class UC_users
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MaterialCheckbox1 = New MaterialSkin.Controls.MaterialCheckbox()
         Me.BTN_add = New MaterialSkin.Controls.MaterialButton()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGV_users, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblusersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'DGV_users
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToResizeColumns = False
-        Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
-        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DGV_users.AllowUserToAddRows = False
+        Me.DGV_users.AllowUserToDeleteRows = False
+        Me.DGV_users.AllowUserToResizeColumns = False
+        Me.DGV_users.AllowUserToResizeRows = False
+        Me.DGV_users.AutoGenerateColumns = False
+        Me.DGV_users.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGV_users.BackgroundColor = System.Drawing.Color.White
+        Me.DGV_users.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGV_users.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
+        Me.DGV_users.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -63,33 +63,32 @@ Partial Class UC_users
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeight = 50
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UsernameDataGridViewTextBoxColumn, Me.LoginNameDataGridViewTextBoxColumn, Me.UserTypeDataGridViewTextBoxColumn, Me.AccountStatusDataGridViewTextBoxColumn})
-        Me.DataGridView1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.DataGridView1.DataSource = Me.TblusersBindingSource
+        Me.DGV_users.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DGV_users.ColumnHeadersHeight = 50
+        Me.DGV_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DGV_users.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UsernameDataGridViewTextBoxColumn, Me.LoginNameDataGridViewTextBoxColumn, Me.UserTypeDataGridViewTextBoxColumn, Me.AccountStatusDataGridViewTextBoxColumn})
+        Me.DGV_users.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DGV_users.DataSource = Me.TblusersBindingSource
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(10)
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
-        Me.DataGridView1.EnableHeadersVisualStyles = False
-        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DataGridView1.Location = New System.Drawing.Point(22, 125)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        Me.DataGridView1.RowTemplate.Height = 50
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(952, 385)
-        Me.DataGridView1.TabIndex = 0
+        Me.DGV_users.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DGV_users.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
+        Me.DGV_users.EnableHeadersVisualStyles = False
+        Me.DGV_users.GridColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DGV_users.Location = New System.Drawing.Point(22, 125)
+        Me.DGV_users.Name = "DGV_users"
+        Me.DGV_users.ReadOnly = True
+        Me.DGV_users.RowHeadersVisible = False
+        Me.DGV_users.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
+        Me.DGV_users.RowTemplate.Height = 50
+        Me.DGV_users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGV_users.Size = New System.Drawing.Size(952, 385)
+        Me.DGV_users.TabIndex = 0
         '
         'UsernameDataGridViewTextBoxColumn
         '
@@ -241,10 +240,10 @@ Partial Class UC_users
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BTN_search)
         Me.Controls.Add(Me.MaterialTextBox21)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DGV_users)
         Me.Name = "UC_users"
         Me.Size = New System.Drawing.Size(1039, 537)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGV_users, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblusersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -252,7 +251,7 @@ Partial Class UC_users
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGV_users As DataGridView
     Friend WithEvents TblusersBindingSource As BindingSource
     Friend WithEvents Db_inventoryDataSet As db_inventoryDataSet
     Friend WithEvents Tbl_usersTableAdapter As db_inventoryDataSetTableAdapters.tbl_usersTableAdapter
