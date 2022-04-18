@@ -29,7 +29,7 @@ Partial Class UC_home
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Name = "UC_home"
-        Me.Size = New System.Drawing.Size(504, 150)
+        Me.Size = New System.Drawing.Size(687, 332)
         Me.ResumeLayout(False)
 
     End Sub

@@ -1,5 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-
 Module SystemModule
     Public con As New MySqlConnection
     Public cmd As New MySqlCommand
@@ -27,4 +26,6 @@ Module SystemModule
         usercontrol.Show()
         usercontrol.Dock = DockStyle.Fill
     End Sub
+
+
 End Module

@@ -1,5 +1,11 @@
-﻿Public Class FRM_mainmenu
+﻿Imports MaterialSkin
+Public Class FRM_mainmenu
     Private Sub FRM_mainmenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        SkinManager.AddFormToManage(Me)
+        SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
+        SkinManager.ColorScheme = New ColorScheme(Primary.Blue900, Primary.Grey800, Primary.Blue500, Accent.Blue700, TextShade.WHITE)
+
         Dim home As New UC_home
         Dim users As New UC_users
         Dim students As New UC_students

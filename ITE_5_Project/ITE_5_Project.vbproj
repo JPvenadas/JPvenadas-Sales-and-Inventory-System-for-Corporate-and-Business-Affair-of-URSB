@@ -128,6 +128,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SUBFRM_adduser.Designer.vb">
+      <DependentUpon>SUBFRM_adduser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUBFRM_adduser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SystemModule.vb" />
     <Compile Include="UC_home.Designer.vb">
       <DependentUpon>UC_home.vb</DependentUpon>
@@ -194,6 +200,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="SUBFRM_adduser.resx">
+      <DependentUpon>SUBFRM_adduser.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_home.resx">
       <DependentUpon>UC_home.vb</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +238,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

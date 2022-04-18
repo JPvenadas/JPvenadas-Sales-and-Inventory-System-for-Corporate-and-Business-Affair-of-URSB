@@ -32,6 +32,11 @@ ITE_5_Project
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ITE_5_Project.My.Resources.Resources.user">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="T:ITE_5_Project.db_inventoryDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.

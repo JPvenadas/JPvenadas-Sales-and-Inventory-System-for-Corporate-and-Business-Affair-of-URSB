@@ -34,7 +34,12 @@ Partial Class FRM_mainmenu
         Me.TAB_reports = New System.Windows.Forms.TabPage()
         Me.TAB_settings = New System.Windows.Forms.TabPage()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
+        Me.TblusersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tbl_usersTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_usersTableAdapter()
         Me.MaterialTabControl1.SuspendLayout()
+        CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblusersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MaterialTabControl1
@@ -163,6 +168,20 @@ Partial Class FRM_mainmenu
         Me.ImageList1.Images.SetKeyName(7, "icons8-hangar-60.png")
         Me.ImageList1.Images.SetKeyName(8, "icons8-member-96.png")
         '
+        'Db_inventoryDataSet
+        '
+        Me.Db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
+        Me.Db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TblusersBindingSource
+        '
+        Me.TblusersBindingSource.DataMember = "tbl_users"
+        Me.TblusersBindingSource.DataSource = Me.Db_inventoryDataSet
+        '
+        'Tbl_usersTableAdapter
+        '
+        Me.Tbl_usersTableAdapter.ClearBeforeFill = True
+        '
         'FRM_mainmenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -178,6 +197,8 @@ Partial Class FRM_mainmenu
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menu"
         Me.MaterialTabControl1.ResumeLayout(False)
+        CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblusersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -192,4 +213,7 @@ Partial Class FRM_mainmenu
     Friend WithEvents TAB_reports As TabPage
     Friend WithEvents TAB_settings As TabPage
     Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents Db_inventoryDataSet As db_inventoryDataSet
+    Friend WithEvents TblusersBindingSource As BindingSource
+    Friend WithEvents Tbl_usersTableAdapter As db_inventoryDataSetTableAdapters.tbl_usersTableAdapter
 End Class

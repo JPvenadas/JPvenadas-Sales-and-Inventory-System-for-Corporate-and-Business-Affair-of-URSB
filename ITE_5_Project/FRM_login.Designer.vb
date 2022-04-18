@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FRM_login
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FRM_login
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TXT_username = New MaterialSkin.Controls.MaterialTextBox()
         Me.BTN_login = New MaterialSkin.Controls.MaterialButton()
@@ -45,7 +45,7 @@ Partial Class FRM_login
         Me.TXT_username.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.TXT_username.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TXT_username.Depth = 0
-        Me.TXT_username.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_username.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.TXT_username.Hint = "Username"
         Me.TXT_username.LeadingIcon = Nothing
         Me.TXT_username.Location = New System.Drawing.Point(627, 308)
