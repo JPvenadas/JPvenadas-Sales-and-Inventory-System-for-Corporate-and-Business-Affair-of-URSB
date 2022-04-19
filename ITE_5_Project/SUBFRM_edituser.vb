@@ -14,6 +14,9 @@
     End Sub
 
     Private Sub BTN_save_Click(sender As Object, e As EventArgs) Handles BTN_save.Click
+        If TXT_loginName.Text = "" Or TXT_password.Text = "" Then
+            MsgBox("Login Name and Password should not be empty", vbOK + vbExclamation, "Account Error")
+        End If
         UpdateData()
     End Sub
 

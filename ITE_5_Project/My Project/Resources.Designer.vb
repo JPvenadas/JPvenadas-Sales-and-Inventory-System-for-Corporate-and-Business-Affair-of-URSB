@@ -73,6 +73,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _85_859280_the_majority_of_students_must_juggle_academic_financial() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_85_859280_the_majority_of_students_must_juggle_academic_financial", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property download_removebg_preview() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("download_removebg_preview", resourceCulture)

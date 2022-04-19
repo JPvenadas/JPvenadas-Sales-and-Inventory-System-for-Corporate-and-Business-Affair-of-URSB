@@ -32,3 +32,5 @@ C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.UC_
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.UC_users.resources
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.SUBFRM_adduser.resources
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.SUBFRM_edituser.resources
+C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.UC_students.resources
+C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.SUBFRM_addstudents.resources

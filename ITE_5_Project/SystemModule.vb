@@ -28,5 +28,19 @@ Module SystemModule
         usercontrol.Dock = DockStyle.Fill
     End Sub
 
+    Sub GetColleges()
+        openCon()
+        cmd.CommandText = "Select * from tbl_colleges"
+        cmd.ExecuteNonQuery()
+        dr = cmd.ExecuteReader
+    End Sub
 
+    Sub GetCourses(college)
+        openCon()
+        cmd.CommandText = "Select * from tbl_courses where CollegeID=@college"
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("college", college)
+        cmd.ExecuteNonQuery()
+        dr = cmd.ExecuteReader
+    End Sub
 End Module

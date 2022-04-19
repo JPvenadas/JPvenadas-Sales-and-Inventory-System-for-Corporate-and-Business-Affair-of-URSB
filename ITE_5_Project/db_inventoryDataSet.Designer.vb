@@ -754,7 +754,9 @@ Partial Public Class db_inventoryDataSet
     Partial Public Class tbl_collegesDataTable
         Inherits Global.System.Data.TypedTableBase(Of tbl_collegesRow)
         
-        Private columnCollege As Global.System.Data.DataColumn
+        Private columnCollegeID As Global.System.Data.DataColumn
+        
+        Private columnCollegeName As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -793,9 +795,17 @@ Partial Public Class db_inventoryDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CollegeColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property CollegeIDColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCollege
+                Return Me.columnCollegeID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property CollegeNameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCollegeName
             End Get
         End Property
         
@@ -836,9 +846,9 @@ Partial Public Class db_inventoryDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_collegesRow(ByVal College As String) As tbl_collegesRow
+        Public Overloads Function Addtbl_collegesRow(ByVal CollegeID As String, ByVal CollegeName As String) As tbl_collegesRow
             Dim rowtbl_collegesRow As tbl_collegesRow = CType(Me.NewRow,tbl_collegesRow)
-            Dim columnValuesArray() As Object = New Object() {College}
+            Dim columnValuesArray() As Object = New Object() {CollegeID, CollegeName}
             rowtbl_collegesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_collegesRow)
             Return rowtbl_collegesRow
@@ -846,8 +856,8 @@ Partial Public Class db_inventoryDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function FindByCollege(ByVal College As String) As tbl_collegesRow
-            Return CType(Me.Rows.Find(New Object() {College}),tbl_collegesRow)
+        Public Function FindByCollegeID(ByVal CollegeID As String) As tbl_collegesRow
+            Return CType(Me.Rows.Find(New Object() {CollegeID}),tbl_collegesRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -867,18 +877,22 @@ Partial Public Class db_inventoryDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnCollege = MyBase.Columns("College")
+            Me.columnCollegeID = MyBase.Columns("CollegeID")
+            Me.columnCollegeName = MyBase.Columns("CollegeName")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnCollege = New Global.System.Data.DataColumn("College", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCollege)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnCollege}, true))
-            Me.columnCollege.AllowDBNull = false
-            Me.columnCollege.Unique = true
-            Me.columnCollege.MaxLength = 45
+            Me.columnCollegeID = New Global.System.Data.DataColumn("CollegeID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCollegeID)
+            Me.columnCollegeName = New Global.System.Data.DataColumn("CollegeName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCollegeName)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnCollegeID}, true))
+            Me.columnCollegeID.AllowDBNull = false
+            Me.columnCollegeID.Unique = true
+            Me.columnCollegeID.MaxLength = 45
+            Me.columnCollegeName.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1016,7 +1030,11 @@ Partial Public Class db_inventoryDataSet
     Partial Public Class tbl_coursesDataTable
         Inherits Global.System.Data.TypedTableBase(Of tbl_coursesRow)
         
-        Private columnCourse As Global.System.Data.DataColumn
+        Private columnCourseID As Global.System.Data.DataColumn
+        
+        Private columnCourseName As Global.System.Data.DataColumn
+        
+        Private columnCollegeID As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -1055,9 +1073,25 @@ Partial Public Class db_inventoryDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property CourseColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property CourseIDColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnCourse
+                Return Me.columnCourseID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property CourseNameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCourseName
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property CollegeIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCollegeID
             End Get
         End Property
         
@@ -1098,9 +1132,9 @@ Partial Public Class db_inventoryDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_coursesRow(ByVal Course As String) As tbl_coursesRow
+        Public Overloads Function Addtbl_coursesRow(ByVal CourseID As String, ByVal CourseName As String, ByVal CollegeID As String) As tbl_coursesRow
             Dim rowtbl_coursesRow As tbl_coursesRow = CType(Me.NewRow,tbl_coursesRow)
-            Dim columnValuesArray() As Object = New Object() {Course}
+            Dim columnValuesArray() As Object = New Object() {CourseID, CourseName, CollegeID}
             rowtbl_coursesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_coursesRow)
             Return rowtbl_coursesRow
@@ -1108,8 +1142,8 @@ Partial Public Class db_inventoryDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function FindByCourse(ByVal Course As String) As tbl_coursesRow
-            Return CType(Me.Rows.Find(New Object() {Course}),tbl_coursesRow)
+        Public Function FindByCourseID(ByVal CourseID As String) As tbl_coursesRow
+            Return CType(Me.Rows.Find(New Object() {CourseID}),tbl_coursesRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1129,18 +1163,28 @@ Partial Public Class db_inventoryDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnCourse = MyBase.Columns("Course")
+            Me.columnCourseID = MyBase.Columns("CourseID")
+            Me.columnCourseName = MyBase.Columns("CourseName")
+            Me.columnCollegeID = MyBase.Columns("CollegeID")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnCourse = New Global.System.Data.DataColumn("Course", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnCourse)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnCourse}, true))
-            Me.columnCourse.AllowDBNull = false
-            Me.columnCourse.Unique = true
-            Me.columnCourse.MaxLength = 45
+            Me.columnCourseID = New Global.System.Data.DataColumn("CourseID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCourseID)
+            Me.columnCourseName = New Global.System.Data.DataColumn("CourseName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCourseName)
+            Me.columnCollegeID = New Global.System.Data.DataColumn("CollegeID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCollegeID)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnCourseID}, true))
+            Me.columnCourseID.AllowDBNull = false
+            Me.columnCourseID.Unique = true
+            Me.columnCourseID.MaxLength = 45
+            Me.columnCourseName.AllowDBNull = false
+            Me.columnCourseName.MaxLength = 45
+            Me.columnCollegeID.AllowDBNull = false
+            Me.columnCollegeID.MaxLength = 45
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2144,7 +2188,6 @@ Partial Public Class db_inventoryDataSet
             Me.columnStudentID.Unique = true
             Me.columnFirstname.AllowDBNull = false
             Me.columnFirstname.MaxLength = 45
-            Me.columnMiddlename.AllowDBNull = false
             Me.columnMiddlename.MaxLength = 45
             Me.columnLastname.AllowDBNull = false
             Me.columnLastname.MaxLength = 45
@@ -2651,14 +2694,41 @@ Partial Public Class db_inventoryDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property College() As String
+        Public Property CollegeID() As String
             Get
-                Return CType(Me(Me.tabletbl_colleges.CollegeColumn),String)
+                Return CType(Me(Me.tabletbl_colleges.CollegeIDColumn),String)
             End Get
             Set
-                Me(Me.tabletbl_colleges.CollegeColumn) = value
+                Me(Me.tabletbl_colleges.CollegeIDColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property CollegeName() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_colleges.CollegeNameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CollegeName' in table 'tbl_colleges' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_colleges.CollegeNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsCollegeNameNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_colleges.CollegeNameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetCollegeNameNull()
+            Me(Me.tabletbl_colleges.CollegeNameColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -2678,12 +2748,34 @@ Partial Public Class db_inventoryDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property Course() As String
+        Public Property CourseID() As String
             Get
-                Return CType(Me(Me.tabletbl_courses.CourseColumn),String)
+                Return CType(Me(Me.tabletbl_courses.CourseIDColumn),String)
             End Get
             Set
-                Me(Me.tabletbl_courses.CourseColumn) = value
+                Me(Me.tabletbl_courses.CourseIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property CourseName() As String
+            Get
+                Return CType(Me(Me.tabletbl_courses.CourseNameColumn),String)
+            End Get
+            Set
+                Me(Me.tabletbl_courses.CourseNameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property CollegeID() As String
+            Get
+                Return CType(Me(Me.tabletbl_courses.CollegeIDColumn),String)
+            End Get
+            Set
+                Me(Me.tabletbl_courses.CollegeIDColumn) = value
             End Set
         End Property
     End Class
@@ -2871,7 +2963,11 @@ Partial Public Class db_inventoryDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property Middlename() As String
             Get
-                Return CType(Me(Me.tabletbl_students.MiddlenameColumn),String)
+                Try 
+                    Return CType(Me(Me.tabletbl_students.MiddlenameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Middlename' in table 'tbl_students' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tabletbl_students.MiddlenameColumn) = value
@@ -2932,6 +3028,18 @@ Partial Public Class db_inventoryDataSet
                 Me(Me.tabletbl_students.ContactNoColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsMiddlenameNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_students.MiddlenameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetMiddlenameNull()
+            Me(Me.tabletbl_students.MiddlenameColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -3705,42 +3813,70 @@ Namespace db_inventoryDataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "tbl_colleges"
-            tableMapping.ColumnMappings.Add("College", "College")
+            tableMapping.ColumnMappings.Add("CollegeID", "CollegeID")
+            tableMapping.ColumnMappings.Add("CollegeName", "CollegeName")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `tbl_colleges` WHERE ((`College` = @p1))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `tbl_colleges` WHERE ((`CollegeID` = @p1) AND ((@p2 = 1 AND `CollegeN"& _ 
+                "ame` IS NULL) OR (`CollegeName` = @p3)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "College"
+            param.SourceColumn = "CollegeID"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.DeleteCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p2"
+            param.DbType = Global.System.Data.DbType.Int32
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
+            param.IsNullable = true
+            param.SourceColumn = "CollegeName"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            param.SourceColumnNullMapping = true
+            Me._adapter.DeleteCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p3"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "CollegeName"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             Me._adapter.InsertCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `tbl_colleges` (`College`) VALUES (@p1)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `tbl_colleges` (`CollegeID`, `CollegeName`) VALUES (@p1, @p2)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "College"
+            param.SourceColumn = "CollegeID"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.InsertCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p2"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "CollegeName"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.InsertCommand.Parameters.Add(param)
             Me._adapter.UpdateCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `tbl_colleges` SET `College` = @p1 WHERE ((`College` = @p2))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `tbl_colleges` SET `CollegeID` = @p1, `CollegeName` = @p2 WHERE ((`College"& _ 
+                "ID` = @p3) AND ((@p4 = 1 AND `CollegeName` IS NULL) OR (`CollegeName` = @p5)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "College"
+            param.SourceColumn = "CollegeID"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -3748,7 +3884,32 @@ Namespace db_inventoryDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "College"
+            param.SourceColumn = "CollegeName"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p3"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "CollegeID"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p4"
+            param.DbType = Global.System.Data.DbType.Int32
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
+            param.IsNullable = true
+            param.SourceColumn = "CollegeName"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            param.SourceColumnNullMapping = true
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p5"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "CollegeName"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
         End Sub
@@ -3766,7 +3927,7 @@ Namespace db_inventoryDataSetTableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT `College` FROM `tbl_colleges`"
+            Me._commandCollection(0).CommandText = "SELECT `CollegeID`, `CollegeName` FROM `tbl_colleges`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -3826,11 +3987,18 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal p1 As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal p1 As String, ByVal p3 As String) As Integer
             If (p1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p1")
             Else
                 Me.Adapter.DeleteCommand.Parameters(0).Value = CType(p1,String)
+            End If
+            If (p3 Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(p3,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3851,11 +4019,16 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal p1 As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal p1 As String, ByVal p2 As String) As Integer
             If (p1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p1")
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1,String)
+            End If
+            If (p2 Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3876,16 +4049,28 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p1 As String, ByVal p2 As String) As Integer
+        Public Overloads Overridable Function Update(ByVal p1 As String, ByVal p2 As String, ByVal p3 As String, ByVal p5 As String) As Integer
             If (p1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p1")
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(p1,String)
             End If
             If (p2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p2")
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2,String)
+            End If
+            If (p3 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p3")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3,String)
+            End If
+            If (p5 Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(p5,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3906,8 +4091,8 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p2 As String) As Integer
-            Return Me.Update(p2, p2)
+        Public Overloads Overridable Function Update(ByVal p2 As String, ByVal p3 As String, ByVal p5 As String) As Integer
+            Return Me.Update(p3, p2, p3, p5)
         End Function
     End Class
     
@@ -4038,42 +4223,79 @@ Namespace db_inventoryDataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "tbl_courses"
-            tableMapping.ColumnMappings.Add("Course", "Course")
+            tableMapping.ColumnMappings.Add("CourseID", "CourseID")
+            tableMapping.ColumnMappings.Add("CourseName", "CourseName")
+            tableMapping.ColumnMappings.Add("CollegeID", "CollegeID")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `tbl_courses` WHERE ((`Course` = @p1))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `tbl_courses` WHERE ((`CourseID` = @p1) AND (`CourseName` = @p2) AND "& _ 
+                "(`CollegeID` = @p3))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "Course"
+            param.SourceColumn = "CourseID"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.DeleteCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p2"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "CourseName"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.DeleteCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p3"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "CollegeID"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             Me._adapter.InsertCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `tbl_courses` (`Course`) VALUES (@p1)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `tbl_courses` (`CourseID`, `CourseName`, `CollegeID`) VALUES (@p1, @p"& _ 
+                "2, @p3)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "Course"
+            param.SourceColumn = "CourseID"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.InsertCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p2"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "CourseName"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.InsertCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p3"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "CollegeID"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.InsertCommand.Parameters.Add(param)
             Me._adapter.UpdateCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `tbl_courses` SET `Course` = @p1 WHERE ((`Course` = @p2))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `tbl_courses` SET `CourseID` = @p1, `CourseName` = @p2, `CollegeID` = @p3 "& _ 
+                "WHERE ((`CourseID` = @p4) AND (`CourseName` = @p5) AND (`CollegeID` = @p6))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "Course"
+            param.SourceColumn = "CourseID"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
@@ -4081,7 +4303,39 @@ Namespace db_inventoryDataSetTableAdapters
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
-            param.SourceColumn = "Course"
+            param.SourceColumn = "CourseName"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p3"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "CollegeID"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p4"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "CourseID"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p5"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "CourseName"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p6"
+            param.DbType = Global.System.Data.DbType.[String]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
+            param.IsNullable = true
+            param.SourceColumn = "CollegeID"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
         End Sub
@@ -4099,7 +4353,7 @@ Namespace db_inventoryDataSetTableAdapters
             Me._commandCollection = New Global.MySql.Data.MySqlClient.MySqlCommand(0) {}
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT `Course` FROM `tbl_courses`"
+            Me._commandCollection(0).CommandText = "SELECT `CourseID`, `CourseName`, `CollegeID` FROM `tbl_courses`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -4159,11 +4413,21 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal p1 As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal p1 As String, ByVal p2 As String, ByVal p3 As String) As Integer
             If (p1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p1")
             Else
                 Me.Adapter.DeleteCommand.Parameters(0).Value = CType(p1,String)
+            End If
+            If (p2 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p2")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(p2,String)
+            End If
+            If (p3 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p3")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(p3,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4184,11 +4448,21 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal p1 As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal p1 As String, ByVal p2 As String, ByVal p3 As String) As Integer
             If (p1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p1")
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1,String)
+            End If
+            If (p2 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p2")
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2,String)
+            End If
+            If (p3 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p3")
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(p3,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4209,7 +4483,7 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p1 As String, ByVal p2 As String) As Integer
+        Public Overloads Overridable Function Update(ByVal p1 As String, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String) As Integer
             If (p1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p1")
             Else
@@ -4219,6 +4493,26 @@ Namespace db_inventoryDataSetTableAdapters
                 Throw New Global.System.ArgumentNullException("p2")
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2,String)
+            End If
+            If (p3 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p3")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3,String)
+            End If
+            If (p4 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p4")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(p4,String)
+            End If
+            If (p5 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p5")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(p5,String)
+            End If
+            If (p6 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p6")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(p6,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4239,8 +4533,8 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p2 As String) As Integer
-            Return Me.Update(p2, p2)
+        Public Overloads Overridable Function Update(ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String) As Integer
+            Return Me.Update(p4, p2, p3, p4, p5, p6)
         End Function
     End Class
     
@@ -5319,8 +5613,9 @@ Namespace db_inventoryDataSetTableAdapters
             Me._adapter.DeleteCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `tbl_students` WHERE ((`StudentID` = @p1) AND (`Firstname` = @p2) AND"& _ 
-                " (`Middlename` = @p3) AND (`Lastname` = @p4) AND (`College` = @p5) AND (`Course`"& _ 
-                " = @p6) AND (`Address` = @p7) AND (`ContactNo` = @p8))"
+                " ((@p3 = 1 AND `Middlename` IS NULL) OR (`Middlename` = @p4)) AND (`Lastname` = "& _ 
+                "@p5) AND (`College` = @p6) AND (`Course` = @p7) AND (`Address` = @p8) AND (`Cont"& _ 
+                "actNo` = @p9))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -5340,6 +5635,15 @@ Namespace db_inventoryDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p3"
+            param.DbType = Global.System.Data.DbType.Int32
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
+            param.IsNullable = true
+            param.SourceColumn = "Middlename"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            param.SourceColumnNullMapping = true
+            Me._adapter.DeleteCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p4"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -5347,7 +5651,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p4"
+            param.ParameterName = "@p5"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -5355,7 +5659,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p5"
+            param.ParameterName = "@p6"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -5363,7 +5667,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p6"
+            param.ParameterName = "@p7"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -5371,7 +5675,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p7"
+            param.ParameterName = "@p8"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -5379,7 +5683,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p8"
+            param.ParameterName = "@p9"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -5451,9 +5755,9 @@ Namespace db_inventoryDataSetTableAdapters
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `tbl_students` SET `Firstname` = @p1, `Middlename` = @p2, `Lastname` = @p3"& _ 
                 ", `College` = @p4, `Course` = @p5, `Address` = @p6, `ContactNo` = @p7 WHERE ((`S"& _ 
-                "tudentID` = @p8) AND (`Firstname` = @p9) AND (`Middlename` = @p10) AND (`Lastnam"& _ 
-                "e` = @p11) AND (`College` = @p12) AND (`Course` = @p13) AND (`Address` = @p14) A"& _ 
-                "ND (`ContactNo` = @p15))"
+                "tudentID` = @p8) AND (`Firstname` = @p9) AND ((@p10 = 1 AND `Middlename` IS NULL"& _ 
+                ") OR (`Middlename` = @p11)) AND (`Lastname` = @p12) AND (`College` = @p13) AND ("& _ 
+                "`Course` = @p14) AND (`Address` = @p15) AND (`ContactNo` = @p16))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -5529,6 +5833,15 @@ Namespace db_inventoryDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p10"
+            param.DbType = Global.System.Data.DbType.Int32
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
+            param.IsNullable = true
+            param.SourceColumn = "Middlename"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            param.SourceColumnNullMapping = true
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p11"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -5536,7 +5849,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p11"
+            param.ParameterName = "@p12"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -5544,7 +5857,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p12"
+            param.ParameterName = "@p13"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -5552,7 +5865,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p13"
+            param.ParameterName = "@p14"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -5560,7 +5873,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p14"
+            param.ParameterName = "@p15"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -5568,7 +5881,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p15"
+            param.ParameterName = "@p16"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -5651,21 +5964,18 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal p1 As Integer, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal p1 As Integer, ByVal p2 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As String, ByVal p9 As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(p1,Integer)
             If (p2 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p2")
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(p2,String)
             End If
-            If (p3 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p3")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(p3,String)
-            End If
             If (p4 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p4")
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(p4,String)
             End If
             If (p5 Is Nothing) Then
@@ -5687,6 +5997,11 @@ Namespace db_inventoryDataSetTableAdapters
                 Throw New Global.System.ArgumentNullException("p8")
             Else
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(p8,String)
+            End If
+            If (p9 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p9")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(p9,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5714,7 +6029,7 @@ Namespace db_inventoryDataSetTableAdapters
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1,String)
             End If
             If (p2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p2")
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2,String)
             End If
@@ -5762,14 +6077,14 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p1 As String, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As Integer, ByVal p9 As String, ByVal p10 As String, ByVal p11 As String, ByVal p12 As String, ByVal p13 As String, ByVal p14 As String, ByVal p15 As String) As Integer
+        Public Overloads Overridable Function Update(ByVal p1 As String, ByVal p2 As String, ByVal p3 As String, ByVal p4 As String, ByVal p5 As String, ByVal p6 As String, ByVal p7 As String, ByVal p8 As Integer, ByVal p9 As String, ByVal p11 As String, ByVal p12 As String, ByVal p13 As String, ByVal p14 As String, ByVal p15 As String, ByVal p16 As String) As Integer
             If (p1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("p1")
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(p1,String)
             End If
             If (p2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p2")
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2,String)
             End If
@@ -5804,14 +6119,11 @@ Namespace db_inventoryDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(8).Value = CType(p9,String)
             End If
-            If (p10 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p10")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(p10,String)
-            End If
             If (p11 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p11")
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(10).Value = CType(p11,String)
             End If
             If (p12 Is Nothing) Then
@@ -5833,6 +6145,11 @@ Namespace db_inventoryDataSetTableAdapters
                 Throw New Global.System.ArgumentNullException("p15")
             Else
                 Me.Adapter.UpdateCommand.Parameters(14).Value = CType(p15,String)
+            End If
+            If (p16 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p16")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(p16,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
