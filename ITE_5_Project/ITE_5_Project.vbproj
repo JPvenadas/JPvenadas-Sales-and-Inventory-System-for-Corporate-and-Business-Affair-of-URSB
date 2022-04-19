@@ -233,6 +233,9 @@
     <EmbeddedResource Include="UC_home.resx">
       <DependentUpon>UC_home.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_products.resx">
+      <DependentUpon>UC_products.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_students.resx">
       <DependentUpon>UC_students.vb</DependentUpon>
     </EmbeddedResource>

@@ -28,7 +28,6 @@ Partial Class UC_students
         Me.TblstudentsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.Tbl_studentsTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_studentsTableAdapter()
-        Me.CBO_type = New MaterialSkin.Controls.MaterialComboBox()
         Me.BTN_add = New MaterialSkin.Controls.MaterialButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BTN_search = New MaterialSkin.Controls.MaterialButton()
@@ -58,29 +57,6 @@ Partial Class UC_students
         'Tbl_studentsTableAdapter
         '
         Me.Tbl_studentsTableAdapter.ClearBeforeFill = True
-        '
-        'CBO_type
-        '
-        Me.CBO_type.AutoResize = False
-        Me.CBO_type.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CBO_type.Depth = 0
-        Me.CBO_type.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable
-        Me.CBO_type.DropDownHeight = 174
-        Me.CBO_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CBO_type.DropDownWidth = 121
-        Me.CBO_type.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.CBO_type.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.CBO_type.Hint = "Status"
-        Me.CBO_type.IntegralHeight = False
-        Me.CBO_type.ItemHeight = 43
-        Me.CBO_type.Items.AddRange(New Object() {"Active", "Inactive"})
-        Me.CBO_type.Location = New System.Drawing.Point(289, 49)
-        Me.CBO_type.MaxDropDownItems = 4
-        Me.CBO_type.MouseState = MaterialSkin.MouseState.OUT
-        Me.CBO_type.Name = "CBO_type"
-        Me.CBO_type.Size = New System.Drawing.Size(173, 49)
-        Me.CBO_type.StartIndex = 0
-        Me.CBO_type.TabIndex = 12
         '
         'BTN_add
         '
@@ -145,7 +121,7 @@ Partial Class UC_students
         Me.TXT_filter.HideSelection = True
         Me.TXT_filter.Hint = "Search a Student here"
         Me.TXT_filter.LeadingIcon = Nothing
-        Me.TXT_filter.Location = New System.Drawing.Point(468, 51)
+        Me.TXT_filter.Location = New System.Drawing.Point(464, 51)
         Me.TXT_filter.MaxLength = 32767
         Me.TXT_filter.MouseState = MaterialSkin.MouseState.OUT
         Me.TXT_filter.Name = "TXT_filter"
@@ -157,7 +133,7 @@ Partial Class UC_students
         Me.TXT_filter.SelectionLength = 0
         Me.TXT_filter.SelectionStart = 0
         Me.TXT_filter.ShortcutsEnabled = True
-        Me.TXT_filter.Size = New System.Drawing.Size(365, 48)
+        Me.TXT_filter.Size = New System.Drawing.Size(369, 48)
         Me.TXT_filter.TabIndex = 8
         Me.TXT_filter.TabStop = False
         Me.TXT_filter.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -257,7 +233,7 @@ Partial Class UC_students
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.CBO_type)
+        Me.BackColor = System.Drawing.Color.White
         Me.Controls.Add(Me.BTN_add)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BTN_search)
@@ -275,7 +251,6 @@ Partial Class UC_students
     Friend WithEvents TblstudentsBindingSource As BindingSource
     Friend WithEvents Db_inventoryDataSet As db_inventoryDataSet
     Friend WithEvents Tbl_studentsTableAdapter As db_inventoryDataSetTableAdapters.tbl_studentsTableAdapter
-    Friend WithEvents CBO_type As MaterialSkin.Controls.MaterialComboBox
     Friend WithEvents BTN_add As MaterialSkin.Controls.MaterialButton
     Friend WithEvents Label1 As Label
     Friend WithEvents BTN_search As MaterialSkin.Controls.MaterialButton
