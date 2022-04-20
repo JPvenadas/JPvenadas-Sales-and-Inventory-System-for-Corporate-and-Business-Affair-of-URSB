@@ -30,17 +30,17 @@ Partial Class UC_products
         Me.BTN_search = New MaterialSkin.Controls.MaterialButton()
         Me.TXT_filter = New MaterialSkin.Controls.MaterialTextBox2()
         Me.DGV_students = New System.Windows.Forms.DataGridView()
-        Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
-        Me.TblproductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tbl_productsTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_productsTableAdapter()
         Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductCategoryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StocksDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblproductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
+        Me.Tbl_productsTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_productsTableAdapter()
         CType(Me.DGV_students, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblproductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BTN_add
@@ -172,20 +172,6 @@ Partial Class UC_products
         Me.DGV_students.Size = New System.Drawing.Size(952, 404)
         Me.DGV_students.TabIndex = 12
         '
-        'Db_inventoryDataSet
-        '
-        Me.Db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
-        Me.Db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TblproductsBindingSource
-        '
-        Me.TblproductsBindingSource.DataMember = "tbl_products"
-        Me.TblproductsBindingSource.DataSource = Me.Db_inventoryDataSet
-        '
-        'Tbl_productsTableAdapter
-        '
-        Me.Tbl_productsTableAdapter.ClearBeforeFill = True
-        '
         'ProductIDDataGridViewTextBoxColumn
         '
         Me.ProductIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID"
@@ -221,6 +207,20 @@ Partial Class UC_products
         Me.StocksDataGridViewTextBoxColumn.Name = "StocksDataGridViewTextBoxColumn"
         Me.StocksDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'TblproductsBindingSource
+        '
+        Me.TblproductsBindingSource.DataMember = "tbl_products"
+        Me.TblproductsBindingSource.DataSource = Me.Db_inventoryDataSet
+        '
+        'Db_inventoryDataSet
+        '
+        Me.Db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
+        Me.Db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tbl_productsTableAdapter
+        '
+        Me.Tbl_productsTableAdapter.ClearBeforeFill = True
+        '
         'UC_products
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -234,8 +234,8 @@ Partial Class UC_products
         Me.Name = "UC_products"
         Me.Size = New System.Drawing.Size(1039, 537)
         CType(Me.DGV_students, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblproductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
