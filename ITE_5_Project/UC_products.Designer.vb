@@ -23,13 +23,13 @@ Partial Class UC_products
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BTN_add = New MaterialSkin.Controls.MaterialButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BTN_search = New MaterialSkin.Controls.MaterialButton()
         Me.TXT_filter = New MaterialSkin.Controls.MaterialTextBox2()
-        Me.DGV_students = New System.Windows.Forms.DataGridView()
+        Me.DGV_products = New System.Windows.Forms.DataGridView()
         Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductCategoryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,7 +38,7 @@ Partial Class UC_products
         Me.TblproductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.Tbl_productsTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_productsTableAdapter()
-        CType(Me.DGV_students, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGV_products, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblproductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -51,7 +51,7 @@ Partial Class UC_products
         Me.BTN_add.Depth = 0
         Me.BTN_add.HighEmphasis = True
         Me.BTN_add.Icon = Nothing
-        Me.BTN_add.Location = New System.Drawing.Point(28, 57)
+        Me.BTN_add.Location = New System.Drawing.Point(28, 58)
         Me.BTN_add.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.BTN_add.MouseState = MaterialSkin.MouseState.HOVER
         Me.BTN_add.Name = "BTN_add"
@@ -125,52 +125,52 @@ Partial Class UC_products
         Me.TXT_filter.TrailingIcon = Nothing
         Me.TXT_filter.UseSystemPasswordChar = False
         '
-        'DGV_students
+        'DGV_products
         '
-        Me.DGV_students.AllowUserToAddRows = False
-        Me.DGV_students.AllowUserToDeleteRows = False
-        Me.DGV_students.AllowUserToResizeColumns = False
-        Me.DGV_students.AllowUserToResizeRows = False
-        Me.DGV_students.AutoGenerateColumns = False
-        Me.DGV_students.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DGV_students.BackgroundColor = System.Drawing.Color.White
-        Me.DGV_students.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DGV_students.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
-        Me.DGV_students.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_students.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DGV_students.ColumnHeadersHeight = 50
-        Me.DGV_students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DGV_students.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.ProductCategoryDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn, Me.StocksDataGridViewTextBoxColumn})
-        Me.DGV_students.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.DGV_students.DataSource = Me.TblproductsBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGV_students.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DGV_students.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
-        Me.DGV_students.EnableHeadersVisualStyles = False
-        Me.DGV_students.GridColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DGV_students.Location = New System.Drawing.Point(28, 124)
-        Me.DGV_students.Name = "DGV_students"
-        Me.DGV_students.ReadOnly = True
-        Me.DGV_students.RowHeadersVisible = False
-        Me.DGV_students.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        Me.DGV_students.RowTemplate.Height = 50
-        Me.DGV_students.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_students.Size = New System.Drawing.Size(952, 404)
-        Me.DGV_students.TabIndex = 12
+        Me.DGV_products.AllowUserToAddRows = False
+        Me.DGV_products.AllowUserToDeleteRows = False
+        Me.DGV_products.AllowUserToResizeColumns = False
+        Me.DGV_products.AllowUserToResizeRows = False
+        Me.DGV_products.AutoGenerateColumns = False
+        Me.DGV_products.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGV_products.BackgroundColor = System.Drawing.Color.White
+        Me.DGV_products.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGV_products.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
+        Me.DGV_products.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(10)
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_products.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.DGV_products.ColumnHeadersHeight = 50
+        Me.DGV_products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DGV_products.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.ProductCategoryDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn, Me.StocksDataGridViewTextBoxColumn})
+        Me.DGV_products.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DGV_products.DataSource = Me.TblproductsBindingSource
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_products.DefaultCellStyle = DataGridViewCellStyle6
+        Me.DGV_products.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
+        Me.DGV_products.EnableHeadersVisualStyles = False
+        Me.DGV_products.GridColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DGV_products.Location = New System.Drawing.Point(28, 124)
+        Me.DGV_products.Name = "DGV_products"
+        Me.DGV_products.ReadOnly = True
+        Me.DGV_products.RowHeadersVisible = False
+        Me.DGV_products.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
+        Me.DGV_products.RowTemplate.Height = 50
+        Me.DGV_products.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGV_products.Size = New System.Drawing.Size(952, 404)
+        Me.DGV_products.TabIndex = 12
         '
         'ProductIDDataGridViewTextBoxColumn
         '
@@ -230,10 +230,10 @@ Partial Class UC_products
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BTN_search)
         Me.Controls.Add(Me.TXT_filter)
-        Me.Controls.Add(Me.DGV_students)
+        Me.Controls.Add(Me.DGV_products)
         Me.Name = "UC_products"
         Me.Size = New System.Drawing.Size(1039, 537)
-        CType(Me.DGV_students, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGV_products, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblproductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -245,7 +245,7 @@ Partial Class UC_products
     Friend WithEvents Label1 As Label
     Friend WithEvents BTN_search As MaterialSkin.Controls.MaterialButton
     Friend WithEvents TXT_filter As MaterialSkin.Controls.MaterialTextBox2
-    Friend WithEvents DGV_students As DataGridView
+    Friend WithEvents DGV_products As DataGridView
     Friend WithEvents ProductIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ProductNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ProductCategoryDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

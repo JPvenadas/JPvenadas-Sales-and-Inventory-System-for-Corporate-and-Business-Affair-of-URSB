@@ -34,7 +34,12 @@ Module SystemModule
         cmd.ExecuteNonQuery()
         dr = cmd.ExecuteReader
     End Sub
-
+    Sub GetProductCategory()
+        openCon()
+        cmd.CommandText = "Select * from tbl_categories"
+        cmd.ExecuteNonQuery()
+        dr = cmd.ExecuteReader
+    End Sub
     Sub GetCourses(college)
         openCon()
         cmd.CommandText = "Select * from tbl_courses where CollegeID=@college"
@@ -42,5 +47,10 @@ Module SystemModule
         cmd.Parameters.AddWithValue("college", college)
         cmd.ExecuteNonQuery()
         dr = cmd.ExecuteReader
+    End Sub
+    Sub numberonly(input, cmd)
+        If Char.IsLetter(input) Then
+            cmd.Handled = True
+        End If
     End Sub
 End Module

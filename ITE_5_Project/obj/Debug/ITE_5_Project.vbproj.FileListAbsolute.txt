@@ -36,3 +36,4 @@ C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.UC_
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.SUBFRM_addstudents.resources
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.SUBFRM_viewstudent.resources
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.UC_products.resources
+C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.SUBFRM_addproducts.resources

@@ -18,7 +18,7 @@
         If TXT_filter.Text = "" Then
             TblstudentsBindingSource.Filter = Nothing
         Else
-            TblstudentsBindingSource.Filter = "(Convert(StudentID,'System.String')) = '%" & TXT_filter.Text & "%' OR Firstname LIKE '%" & TXT_filter.Text & "%' OR Middlename LIKE '%" & TXT_filter.Text & "%' OR Lastname LIKE '%" & TXT_filter.Text & "%' OR College LIKE '%" & TXT_filter.Text & "%' OR Course LIKE '%" & TXT_filter.Text & "%' "
+            TblstudentsBindingSource.Filter = "(Convert(StudentID,'System.String')) LIKE '%" & TXT_filter.Text & "%' OR Firstname LIKE '%" & TXT_filter.Text & "%' OR Middlename LIKE '%" & TXT_filter.Text & "%' OR Lastname LIKE '%" & TXT_filter.Text & "%' OR College LIKE '%" & TXT_filter.Text & "%' OR Course LIKE '%" & TXT_filter.Text & "%' "
         End If
 
     End Sub

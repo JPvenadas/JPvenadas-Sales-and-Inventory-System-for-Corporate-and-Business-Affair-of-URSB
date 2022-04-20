@@ -31,9 +31,9 @@ Partial Class SUBFRM_adduser
         Me.TXT_cpassword = New MaterialSkin.Controls.MaterialTextBox2()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.BTN_back = New MaterialSkin.Controls.MaterialButton()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TXT_loginName = New MaterialSkin.Controls.MaterialTextBox2()
         Me.TXT_username = New MaterialSkin.Controls.MaterialTextBox2()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -202,22 +202,13 @@ Partial Class SUBFRM_adduser
         Me.BTN_back.UseAccentColor = True
         Me.BTN_back.UseVisualStyleBackColor = True
         '
-        'Panel1
-        '
-        Me.Panel1.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.user
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Location = New System.Drawing.Point(61, 44)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(123, 114)
-        Me.Panel1.TabIndex = 0
-        '
         'TXT_loginName
         '
         Me.TXT_loginName.AnimateReadOnly = False
         Me.TXT_loginName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.TXT_loginName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
         Me.TXT_loginName.Depth = 0
-        Me.TXT_loginName.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_loginName.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.TXT_loginName.HideSelection = True
         Me.TXT_loginName.Hint = "Login Name"
         Me.TXT_loginName.LeadingIcon = Nothing
@@ -268,6 +259,15 @@ Partial Class SUBFRM_adduser
         Me.TXT_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.TXT_username.TrailingIcon = Nothing
         Me.TXT_username.UseSystemPasswordChar = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.user
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Location = New System.Drawing.Point(61, 44)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(123, 114)
+        Me.Panel1.TabIndex = 0
         '
         'SUBFRM_adduser
         '

@@ -128,6 +128,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SUBFRM_addproducts.Designer.vb">
+      <DependentUpon>SUBFRM_addproducts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUBFRM_addproducts.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SUBFRM_addstudents.Designer.vb">
       <DependentUpon>SUBFRM_addstudents.vb</DependentUpon>
     </Compile>
@@ -144,6 +150,12 @@
       <DependentUpon>SUBFRM_edituser.vb</DependentUpon>
     </Compile>
     <Compile Include="SUBFRM_edituser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUBFRM_viewproduct.Designer.vb">
+      <DependentUpon>SUBFRM_viewproduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUBFRM_viewproduct.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SUBFRM_viewstudent.Designer.vb">
@@ -218,6 +230,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="SUBFRM_addproducts.resx">
+      <DependentUpon>SUBFRM_addproducts.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SUBFRM_addstudents.resx">
       <DependentUpon>SUBFRM_addstudents.vb</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SUBFRM_edituser.resx">
       <DependentUpon>SUBFRM_edituser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUBFRM_viewproduct.resx">
+      <DependentUpon>SUBFRM_viewproduct.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SUBFRM_viewstudent.resx">
       <DependentUpon>SUBFRM_viewstudent.vb</DependentUpon>
@@ -277,6 +295,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\85-859280_the-majority-of-students-must-juggle-academic-financial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-box-flat-blue-icon-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-philippine-peso-sign-philippines-mexican-peso-currency-symbol-others-miscellaneous-angle-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
