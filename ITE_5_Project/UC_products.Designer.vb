@@ -23,8 +23,8 @@ Partial Class UC_products
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BTN_add = New MaterialSkin.Controls.MaterialButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BTN_search = New MaterialSkin.Controls.MaterialButton()
@@ -51,7 +51,7 @@ Partial Class UC_products
         Me.BTN_add.Depth = 0
         Me.BTN_add.HighEmphasis = True
         Me.BTN_add.Icon = Nothing
-        Me.BTN_add.Location = New System.Drawing.Point(28, 58)
+        Me.BTN_add.Location = New System.Drawing.Point(24, 58)
         Me.BTN_add.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.BTN_add.MouseState = MaterialSkin.MouseState.HOVER
         Me.BTN_add.Name = "BTN_add"
@@ -68,7 +68,7 @@ Partial Class UC_products
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(25, 19)
+        Me.Label1.Location = New System.Drawing.Point(21, 19)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(854, 30)
         Me.Label1.TabIndex = 15
@@ -84,7 +84,7 @@ Partial Class UC_products
         Me.BTN_search.Depth = 0
         Me.BTN_search.HighEmphasis = True
         Me.BTN_search.Icon = Nothing
-        Me.BTN_search.Location = New System.Drawing.Point(852, 56)
+        Me.BTN_search.Location = New System.Drawing.Point(848, 56)
         Me.BTN_search.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.BTN_search.MouseState = MaterialSkin.MouseState.HOVER
         Me.BTN_search.Name = "BTN_search"
@@ -106,7 +106,7 @@ Partial Class UC_products
         Me.TXT_filter.HideSelection = True
         Me.TXT_filter.Hint = "Search a Product here"
         Me.TXT_filter.LeadingIcon = Nothing
-        Me.TXT_filter.Location = New System.Drawing.Point(470, 57)
+        Me.TXT_filter.Location = New System.Drawing.Point(466, 57)
         Me.TXT_filter.MaxLength = 32767
         Me.TXT_filter.MouseState = MaterialSkin.MouseState.OUT
         Me.TXT_filter.Name = "TXT_filter"
@@ -137,32 +137,32 @@ Partial Class UC_products
         Me.DGV_products.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGV_products.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
         Me.DGV_products.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_products.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(10)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_products.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGV_products.ColumnHeadersHeight = 50
         Me.DGV_products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DGV_products.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.ProductCategoryDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn, Me.StocksDataGridViewTextBoxColumn})
         Me.DGV_products.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DGV_products.DataSource = Me.TblproductsBindingSource
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGV_products.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_products.DefaultCellStyle = DataGridViewCellStyle2
         Me.DGV_products.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
         Me.DGV_products.EnableHeadersVisualStyles = False
         Me.DGV_products.GridColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DGV_products.Location = New System.Drawing.Point(28, 124)
+        Me.DGV_products.Location = New System.Drawing.Point(24, 124)
         Me.DGV_products.Name = "DGV_products"
         Me.DGV_products.ReadOnly = True
         Me.DGV_products.RowHeadersVisible = False

@@ -32,7 +32,7 @@ Partial Class SUBFRM_addproducts
         Me.BTN_clear = New MaterialSkin.Controls.MaterialButton()
         Me.CBO_category = New MaterialSkin.Controls.MaterialComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TXT_price = New MaterialSkin.Controls.MaterialTextBox()
+        Me.TXT_price = New MaterialSkin.Controls.MaterialMaskedTextBox()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -70,7 +70,7 @@ Partial Class SUBFRM_addproducts
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(254, 131)
+        Me.Label2.Location = New System.Drawing.Point(264, 117)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(189, 13)
         Me.Label2.TabIndex = 12
@@ -81,7 +81,7 @@ Partial Class SUBFRM_addproducts
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label1.Location = New System.Drawing.Point(252, 92)
+        Me.Label1.Location = New System.Drawing.Point(262, 78)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(164, 29)
         Me.Label1.TabIndex = 11
@@ -97,7 +97,7 @@ Partial Class SUBFRM_addproducts
         Me.TXT_productname.HideSelection = True
         Me.TXT_productname.Hint = "Product Name"
         Me.TXT_productname.LeadingIcon = Nothing
-        Me.TXT_productname.Location = New System.Drawing.Point(65, 214)
+        Me.TXT_productname.Location = New System.Drawing.Point(75, 203)
         Me.TXT_productname.MaxLength = 32767
         Me.TXT_productname.MouseState = MaterialSkin.MouseState.OUT
         Me.TXT_productname.Name = "TXT_productname"
@@ -110,7 +110,7 @@ Partial Class SUBFRM_addproducts
         Me.TXT_productname.SelectionStart = 0
         Me.TXT_productname.ShortcutsEnabled = True
         Me.TXT_productname.Size = New System.Drawing.Size(378, 48)
-        Me.TXT_productname.TabIndex = 13
+        Me.TXT_productname.TabIndex = 1
         Me.TXT_productname.TabStop = False
         Me.TXT_productname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.TXT_productname.TrailingIcon = Nothing
@@ -123,10 +123,11 @@ Partial Class SUBFRM_addproducts
         Me.TXT_stocks.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
         Me.TXT_stocks.Depth = 0
         Me.TXT_stocks.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_stocks.HelperText = "Non-numeric input is not allowed"
         Me.TXT_stocks.HideSelection = True
         Me.TXT_stocks.Hint = "Stocks"
         Me.TXT_stocks.LeadingIcon = Nothing
-        Me.TXT_stocks.Location = New System.Drawing.Point(65, 388)
+        Me.TXT_stocks.Location = New System.Drawing.Point(75, 386)
         Me.TXT_stocks.MaxLength = 32767
         Me.TXT_stocks.MouseState = MaterialSkin.MouseState.OUT
         Me.TXT_stocks.Name = "TXT_stocks"
@@ -138,8 +139,9 @@ Partial Class SUBFRM_addproducts
         Me.TXT_stocks.SelectionLength = 0
         Me.TXT_stocks.SelectionStart = 0
         Me.TXT_stocks.ShortcutsEnabled = True
-        Me.TXT_stocks.Size = New System.Drawing.Size(378, 48)
-        Me.TXT_stocks.TabIndex = 13
+        Me.TXT_stocks.ShowAssistiveText = True
+        Me.TXT_stocks.Size = New System.Drawing.Size(378, 64)
+        Me.TXT_stocks.TabIndex = 4
         Me.TXT_stocks.TabStop = False
         Me.TXT_stocks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.TXT_stocks.TrailingIcon = Nothing
@@ -153,13 +155,13 @@ Partial Class SUBFRM_addproducts
         Me.BTN_add.Depth = 0
         Me.BTN_add.HighEmphasis = True
         Me.BTN_add.Icon = Nothing
-        Me.BTN_add.Location = New System.Drawing.Point(359, 475)
+        Me.BTN_add.Location = New System.Drawing.Point(369, 473)
         Me.BTN_add.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.BTN_add.MouseState = MaterialSkin.MouseState.HOVER
         Me.BTN_add.Name = "BTN_add"
         Me.BTN_add.NoAccentTextColor = System.Drawing.Color.Empty
         Me.BTN_add.Size = New System.Drawing.Size(126, 45)
-        Me.BTN_add.TabIndex = 14
+        Me.BTN_add.TabIndex = 5
         Me.BTN_add.Text = "Add"
         Me.BTN_add.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
         Me.BTN_add.UseAccentColor = False
@@ -173,7 +175,7 @@ Partial Class SUBFRM_addproducts
         Me.BTN_clear.Depth = 0
         Me.BTN_clear.HighEmphasis = True
         Me.BTN_clear.Icon = Nothing
-        Me.BTN_clear.Location = New System.Drawing.Point(261, 475)
+        Me.BTN_clear.Location = New System.Drawing.Point(271, 473)
         Me.BTN_clear.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.BTN_clear.MouseState = MaterialSkin.MouseState.HOVER
         Me.BTN_clear.Name = "BTN_clear"
@@ -200,40 +202,66 @@ Partial Class SUBFRM_addproducts
         Me.CBO_category.Hint = "Product Category"
         Me.CBO_category.IntegralHeight = False
         Me.CBO_category.ItemHeight = 43
-        Me.CBO_category.Location = New System.Drawing.Point(65, 271)
+        Me.CBO_category.Location = New System.Drawing.Point(75, 263)
         Me.CBO_category.MaxDropDownItems = 4
         Me.CBO_category.MouseState = MaterialSkin.MouseState.OUT
         Me.CBO_category.Name = "CBO_category"
         Me.CBO_category.Size = New System.Drawing.Size(378, 49)
         Me.CBO_category.StartIndex = 0
-        Me.CBO_category.TabIndex = 15
+        Me.CBO_category.TabIndex = 2
         '
         'Panel1
         '
         Me.Panel1.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Product
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Location = New System.Drawing.Point(32, 45)
+        Me.Panel1.Location = New System.Drawing.Point(42, 34)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(214, 155)
         Me.Panel1.TabIndex = 10
         '
         'TXT_price
         '
+        Me.TXT_price.AllowPromptAsInput = True
         Me.TXT_price.AnimateReadOnly = False
-        Me.TXT_price.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TXT_price.AsciiOnly = False
+        Me.TXT_price.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.TXT_price.BeepOnError = False
+        Me.TXT_price.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals
         Me.TXT_price.Depth = 0
-        Me.TXT_price.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_price.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_price.HelperText = "Non-numeric input is not allowed"
+        Me.TXT_price.HidePromptOnLeave = False
+        Me.TXT_price.HideSelection = True
         Me.TXT_price.Hint = "Price"
+        Me.TXT_price.InsertKeyMode = System.Windows.Forms.InsertKeyMode.[Default]
         Me.TXT_price.LeadingIcon = Nothing
-        Me.TXT_price.Location = New System.Drawing.Point(65, 329)
-        Me.TXT_price.MaxLength = 50
+        Me.TXT_price.Location = New System.Drawing.Point(75, 323)
+        Me.TXT_price.Mask = ""
+        Me.TXT_price.MaxLength = 32767
         Me.TXT_price.MouseState = MaterialSkin.MouseState.OUT
-        Me.TXT_price.Multiline = False
         Me.TXT_price.Name = "TXT_price"
-        Me.TXT_price.Size = New System.Drawing.Size(378, 50)
-        Me.TXT_price.TabIndex = 16
-        Me.TXT_price.Text = ""
+        Me.TXT_price.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXT_price.PrefixSuffixText = Nothing
+        Me.TXT_price.PromptChar = Global.Microsoft.VisualBasic.ChrW(95)
+        Me.TXT_price.ReadOnly = False
+        Me.TXT_price.RejectInputOnFirstFailure = False
+        Me.TXT_price.ResetOnPrompt = True
+        Me.TXT_price.ResetOnSpace = True
+        Me.TXT_price.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_price.SelectedText = ""
+        Me.TXT_price.SelectionLength = 0
+        Me.TXT_price.SelectionStart = 0
+        Me.TXT_price.ShortcutsEnabled = True
+        Me.TXT_price.ShowAssistiveText = True
+        Me.TXT_price.Size = New System.Drawing.Size(378, 64)
+        Me.TXT_price.SkipLiterals = True
+        Me.TXT_price.TabIndex = 3
+        Me.TXT_price.TabStop = False
+        Me.TXT_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.TXT_price.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
         Me.TXT_price.TrailingIcon = Global.ITE_5_Project.My.Resources.Resources.Peso
+        Me.TXT_price.UseSystemPasswordChar = False
+        Me.TXT_price.ValidatingType = Nothing
         '
         'SUBFRM_addproducts
         '
@@ -241,6 +269,7 @@ Partial Class SUBFRM_addproducts
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(534, 546)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TXT_price)
         Me.Controls.Add(Me.CBO_category)
         Me.Controls.Add(Me.BTN_clear)
@@ -250,7 +279,6 @@ Partial Class SUBFRM_addproducts
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SUBFRM_addproducts"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
@@ -271,5 +299,5 @@ Partial Class SUBFRM_addproducts
     Friend WithEvents BTN_add As MaterialSkin.Controls.MaterialButton
     Friend WithEvents BTN_clear As MaterialSkin.Controls.MaterialButton
     Friend WithEvents CBO_category As MaterialSkin.Controls.MaterialComboBox
-    Friend WithEvents TXT_price As MaterialSkin.Controls.MaterialTextBox
+    Friend WithEvents TXT_price As MaterialSkin.Controls.MaterialMaskedTextBox
 End Class

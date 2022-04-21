@@ -64,4 +64,5 @@
     Private Sub TXT_stocks_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_stocks.KeyPress
         numberonly(e.KeyChar, e)
     End Sub
+
 End Class

@@ -5,33 +5,11 @@
     End Sub
 
     Private Sub SUBFRM_addstudents_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        GetColleges()
-        CBO_college.Items.Clear()
-        While dr.Read
-            Dim college = dr.GetString("CollegeID")
-            CBO_college.Items.Add(college)
-        End While
-        con.Close()
-    End Sub
-
-    Private Sub SUBFRM_addstudents_ControlAdded(sender As Object, e As ControlEventArgs) Handles MyBase.ControlAdded
-        GetColleges()
-        CBO_college.Items.Clear()
-        While dr.Read
-            Dim college = dr.GetString("CollegeID")
-            CBO_college.Items.Add(college)
-        End While
-        con.Close()
+        attachCollege()
     End Sub
 
     Private Sub CBO_college_Leave(sender As Object, e As EventArgs) Handles CBO_college.Leave
-        GetCourses(CBO_college.Text)
-        CBO_course.Items.Clear()
-        While dr.Read
-            Dim course = dr.GetString("CourseID")
-            CBO_course.Items.Add(course)
-        End While
-        con.Close()
+        attachCourse()
     End Sub
 
     Private Sub BTN_clear_Click(sender As Object, e As EventArgs) Handles BTN_clear.Click
@@ -47,8 +25,33 @@
     End Sub
 
     Sub Clear()
-        Me.Controls.Clear()
-        InitializeComponent()
+        TXT_firstname.Text = ""
+        TXT_lastname.Text = ""
+        TXT_midname.Text = ""
+        TXT_contact.Text = ""
+        TXT_address.Text = ""
+        attachCollege()
+        attachCourse()
+        CBO_college.Refresh()
+        CBO_course.Refresh()
+    End Sub
+    Sub attachCollege()
+        GetColleges()
+        CBO_college.Items.Clear()
+        While dr.Read
+            Dim college = dr.GetString("CollegeID")
+            CBO_college.Items.Add(college)
+        End While
+        con.Close()
+    End Sub
+    Sub attachCourse()
+        GetCourses(CBO_college.Text)
+        CBO_course.Items.Clear()
+        While dr.Read
+            Dim course = dr.GetString("CourseID")
+            CBO_course.Items.Add(course)
+        End While
+        con.Close()
     End Sub
 
     Sub AddStudents()

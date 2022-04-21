@@ -87,7 +87,7 @@ Partial Class SUBFRM_viewstudent
         Me.TXT_contact.AnimateReadOnly = False
         Me.TXT_contact.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TXT_contact.Depth = 0
-        Me.TXT_contact.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_contact.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.TXT_contact.Hint = "Contact Number"
         Me.TXT_contact.LeadingIcon = Nothing
         Me.TXT_contact.Location = New System.Drawing.Point(45, 413)
@@ -105,7 +105,7 @@ Partial Class SUBFRM_viewstudent
         Me.TXT_address.AnimateReadOnly = False
         Me.TXT_address.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TXT_address.Depth = 0
-        Me.TXT_address.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_address.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.TXT_address.Hint = "Address"
         Me.TXT_address.LeadingIcon = Nothing
         Me.TXT_address.Location = New System.Drawing.Point(45, 357)
@@ -123,7 +123,7 @@ Partial Class SUBFRM_viewstudent
         Me.TXT_lastname.AnimateReadOnly = False
         Me.TXT_lastname.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TXT_lastname.Depth = 0
-        Me.TXT_lastname.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_lastname.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.TXT_lastname.Hint = "Last Name"
         Me.TXT_lastname.LeadingIcon = Nothing
         Me.TXT_lastname.Location = New System.Drawing.Point(221, 189)
@@ -141,7 +141,7 @@ Partial Class SUBFRM_viewstudent
         Me.TXT_midname.AnimateReadOnly = False
         Me.TXT_midname.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TXT_midname.Depth = 0
-        Me.TXT_midname.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_midname.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.TXT_midname.Hint = "Middle Name"
         Me.TXT_midname.LeadingIcon = Nothing
         Me.TXT_midname.Location = New System.Drawing.Point(221, 133)
@@ -159,7 +159,7 @@ Partial Class SUBFRM_viewstudent
         Me.TXT_firstname.AnimateReadOnly = False
         Me.TXT_firstname.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TXT_firstname.Depth = 0
-        Me.TXT_firstname.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_firstname.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.TXT_firstname.Hint = "First Name"
         Me.TXT_firstname.LeadingIcon = Nothing
         Me.TXT_firstname.Location = New System.Drawing.Point(221, 79)
@@ -281,6 +281,7 @@ Partial Class SUBFRM_viewstudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(534, 558)
         Me.Controls.Add(Me.TXT_contact)
         Me.Controls.Add(Me.TXT_address)
