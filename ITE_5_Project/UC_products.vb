@@ -13,7 +13,12 @@
         SUBFRM_viewproduct.ShowDialog()
     End Sub
 
-    Private Sub BTN_search_Click(sender As Object, e As EventArgs)
-
+    Private Sub BTN_search_Click(sender As Object, e As EventArgs) Handles BTN_search.Click
+        If TXT_filter.Text = "" Then
+            TblproductsBindingSource.Filter = Nothing
+        Else
+            TblproductsBindingSource.Filter = "(Convert(ProductID,'System.String')) LIKE '%" & TXT_filter.Text & "%' OR ProductName LIKE '%" & TXT_filter.Text & "%' OR ProductCategory LIKE '%" & TXT_filter.Text & "%' "
+        End If
     End Sub
+
 End Class

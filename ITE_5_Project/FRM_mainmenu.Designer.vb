@@ -37,9 +37,12 @@ Partial Class FRM_mainmenu
         Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.TblusersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_usersTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_usersTableAdapter()
+        Me.TblproductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tbl_productsTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_productsTableAdapter()
         Me.MaterialTabControl1.SuspendLayout()
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblusersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblproductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MaterialTabControl1
@@ -55,12 +58,13 @@ Partial Class FRM_mainmenu
         Me.MaterialTabControl1.Depth = 0
         Me.MaterialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MaterialTabControl1.ImageList = Me.ImageList1
-        Me.MaterialTabControl1.Location = New System.Drawing.Point(3, 72)
+        Me.MaterialTabControl1.Location = New System.Drawing.Point(0, 72)
         Me.MaterialTabControl1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabControl1.Multiline = True
         Me.MaterialTabControl1.Name = "MaterialTabControl1"
         Me.MaterialTabControl1.SelectedIndex = 0
-        Me.MaterialTabControl1.Size = New System.Drawing.Size(1053, 586)
+        Me.MaterialTabControl1.ShowToolTips = True
+        Me.MaterialTabControl1.Size = New System.Drawing.Size(1056, 586)
         Me.MaterialTabControl1.TabIndex = 0
         '
         'TAB_home
@@ -70,7 +74,7 @@ Partial Class FRM_mainmenu
         Me.TAB_home.Location = New System.Drawing.Point(4, 39)
         Me.TAB_home.Name = "TAB_home"
         Me.TAB_home.Padding = New System.Windows.Forms.Padding(3)
-        Me.TAB_home.Size = New System.Drawing.Size(1045, 543)
+        Me.TAB_home.Size = New System.Drawing.Size(1048, 543)
         Me.TAB_home.TabIndex = 0
         Me.TAB_home.Text = "Home"
         Me.TAB_home.ToolTipText = "Home"
@@ -82,7 +86,7 @@ Partial Class FRM_mainmenu
         Me.TAB_user.Location = New System.Drawing.Point(4, 39)
         Me.TAB_user.Name = "TAB_user"
         Me.TAB_user.Padding = New System.Windows.Forms.Padding(3)
-        Me.TAB_user.Size = New System.Drawing.Size(1045, 543)
+        Me.TAB_user.Size = New System.Drawing.Size(1048, 543)
         Me.TAB_user.TabIndex = 1
         Me.TAB_user.Text = "Users"
         Me.TAB_user.ToolTipText = "Students"
@@ -93,7 +97,7 @@ Partial Class FRM_mainmenu
         Me.TAB_students.ImageKey = "icons8-member-96.png"
         Me.TAB_students.Location = New System.Drawing.Point(4, 39)
         Me.TAB_students.Name = "TAB_students"
-        Me.TAB_students.Size = New System.Drawing.Size(1045, 543)
+        Me.TAB_students.Size = New System.Drawing.Size(1048, 543)
         Me.TAB_students.TabIndex = 2
         Me.TAB_students.Text = "Students"
         Me.TAB_students.ToolTipText = "Students"
@@ -102,9 +106,10 @@ Partial Class FRM_mainmenu
         'TAB_products
         '
         Me.TAB_products.ImageKey = "icons8-used-product-64.png"
+        Me.TAB_products.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TAB_products.Location = New System.Drawing.Point(4, 39)
         Me.TAB_products.Name = "TAB_products"
-        Me.TAB_products.Size = New System.Drawing.Size(1045, 543)
+        Me.TAB_products.Size = New System.Drawing.Size(1048, 543)
         Me.TAB_products.TabIndex = 3
         Me.TAB_products.Text = "Products"
         Me.TAB_products.ToolTipText = "Products"
@@ -115,7 +120,7 @@ Partial Class FRM_mainmenu
         Me.TAB_stocks.ImageKey = "icons8-hangar-60.png"
         Me.TAB_stocks.Location = New System.Drawing.Point(4, 39)
         Me.TAB_stocks.Name = "TAB_stocks"
-        Me.TAB_stocks.Size = New System.Drawing.Size(1045, 543)
+        Me.TAB_stocks.Size = New System.Drawing.Size(1048, 543)
         Me.TAB_stocks.TabIndex = 4
         Me.TAB_stocks.Text = "Product Stocks"
         Me.TAB_stocks.ToolTipText = "Stocks"
@@ -126,7 +131,7 @@ Partial Class FRM_mainmenu
         Me.TAB_transaction.ImageKey = "icons8-shopping-cart-96.png"
         Me.TAB_transaction.Location = New System.Drawing.Point(4, 39)
         Me.TAB_transaction.Name = "TAB_transaction"
-        Me.TAB_transaction.Size = New System.Drawing.Size(1045, 543)
+        Me.TAB_transaction.Size = New System.Drawing.Size(1048, 543)
         Me.TAB_transaction.TabIndex = 5
         Me.TAB_transaction.Text = "Transactions"
         Me.TAB_transaction.ToolTipText = "Sales Transaction"
@@ -137,7 +142,7 @@ Partial Class FRM_mainmenu
         Me.TAB_reports.ImageKey = "icons8-shared-folder-50.png"
         Me.TAB_reports.Location = New System.Drawing.Point(4, 39)
         Me.TAB_reports.Name = "TAB_reports"
-        Me.TAB_reports.Size = New System.Drawing.Size(1045, 543)
+        Me.TAB_reports.Size = New System.Drawing.Size(1048, 543)
         Me.TAB_reports.TabIndex = 6
         Me.TAB_reports.Text = "Reports"
         Me.TAB_reports.ToolTipText = "Reports"
@@ -148,7 +153,7 @@ Partial Class FRM_mainmenu
         Me.TAB_settings.ImageKey = "icons8-settings-50.png"
         Me.TAB_settings.Location = New System.Drawing.Point(4, 39)
         Me.TAB_settings.Name = "TAB_settings"
-        Me.TAB_settings.Size = New System.Drawing.Size(1045, 543)
+        Me.TAB_settings.Size = New System.Drawing.Size(1048, 543)
         Me.TAB_settings.TabIndex = 7
         Me.TAB_settings.Text = "Settings"
         Me.TAB_settings.ToolTipText = "Settings"
@@ -182,6 +187,15 @@ Partial Class FRM_mainmenu
         '
         Me.Tbl_usersTableAdapter.ClearBeforeFill = True
         '
+        'TblproductsBindingSource
+        '
+        Me.TblproductsBindingSource.DataMember = "tbl_products"
+        Me.TblproductsBindingSource.DataSource = Me.Db_inventoryDataSet
+        '
+        'Tbl_productsTableAdapter
+        '
+        Me.Tbl_productsTableAdapter.ClearBeforeFill = True
+        '
         'FRM_mainmenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -192,13 +206,14 @@ Partial Class FRM_mainmenu
         Me.DrawerTabControl = Me.MaterialTabControl1
         Me.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_48
         Me.Name = "FRM_mainmenu"
-        Me.Padding = New System.Windows.Forms.Padding(3, 72, 3, 3)
+        Me.Padding = New System.Windows.Forms.Padding(0, 72, 3, 3)
         Me.Sizable = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menu"
         Me.MaterialTabControl1.ResumeLayout(False)
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblusersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblproductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -207,7 +222,6 @@ Partial Class FRM_mainmenu
     Friend WithEvents TAB_home As TabPage
     Friend WithEvents TAB_user As TabPage
     Friend WithEvents TAB_students As TabPage
-    Friend WithEvents TAB_products As TabPage
     Friend WithEvents TAB_stocks As TabPage
     Friend WithEvents TAB_transaction As TabPage
     Friend WithEvents TAB_reports As TabPage
@@ -216,4 +230,7 @@ Partial Class FRM_mainmenu
     Friend WithEvents Db_inventoryDataSet As db_inventoryDataSet
     Friend WithEvents TblusersBindingSource As BindingSource
     Friend WithEvents Tbl_usersTableAdapter As db_inventoryDataSetTableAdapters.tbl_usersTableAdapter
+    Friend WithEvents TAB_products As TabPage
+    Friend WithEvents TblproductsBindingSource As BindingSource
+    Friend WithEvents Tbl_productsTableAdapter As db_inventoryDataSetTableAdapters.tbl_productsTableAdapter
 End Class

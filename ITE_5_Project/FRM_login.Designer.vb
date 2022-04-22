@@ -22,7 +22,6 @@ Partial Class FRM_login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.TXT_username = New MaterialSkin.Controls.MaterialTextBox()
         Me.BTN_login = New MaterialSkin.Controls.MaterialButton()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -31,18 +30,13 @@ Partial Class FRM_login
         Me.BTN_close = New MaterialSkin.Controls.MaterialButton()
         Me.TXT_password = New MaterialSkin.Controls.MaterialTextBox2()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TblproductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Tbl_productsTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_productsTableAdapter()
         Me.Panel2.SuspendLayout()
-        CType(Me.TblproductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TXT_username
@@ -189,16 +183,6 @@ Partial Class FRM_login
         Me.Panel2.Size = New System.Drawing.Size(552, 661)
         Me.Panel2.TabIndex = 5
         '
-        'TblproductsBindingSource
-        '
-        Me.TblproductsBindingSource.DataMember = "tbl_products"
-        Me.TblproductsBindingSource.DataSource = Me.Db_inventoryDataSet
-        '
-        'Db_inventoryDataSet
-        '
-        Me.Db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
-        Me.Db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -269,10 +253,6 @@ Partial Class FRM_login
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Welcome To..."
         '
-        'Tbl_productsTableAdapter
-        '
-        Me.Tbl_productsTableAdapter.ClearBeforeFill = True
-        '
         'FRM_login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -293,8 +273,6 @@ Partial Class FRM_login
         Me.Text = "Form1"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.TblproductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -314,7 +292,4 @@ Partial Class FRM_login
     Friend WithEvents Label1 As Label
     Friend WithEvents BTN_close As MaterialSkin.Controls.MaterialButton
     Friend WithEvents TXT_password As MaterialSkin.Controls.MaterialTextBox2
-    Friend WithEvents Db_inventoryDataSet As db_inventoryDataSet
-    Friend WithEvents TblproductsBindingSource As BindingSource
-    Friend WithEvents Tbl_productsTableAdapter As db_inventoryDataSetTableAdapters.tbl_productsTableAdapter
 End Class

@@ -1,6 +1,8 @@
 ﻿Imports MaterialSkin
 Public Class FRM_mainmenu
     Private Sub FRM_mainmenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Db_inventoryDataSet.tbl_products' table. You can move, or remove it, as needed.
+        Me.Tbl_productsTableAdapter.Fill(Me.Db_inventoryDataSet.tbl_products)
 
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
@@ -11,7 +13,7 @@ Public Class FRM_mainmenu
         Dim students As New UC_students
         Dim products As New UC_products
         Dim stocks As New UC_stocks
-        Dim reports As New UC_stocks
+        Dim reports As New UC_reports
         Dim settings As New UC_settings
         Dim transactions As New UC_transactions
 
