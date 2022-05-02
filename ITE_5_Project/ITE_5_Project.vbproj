@@ -172,6 +172,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SystemModule.vb" />
+    <Compile Include="UC_college.Designer.vb">
+      <DependentUpon>UC_college.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UC_college.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UC_home.Designer.vb">
       <DependentUpon>UC_home.vb</DependentUpon>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SUBFRM_viewstudent.resx">
       <DependentUpon>SUBFRM_viewstudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_college.resx">
+      <DependentUpon>UC_college.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_home.resx">
       <DependentUpon>UC_home.vb</DependentUpon>
