@@ -28,11 +28,11 @@ Partial Class UC_college
         Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.LBL_notif = New System.Windows.Forms.Label()
+        Me.LBL_operation = New System.Windows.Forms.Label()
         Me.TXT_collegeID = New MaterialSkin.Controls.MaterialTextBox2()
         Me.TXT_collegeName = New MaterialSkin.Controls.MaterialTextBox2()
         Me.MaterialCard4 = New MaterialSkin.Controls.MaterialCard()
-        Me.DGV_products = New System.Windows.Forms.DataGridView()
+        Me.DGV_colleges = New System.Windows.Forms.DataGridView()
         Me.CollegeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CollegeNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TblcollegesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -44,7 +44,7 @@ Partial Class UC_college
         Me.MaterialCard1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.MaterialCard4.SuspendLayout()
-        CType(Me.DGV_products, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGV_colleges, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblcollegesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,7 +71,7 @@ Partial Class UC_college
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.LBL_notif)
+        Me.Panel1.Controls.Add(Me.LBL_operation)
         Me.Panel1.Controls.Add(Me.TXT_collegeID)
         Me.Panel1.Controls.Add(Me.TXT_collegeName)
         Me.Panel1.Location = New System.Drawing.Point(17, 78)
@@ -91,17 +91,17 @@ Partial Class UC_college
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Fill and supply the neccessary field below"
         '
-        'LBL_notif
+        'LBL_operation
         '
-        Me.LBL_notif.AutoSize = True
-        Me.LBL_notif.BackColor = System.Drawing.Color.Transparent
-        Me.LBL_notif.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBL_notif.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.LBL_notif.Location = New System.Drawing.Point(29, 24)
-        Me.LBL_notif.Name = "LBL_notif"
-        Me.LBL_notif.Size = New System.Drawing.Size(121, 20)
-        Me.LBL_notif.TabIndex = 2
-        Me.LBL_notif.Text = "Add a College"
+        Me.LBL_operation.AutoSize = True
+        Me.LBL_operation.BackColor = System.Drawing.Color.Transparent
+        Me.LBL_operation.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBL_operation.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LBL_operation.Location = New System.Drawing.Point(29, 24)
+        Me.LBL_operation.Name = "LBL_operation"
+        Me.LBL_operation.Size = New System.Drawing.Size(121, 20)
+        Me.LBL_operation.TabIndex = 2
+        Me.LBL_operation.Text = "Add a College"
         '
         'TXT_collegeID
         '
@@ -166,7 +166,7 @@ Partial Class UC_college
         'MaterialCard4
         '
         Me.MaterialCard4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialCard4.Controls.Add(Me.DGV_products)
+        Me.MaterialCard4.Controls.Add(Me.DGV_colleges)
         Me.MaterialCard4.Depth = 0
         Me.MaterialCard4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.MaterialCard4.Location = New System.Drawing.Point(465, 21)
@@ -177,18 +177,18 @@ Partial Class UC_college
         Me.MaterialCard4.Size = New System.Drawing.Size(461, 392)
         Me.MaterialCard4.TabIndex = 15
         '
-        'DGV_products
+        'DGV_colleges
         '
-        Me.DGV_products.AllowUserToAddRows = False
-        Me.DGV_products.AllowUserToDeleteRows = False
-        Me.DGV_products.AllowUserToResizeColumns = False
-        Me.DGV_products.AllowUserToResizeRows = False
-        Me.DGV_products.AutoGenerateColumns = False
-        Me.DGV_products.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DGV_products.BackgroundColor = System.Drawing.Color.White
-        Me.DGV_products.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DGV_products.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
-        Me.DGV_products.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.DGV_colleges.AllowUserToAddRows = False
+        Me.DGV_colleges.AllowUserToDeleteRows = False
+        Me.DGV_colleges.AllowUserToResizeColumns = False
+        Me.DGV_colleges.AllowUserToResizeRows = False
+        Me.DGV_colleges.AutoGenerateColumns = False
+        Me.DGV_colleges.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGV_colleges.BackgroundColor = System.Drawing.Color.White
+        Me.DGV_colleges.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGV_colleges.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
+        Me.DGV_colleges.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -197,12 +197,12 @@ Partial Class UC_college
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_products.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.DGV_products.ColumnHeadersHeight = 50
-        Me.DGV_products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DGV_products.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CollegeIDDataGridViewTextBoxColumn, Me.CollegeNameDataGridViewTextBoxColumn})
-        Me.DGV_products.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.DGV_products.DataSource = Me.TblcollegesBindingSource
+        Me.DGV_colleges.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.DGV_colleges.ColumnHeadersHeight = 50
+        Me.DGV_colleges.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DGV_colleges.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CollegeIDDataGridViewTextBoxColumn, Me.CollegeNameDataGridViewTextBoxColumn})
+        Me.DGV_colleges.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DGV_colleges.DataSource = Me.TblcollegesBindingSource
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -210,20 +210,20 @@ Partial Class UC_college
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGV_products.DefaultCellStyle = DataGridViewCellStyle4
-        Me.DGV_products.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DGV_products.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
-        Me.DGV_products.EnableHeadersVisualStyles = False
-        Me.DGV_products.GridColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DGV_products.Location = New System.Drawing.Point(14, 14)
-        Me.DGV_products.Name = "DGV_products"
-        Me.DGV_products.ReadOnly = True
-        Me.DGV_products.RowHeadersVisible = False
-        Me.DGV_products.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        Me.DGV_products.RowTemplate.Height = 50
-        Me.DGV_products.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_products.Size = New System.Drawing.Size(433, 364)
-        Me.DGV_products.TabIndex = 13
+        Me.DGV_colleges.DefaultCellStyle = DataGridViewCellStyle4
+        Me.DGV_colleges.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DGV_colleges.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
+        Me.DGV_colleges.EnableHeadersVisualStyles = False
+        Me.DGV_colleges.GridColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DGV_colleges.Location = New System.Drawing.Point(14, 14)
+        Me.DGV_colleges.Name = "DGV_colleges"
+        Me.DGV_colleges.ReadOnly = True
+        Me.DGV_colleges.RowHeadersVisible = False
+        Me.DGV_colleges.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
+        Me.DGV_colleges.RowTemplate.Height = 50
+        Me.DGV_colleges.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGV_colleges.Size = New System.Drawing.Size(433, 364)
+        Me.DGV_colleges.TabIndex = 13
         '
         'CollegeIDDataGridViewTextBoxColumn
         '
@@ -327,7 +327,7 @@ Partial Class UC_college
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.MaterialCard4.ResumeLayout(False)
-        CType(Me.DGV_products, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGV_colleges, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblcollegesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -337,11 +337,11 @@ Partial Class UC_college
     Friend WithEvents MaterialCard1 As MaterialSkin.Controls.MaterialCard
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents LBL_notif As Label
+    Friend WithEvents LBL_operation As Label
     Friend WithEvents TXT_collegeID As MaterialSkin.Controls.MaterialTextBox2
     Friend WithEvents TXT_collegeName As MaterialSkin.Controls.MaterialTextBox2
     Friend WithEvents MaterialCard4 As MaterialSkin.Controls.MaterialCard
-    Friend WithEvents DGV_products As DataGridView
+    Friend WithEvents DGV_colleges As DataGridView
     Friend WithEvents BTN_clear As MaterialSkin.Controls.MaterialButton
     Friend WithEvents BTN_save As MaterialSkin.Controls.MaterialButton
     Friend WithEvents BTN_add As MaterialSkin.Controls.MaterialButton
