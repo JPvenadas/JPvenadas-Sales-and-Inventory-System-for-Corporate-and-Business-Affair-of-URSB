@@ -264,6 +264,9 @@
     <EmbeddedResource Include="UC_products.resx">
       <DependentUpon>UC_products.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_settings.resx">
+      <DependentUpon>UC_settings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_stocks.resx">
       <DependentUpon>UC_stocks.vb</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +320,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\601-6017177_manufacturing-infrastructure-raw-material-company-icon-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\953211-200.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
