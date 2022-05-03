@@ -69,7 +69,7 @@
             Exit Sub
         End If
         con.Close()
-        If TXT_collegeID.Text = "" And TXT_collegeName.Text = "" Then
+        If TXT_collegeID.Text = "" Or TXT_collegeName.Text = "" Then
             MsgBox("All fields are required", vbOKOnly + vbExclamation, "Saving Error")
             Exit Sub
         End If
@@ -96,7 +96,7 @@
             End If
         End If
         con.Close()
-        If TXT_collegeID.Text = "" And TXT_collegeName.Text = "" Then
+        If TXT_collegeID.Text = "" Or TXT_collegeName.Text = "" Then
             MsgBox("All fields are required", vbOKOnly + vbExclamation, "Saving Error")
             Exit Sub
         End If

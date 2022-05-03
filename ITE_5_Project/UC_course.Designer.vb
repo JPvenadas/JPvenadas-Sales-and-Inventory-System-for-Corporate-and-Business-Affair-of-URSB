@@ -23,32 +23,32 @@ Partial Class UC_course
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CBO_college = New MaterialSkin.Controls.MaterialComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LBL_operation = New System.Windows.Forms.Label()
         Me.TXT_courseID = New MaterialSkin.Controls.MaterialTextBox2()
         Me.TXT_courseName = New MaterialSkin.Controls.MaterialTextBox2()
         Me.MaterialCard4 = New MaterialSkin.Controls.MaterialCard()
         Me.DGV_courses = New System.Windows.Forms.DataGridView()
-        Me.BTN_clear = New MaterialSkin.Controls.MaterialButton()
-        Me.BTN_save = New MaterialSkin.Controls.MaterialButton()
-        Me.BTN_add = New MaterialSkin.Controls.MaterialButton()
-        Me.CBO_college = New MaterialSkin.Controls.MaterialComboBox()
-        Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
-        Me.TblcoursesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tbl_coursesTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_coursesTableAdapter()
         Me.CourseIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CourseNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CollegeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblcoursesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
+        Me.BTN_clear = New MaterialSkin.Controls.MaterialButton()
+        Me.BTN_save = New MaterialSkin.Controls.MaterialButton()
+        Me.BTN_add = New MaterialSkin.Controls.MaterialButton()
+        Me.Tbl_coursesTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_coursesTableAdapter()
         Me.MaterialCard1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.MaterialCard4.SuspendLayout()
         CType(Me.DGV_courses, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblcoursesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MaterialCard1
@@ -81,6 +81,30 @@ Partial Class UC_course
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(435, 298)
         Me.Panel1.TabIndex = 17
+        '
+        'CBO_college
+        '
+        Me.CBO_college.AutoResize = False
+        Me.CBO_college.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CBO_college.Depth = 0
+        Me.CBO_college.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable
+        Me.CBO_college.DropDownHeight = 174
+        Me.CBO_college.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBO_college.DropDownWidth = 121
+        Me.CBO_college.Enabled = False
+        Me.CBO_college.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.CBO_college.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.CBO_college.FormattingEnabled = True
+        Me.CBO_college.Hint = "College"
+        Me.CBO_college.IntegralHeight = False
+        Me.CBO_college.ItemHeight = 43
+        Me.CBO_college.Location = New System.Drawing.Point(22, 208)
+        Me.CBO_college.MaxDropDownItems = 4
+        Me.CBO_college.MouseState = MaterialSkin.MouseState.OUT
+        Me.CBO_college.Name = "CBO_college"
+        Me.CBO_college.Size = New System.Drawing.Size(386, 49)
+        Me.CBO_college.StartIndex = 0
+        Me.CBO_college.TabIndex = 18
         '
         'Label1
         '
@@ -192,28 +216,28 @@ Partial Class UC_course
         Me.DGV_courses.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGV_courses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
         Me.DGV_courses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle9.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_courses.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(10)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_courses.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGV_courses.ColumnHeadersHeight = 50
         Me.DGV_courses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DGV_courses.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CourseIDDataGridViewTextBoxColumn, Me.CourseNameDataGridViewTextBoxColumn, Me.CollegeIDDataGridViewTextBoxColumn})
         Me.DGV_courses.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DGV_courses.DataSource = Me.TblcoursesBindingSource
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGV_courses.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_courses.DefaultCellStyle = DataGridViewCellStyle2
         Me.DGV_courses.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DGV_courses.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
         Me.DGV_courses.EnableHeadersVisualStyles = False
@@ -227,6 +251,37 @@ Partial Class UC_course
         Me.DGV_courses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGV_courses.Size = New System.Drawing.Size(433, 364)
         Me.DGV_courses.TabIndex = 13
+        '
+        'CourseIDDataGridViewTextBoxColumn
+        '
+        Me.CourseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID"
+        Me.CourseIDDataGridViewTextBoxColumn.HeaderText = "CourseID"
+        Me.CourseIDDataGridViewTextBoxColumn.Name = "CourseIDDataGridViewTextBoxColumn"
+        Me.CourseIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CourseNameDataGridViewTextBoxColumn
+        '
+        Me.CourseNameDataGridViewTextBoxColumn.DataPropertyName = "CourseName"
+        Me.CourseNameDataGridViewTextBoxColumn.HeaderText = "CourseName"
+        Me.CourseNameDataGridViewTextBoxColumn.Name = "CourseNameDataGridViewTextBoxColumn"
+        Me.CourseNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CollegeIDDataGridViewTextBoxColumn
+        '
+        Me.CollegeIDDataGridViewTextBoxColumn.DataPropertyName = "CollegeID"
+        Me.CollegeIDDataGridViewTextBoxColumn.HeaderText = "CollegeID"
+        Me.CollegeIDDataGridViewTextBoxColumn.Name = "CollegeIDDataGridViewTextBoxColumn"
+        Me.CollegeIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TblcoursesBindingSource
+        '
+        Me.TblcoursesBindingSource.DataMember = "tbl_courses"
+        Me.TblcoursesBindingSource.DataSource = Me.Db_inventoryDataSet
+        '
+        'Db_inventoryDataSet
+        '
+        Me.Db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
+        Me.Db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BTN_clear
         '
@@ -289,64 +344,9 @@ Partial Class UC_course
         Me.BTN_add.UseAccentColor = False
         Me.BTN_add.UseVisualStyleBackColor = True
         '
-        'CBO_college
-        '
-        Me.CBO_college.AutoResize = False
-        Me.CBO_college.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CBO_college.Depth = 0
-        Me.CBO_college.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable
-        Me.CBO_college.DropDownHeight = 174
-        Me.CBO_college.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CBO_college.DropDownWidth = 121
-        Me.CBO_college.Enabled = False
-        Me.CBO_college.Font = New System.Drawing.Font("Roboto Medium", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
-        Me.CBO_college.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.CBO_college.FormattingEnabled = True
-        Me.CBO_college.Hint = "College"
-        Me.CBO_college.IntegralHeight = False
-        Me.CBO_college.ItemHeight = 43
-        Me.CBO_college.Location = New System.Drawing.Point(22, 208)
-        Me.CBO_college.MaxDropDownItems = 4
-        Me.CBO_college.MouseState = MaterialSkin.MouseState.OUT
-        Me.CBO_college.Name = "CBO_college"
-        Me.CBO_college.Size = New System.Drawing.Size(386, 49)
-        Me.CBO_college.StartIndex = 0
-        Me.CBO_college.TabIndex = 18
-        '
-        'Db_inventoryDataSet
-        '
-        Me.Db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
-        Me.Db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TblcoursesBindingSource
-        '
-        Me.TblcoursesBindingSource.DataMember = "tbl_courses"
-        Me.TblcoursesBindingSource.DataSource = Me.Db_inventoryDataSet
-        '
         'Tbl_coursesTableAdapter
         '
         Me.Tbl_coursesTableAdapter.ClearBeforeFill = True
-        '
-        'CourseIDDataGridViewTextBoxColumn
-        '
-        Me.CourseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID"
-        Me.CourseIDDataGridViewTextBoxColumn.HeaderText = "CourseID"
-        Me.CourseIDDataGridViewTextBoxColumn.Name = "CourseIDDataGridViewTextBoxColumn"
-        Me.CourseIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CourseNameDataGridViewTextBoxColumn
-        '
-        Me.CourseNameDataGridViewTextBoxColumn.DataPropertyName = "CourseName"
-        Me.CourseNameDataGridViewTextBoxColumn.HeaderText = "CourseName"
-        Me.CourseNameDataGridViewTextBoxColumn.Name = "CourseNameDataGridViewTextBoxColumn"
-        Me.CourseNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CollegeIDDataGridViewTextBoxColumn
-        '
-        Me.CollegeIDDataGridViewTextBoxColumn.DataPropertyName = "CollegeID"
-        Me.CollegeIDDataGridViewTextBoxColumn.HeaderText = "CollegeID"
-        Me.CollegeIDDataGridViewTextBoxColumn.Name = "CollegeIDDataGridViewTextBoxColumn"
-        Me.CollegeIDDataGridViewTextBoxColumn.ReadOnly = True
         '
         'UC_course
         '
@@ -362,8 +362,8 @@ Partial Class UC_course
         Me.Panel1.PerformLayout()
         Me.MaterialCard4.ResumeLayout(False)
         CType(Me.DGV_courses, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblcoursesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
