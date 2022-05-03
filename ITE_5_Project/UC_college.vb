@@ -7,11 +7,20 @@
         Me.Tbl_collegesTableAdapter.Fill(Me.Db_inventoryDataSet.tbl_colleges)
     End Sub
     Private Sub BTN_clear_Click(sender As Object, e As EventArgs) Handles BTN_clear.Click
-        Clearinputs()
+        If BTN_clear.Text = "Clear" Then
+            Clearinputs()
+        Else
+            DeleteCollege()
+            Clearinputs()
+            Refreshdata()
+            LBL_operation.Text = "Add a College"
+            BTN_clear.Text = "Clear"
+        End If
     End Sub
     Private Sub BTN_add_Click(sender As Object, e As EventArgs) Handles BTN_add.Click
         Enable()
         LBL_operation.Text = "Add a College"
+        BTN_clear.Text = "Clear"
     End Sub
 
     Private Sub BTN_save_Click(sender As Object, e As EventArgs) Handles BTN_save.Click
@@ -29,6 +38,7 @@
         previousId = row.Cells(0).Value
         TXT_collegeName.Text = row.Cells(1).Value
         LBL_operation.Text = "Edit a College"
+        BTN_clear.Text = "Delete"
     End Sub
 
     Sub Clearinputs()
@@ -118,5 +128,15 @@
         con.Close()
     End Sub
 
+    Sub DeleteCollege()
+        openCon()
+        cmd.CommandText = "delete from tbl_colleges where collegeID=@ID"
+        With cmd.Parameters
+            .Clear()
+            .AddWithValue("ID", previousId)
+        End With
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
 
 End Class
