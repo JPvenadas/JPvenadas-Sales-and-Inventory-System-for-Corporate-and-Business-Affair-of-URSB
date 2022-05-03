@@ -6,10 +6,28 @@
     Private Sub BTN_save_Click(sender As Object, e As EventArgs) Handles BTN_save.Click
         ErrorTrappingAdd()
     End Sub
+    Private Sub BTN_clear_Click(sender As Object, e As EventArgs) Handles BTN_clear.Click
+        If BTN_clear.Text = "Delete" Then
+            Dim answer = MsgBox(("Are you sure you want to delete the category, " + prevcat + " ?"), vbYesNo + vbQuestion, "Delete Product Category")
+            If answer = vbYes Then
+                Deletecategory()
+                TXT_catID.Text = ""
+            End If
+        Else
+            TXT_catID.Text = ""
+        End If
+    End Sub
     Private Sub BTN_add_Click(sender As Object, e As EventArgs) Handles BTN_add.Click
         Enable()
         LBL_operation.Text = "Add a Product Category"
         BTN_clear.Text = "Clear"
+    End Sub
+    Private Sub DGV_pcategory_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_pcategory.CellClick
+        Dim row = DGV_pcategory.Rows(e.RowIndex)
+        TXT_catID.Text = row.Cells(0).Value
+        prevcat = row.Cells(0).Value
+        LBL_operation.Text = "Edit a Product Category"
+        BTN_clear.Text = "Delete"
     End Sub
     Sub Enable()
         TXT_catID.Enabled = True
@@ -46,15 +64,17 @@
         con.Close()
         RefreshData()
     End Sub
+    Sub Deletecategory()
+        openCon()
+        cmd.CommandText = "Delete from tbl_categories where ProductCategory = @cat"
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("cat", prevcat)
+        cmd.ExecuteNonQuery()
+        con.Close()
+        RefreshData()
+    End Sub
     Sub RefreshData()
         Me.Tbl_categoriesTableAdapter.Fill(Me.Db_inventoryDataSet.tbl_categories)
     End Sub
 
-    Private Sub DGV_pcategory_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_pcategory.CellClick
-        Dim row = DGV_pcategory.Rows(e.RowIndex)
-        TXT_catID.Text = row.Cells(0).Value
-        prevcat = row.Cells(0).Value
-        LBL_operation.Text = "Edit a Product Category"
-        BTN_clear.Text = "Delete"
-    End Sub
 End Class
