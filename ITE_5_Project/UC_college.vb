@@ -10,11 +10,14 @@
         If BTN_clear.Text = "Clear" Then
             Clearinputs()
         Else
-            DeleteCollege()
-            Clearinputs()
-            Refreshdata()
-            LBL_operation.Text = "Add a College"
-            BTN_clear.Text = "Clear"
+            Dim answer = MsgBox(("Are you sure you want to Delete the College, " + previousId + " ?"), vbYesNo + vbQuestion, "Delete College")
+            If answer = vbYes Then
+                DeleteCollege()
+                Clearinputs()
+                Refreshdata()
+                LBL_operation.Text = "Add a College"
+                BTN_clear.Text = "Clear"
+            End If
         End If
     End Sub
     Private Sub BTN_add_Click(sender As Object, e As EventArgs) Handles BTN_add.Click
@@ -31,7 +34,7 @@
         End If
     End Sub
 
-    Private Sub DGV_products_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_colleges.CellClick
+    Private Sub DGV_colleges_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_colleges.CellClick
         Enable()
         Dim row = DGV_colleges.Rows(e.RowIndex)
         TXT_collegeID.Text = row.Cells(0).Value
