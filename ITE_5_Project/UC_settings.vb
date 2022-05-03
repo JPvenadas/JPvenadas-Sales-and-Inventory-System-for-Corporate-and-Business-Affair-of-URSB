@@ -4,5 +4,7 @@
         attachControls(colleges, TAB_colleges)
         Dim courses As New UC_course
         attachControls(courses, TAB_courses)
+        Dim pcategories As New UC_pcategory
+        attachControls(pcategories, TAB_categories)
     End Sub
 End Class
