@@ -205,6 +205,7 @@ Partial Class FRM_mainmenu
         Me.DrawerShowIconsWhenHidden = True
         Me.DrawerTabControl = Me.MaterialTabControl1
         Me.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_48
+        Me.MaximumSize = New System.Drawing.Size(1059, 661)
         Me.Name = "FRM_mainmenu"
         Me.Padding = New System.Windows.Forms.Padding(0, 72, 3, 3)
         Me.Sizable = False

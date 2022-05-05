@@ -34,14 +34,12 @@
         con.Close()
         addtocart()
         Refreshdata()
-        enableStudent(False)
     End Sub
     Private Sub BTN_cancel_Click(sender As Object, e As EventArgs) Handles BTN_cancel.Click
         Dim answer = MsgBox("Are you sure you want to cancel this transaction?", vbYesNo + vbQuestion, "Void Transaction")
         If answer = vbYes Then
             VoidCart()
             Refreshdata()
-            enableStudent(True)
             Clear()
         End If
     End Sub
@@ -234,12 +232,31 @@
         cmd.ExecuteNonQuery()
         con.Close()
     End Sub
-    Sub enableStudent(status)
-        TXT_studentName.Enabled = status
-        TXT_studentID.Enabled = status
+    Sub EnableStudent()
+        openCon()
+        cmd.CommandText = "select * from tbl_cart"
+        cmd.ExecuteNonQuery()
+        dr = cmd.ExecuteReader
+        If dr.HasRows Then
+            dr.Read()
+            TXT_studentID.Text = dr.GetString("StudentID")
+            TXT_studentName.Text = dr.GetString("Fullname")
+            TXT_studentID.Enabled = False
+            TXT_studentName.Enabled = False
+        Else
+            TXT_studentID.Enabled = True
+            TXT_studentName.Enabled = True
+        End If
+        con.Close()
     End Sub
     Sub Refreshdata()
         Me.Tbl_cartTableAdapter.Fill(Me.Db_inventoryDataSet.tbl_cart)
+        EnableStudent()
     End Sub
-
+    Private Sub DGV_cart_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_cart.CellClick
+        Dim row = DGV_cart.Rows(e.RowIndex)
+        clickedkey = row.Cells(0).Value
+        clickedkey2 = row.Cells(1).Value
+        SUBFRM_editCart.ShowDialog()
+    End Sub
 End Class
