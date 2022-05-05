@@ -300,6 +300,9 @@
     <EmbeddedResource Include="UC_students.resx">
       <DependentUpon>UC_students.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_transactions.resx">
+      <DependentUpon>UC_transactions.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_users.resx">
       <DependentUpon>UC_users.vb</DependentUpon>
     </EmbeddedResource>

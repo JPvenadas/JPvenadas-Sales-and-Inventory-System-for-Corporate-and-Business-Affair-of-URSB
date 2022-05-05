@@ -44,3 +44,4 @@ C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.UC_
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.UC_college.resources
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.UC_course.resources
 C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.UC_pcategory.resources
+C:\Users\Venadas\Desktop\ITE_5_Project\ITE_5_Project\obj\Debug\ITE_5_Project.UC_transactions.resources

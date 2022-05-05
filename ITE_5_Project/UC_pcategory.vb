@@ -27,6 +27,7 @@
         BTN_clear.Text = "Clear"
     End Sub
     Private Sub DGV_pcategory_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_pcategory.CellClick
+        Enable()
         Dim row = DGV_pcategory.Rows(e.RowIndex)
         TXT_catID.Text = row.Cells(0).Value
         prevcat = row.Cells(0).Value

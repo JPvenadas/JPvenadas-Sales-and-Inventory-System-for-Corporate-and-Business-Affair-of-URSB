@@ -30,7 +30,7 @@ Partial Class UC_home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.Name = "UC_home"
-        Me.Size = New System.Drawing.Size(806, 480)
+        Me.Size = New System.Drawing.Size(729, 480)
         Me.ResumeLayout(False)
 
     End Sub
