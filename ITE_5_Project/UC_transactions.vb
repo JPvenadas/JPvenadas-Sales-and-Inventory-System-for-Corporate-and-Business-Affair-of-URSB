@@ -40,12 +40,12 @@
         If count > 1 Then
             textbox.text = ""
             If textbox.Text = TXT_productName.Text Then
-                LBL_price.Text = ""
+                LBL_price.Text = "0.00"
             End If
         ElseIf Not dr.HasRows Then
             textbox.text = ""
             If textbox.Text = TXT_productName.Text Then
-                LBL_price.Text = ""
+                LBL_price.Text = "0.00"
             End If
         End If
         con.Close()
@@ -86,10 +86,10 @@
         End While
         If count > 1 Then
             TXT_productID.Text = ""
-            LBL_price.Text = ""
+            LBL_price.Text = "0.00"
         ElseIf Not dr.HasRows Then
             TXT_productID.Text = ""
-            LBL_price.Text = ""
+            LBL_price.Text = "0.00"
         End If
         con.Close()
     End Sub
@@ -113,5 +113,13 @@
             TXT_studentID.Text = ""
         End If
         con.Close()
+    End Sub
+
+    Private Sub TXT_studentID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_studentID.KeyPress
+        numberonly(e.KeyChar, e)
+    End Sub
+
+    Private Sub TXT_productID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_productID.KeyPress
+        numberonly(e.KeyChar, e)
     End Sub
 End Class
