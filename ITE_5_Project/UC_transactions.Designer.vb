@@ -23,8 +23,8 @@ Partial Class UC_transactions
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.MaterialCard6 = New MaterialSkin.Controls.MaterialCard()
         Me.LBL_totalPrice = New MaterialSkin.Controls.MaterialLabel()
@@ -42,7 +42,7 @@ Partial Class UC_transactions
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.SLD_quantity = New MaterialSkin.Controls.MaterialSlider()
         Me.TXT_quantity = New MaterialSkin.Controls.MaterialTextBox2()
-        Me.MaterialCard3 = New MaterialSkin.Controls.MaterialCard()
+        Me.PNL_student = New MaterialSkin.Controls.MaterialCard()
         Me.MaterialLabel8 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialCard10 = New MaterialSkin.Controls.MaterialCard()
@@ -56,11 +56,6 @@ Partial Class UC_transactions
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MaterialCard2 = New MaterialSkin.Controls.MaterialCard()
         Me.DGV_cart = New System.Windows.Forms.DataGridView()
-        Me.TransactionIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TblcartBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.MaterialCard4 = New MaterialSkin.Controls.MaterialCard()
@@ -68,12 +63,20 @@ Partial Class UC_transactions
         Me.BTN_buy = New MaterialSkin.Controls.MaterialButton()
         Me.Tbl_cartTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_cartTableAdapter()
         Me.MaterialLabel6 = New MaterialSkin.Controls.MaterialLabel()
+        Me.TransactionIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TotalAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MaterialLabel11 = New MaterialSkin.Controls.MaterialLabel()
+        Me.LBL_stocks = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialCard1.SuspendLayout()
         Me.MaterialCard6.SuspendLayout()
         Me.MaterialCard5.SuspendLayout()
         Me.MaterialCard8.SuspendLayout()
         Me.MaterialCard7.SuspendLayout()
-        Me.MaterialCard3.SuspendLayout()
+        Me.PNL_student.SuspendLayout()
         Me.MaterialCard10.SuspendLayout()
         Me.MaterialCard9.SuspendLayout()
         Me.MaterialCard2.SuspendLayout()
@@ -88,7 +91,7 @@ Partial Class UC_transactions
         Me.MaterialCard1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.MaterialCard1.Controls.Add(Me.MaterialCard6)
         Me.MaterialCard1.Controls.Add(Me.MaterialCard5)
-        Me.MaterialCard1.Controls.Add(Me.MaterialCard3)
+        Me.MaterialCard1.Controls.Add(Me.PNL_student)
         Me.MaterialCard1.Controls.Add(Me.MaterialLabel1)
         Me.MaterialCard1.Controls.Add(Me.MaterialLabel2)
         Me.MaterialCard1.Controls.Add(Me.BTN_add)
@@ -152,7 +155,9 @@ Partial Class UC_transactions
         Me.MaterialCard5.Controls.Add(Me.MaterialCard8)
         Me.MaterialCard5.Controls.Add(Me.MaterialCard7)
         Me.MaterialCard5.Controls.Add(Me.Panel3)
+        Me.MaterialCard5.Controls.Add(Me.LBL_stocks)
         Me.MaterialCard5.Controls.Add(Me.LBL_price)
+        Me.MaterialCard5.Controls.Add(Me.MaterialLabel11)
         Me.MaterialCard5.Controls.Add(Me.MaterialLabel4)
         Me.MaterialCard5.Controls.Add(Me.MaterialLabel3)
         Me.MaterialCard5.Controls.Add(Me.SLD_quantity)
@@ -336,23 +341,23 @@ Partial Class UC_transactions
         Me.TXT_quantity.TrailingIcon = Nothing
         Me.TXT_quantity.UseSystemPasswordChar = False
         '
-        'MaterialCard3
+        'PNL_student
         '
-        Me.MaterialCard3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialCard3.Controls.Add(Me.MaterialLabel8)
-        Me.MaterialCard3.Controls.Add(Me.MaterialLabel7)
-        Me.MaterialCard3.Controls.Add(Me.MaterialCard10)
-        Me.MaterialCard3.Controls.Add(Me.MaterialCard9)
-        Me.MaterialCard3.Controls.Add(Me.Panel2)
-        Me.MaterialCard3.Depth = 0
-        Me.MaterialCard3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialCard3.Location = New System.Drawing.Point(16, 32)
-        Me.MaterialCard3.Margin = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard3.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialCard3.Name = "MaterialCard3"
-        Me.MaterialCard3.Padding = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard3.Size = New System.Drawing.Size(459, 152)
-        Me.MaterialCard3.TabIndex = 32
+        Me.PNL_student.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.PNL_student.Controls.Add(Me.MaterialLabel8)
+        Me.PNL_student.Controls.Add(Me.MaterialLabel7)
+        Me.PNL_student.Controls.Add(Me.MaterialCard10)
+        Me.PNL_student.Controls.Add(Me.MaterialCard9)
+        Me.PNL_student.Controls.Add(Me.Panel2)
+        Me.PNL_student.Depth = 0
+        Me.PNL_student.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.PNL_student.Location = New System.Drawing.Point(16, 32)
+        Me.PNL_student.Margin = New System.Windows.Forms.Padding(14)
+        Me.PNL_student.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PNL_student.Name = "PNL_student"
+        Me.PNL_student.Padding = New System.Windows.Forms.Padding(14)
+        Me.PNL_student.Size = New System.Drawing.Size(459, 152)
+        Me.PNL_student.TabIndex = 32
         '
         'MaterialLabel8
         '
@@ -506,7 +511,7 @@ Partial Class UC_transactions
         Me.MaterialCard2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialCard2.Name = "MaterialCard2"
         Me.MaterialCard2.Padding = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard2.Size = New System.Drawing.Size(438, 414)
+        Me.MaterialCard2.Size = New System.Drawing.Size(438, 419)
         Me.MaterialCard2.TabIndex = 15
         '
         'DGV_cart
@@ -521,79 +526,40 @@ Partial Class UC_transactions
         Me.DGV_cart.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGV_cart.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
         Me.DGV_cart.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_cart.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(10)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_cart.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGV_cart.ColumnHeadersHeight = 50
         Me.DGV_cart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DGV_cart.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TransactionIDDataGridViewTextBoxColumn, Me.ProductIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.Price})
+        Me.DGV_cart.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TransactionIDDataGridViewTextBoxColumn, Me.ProductIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.Price, Me.TotalAmount})
         Me.DGV_cart.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DGV_cart.DataSource = Me.TblcartBindingSource
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGV_cart.DefaultCellStyle = DataGridViewCellStyle6
-        Me.DGV_cart.Dock = System.Windows.Forms.DockStyle.Fill
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_cart.DefaultCellStyle = DataGridViewCellStyle2
         Me.DGV_cart.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
         Me.DGV_cart.EnableHeadersVisualStyles = False
         Me.DGV_cart.GridColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DGV_cart.Location = New System.Drawing.Point(14, 14)
+        Me.DGV_cart.Location = New System.Drawing.Point(14, 40)
         Me.DGV_cart.Name = "DGV_cart"
         Me.DGV_cart.ReadOnly = True
         Me.DGV_cart.RowHeadersVisible = False
         Me.DGV_cart.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DGV_cart.RowTemplate.Height = 50
         Me.DGV_cart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_cart.Size = New System.Drawing.Size(410, 386)
+        Me.DGV_cart.Size = New System.Drawing.Size(410, 360)
         Me.DGV_cart.TabIndex = 13
-        '
-        'TransactionIDDataGridViewTextBoxColumn
-        '
-        Me.TransactionIDDataGridViewTextBoxColumn.DataPropertyName = "TransactionID"
-        Me.TransactionIDDataGridViewTextBoxColumn.HeaderText = "TransactionID"
-        Me.TransactionIDDataGridViewTextBoxColumn.Name = "TransactionIDDataGridViewTextBoxColumn"
-        Me.TransactionIDDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TransactionIDDataGridViewTextBoxColumn.Visible = False
-        '
-        'ProductIDDataGridViewTextBoxColumn
-        '
-        Me.ProductIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID"
-        Me.ProductIDDataGridViewTextBoxColumn.HeaderText = "ProductID"
-        Me.ProductIDDataGridViewTextBoxColumn.Name = "ProductIDDataGridViewTextBoxColumn"
-        Me.ProductIDDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ProductIDDataGridViewTextBoxColumn.Visible = False
-        '
-        'ProductNameDataGridViewTextBoxColumn
-        '
-        Me.ProductNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName"
-        Me.ProductNameDataGridViewTextBoxColumn.HeaderText = "ProductName"
-        Me.ProductNameDataGridViewTextBoxColumn.Name = "ProductNameDataGridViewTextBoxColumn"
-        Me.ProductNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'QuantityDataGridViewTextBoxColumn
-        '
-        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
-        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "Quantity"
-        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
-        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'Price
-        '
-        Me.Price.DataPropertyName = "Price"
-        Me.Price.HeaderText = "Price"
-        Me.Price.Name = "Price"
-        Me.Price.ReadOnly = True
-        Me.Price.Visible = False
         '
         'TblcartBindingSource
         '
@@ -612,7 +578,7 @@ Partial Class UC_transactions
         Me.MaterialCard4.Controls.Add(Me.BTN_buy)
         Me.MaterialCard4.Depth = 0
         Me.MaterialCard4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialCard4.Location = New System.Drawing.Point(517, 449)
+        Me.MaterialCard4.Location = New System.Drawing.Point(517, 457)
         Me.MaterialCard4.Margin = New System.Windows.Forms.Padding(14)
         Me.MaterialCard4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialCard4.Name = "MaterialCard4"
@@ -676,6 +642,77 @@ Partial Class UC_transactions
         Me.MaterialLabel6.TabIndex = 31
         Me.MaterialLabel6.Text = "Process and Record the daily Transactions of Students"
         '
+        'TransactionIDDataGridViewTextBoxColumn
+        '
+        Me.TransactionIDDataGridViewTextBoxColumn.DataPropertyName = "TransactionID"
+        Me.TransactionIDDataGridViewTextBoxColumn.HeaderText = "TransactionID"
+        Me.TransactionIDDataGridViewTextBoxColumn.Name = "TransactionIDDataGridViewTextBoxColumn"
+        Me.TransactionIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TransactionIDDataGridViewTextBoxColumn.Visible = False
+        '
+        'ProductIDDataGridViewTextBoxColumn
+        '
+        Me.ProductIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID"
+        Me.ProductIDDataGridViewTextBoxColumn.HeaderText = "ProductID"
+        Me.ProductIDDataGridViewTextBoxColumn.Name = "ProductIDDataGridViewTextBoxColumn"
+        Me.ProductIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ProductIDDataGridViewTextBoxColumn.Visible = False
+        '
+        'ProductNameDataGridViewTextBoxColumn
+        '
+        Me.ProductNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName"
+        Me.ProductNameDataGridViewTextBoxColumn.HeaderText = "ProductName"
+        Me.ProductNameDataGridViewTextBoxColumn.Name = "ProductNameDataGridViewTextBoxColumn"
+        Me.ProductNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'QuantityDataGridViewTextBoxColumn
+        '
+        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
+        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'Price
+        '
+        Me.Price.DataPropertyName = "Price"
+        Me.Price.HeaderText = "Price"
+        Me.Price.Name = "Price"
+        Me.Price.ReadOnly = True
+        Me.Price.Visible = False
+        '
+        'TotalAmount
+        '
+        Me.TotalAmount.DataPropertyName = "TotalAmount"
+        Me.TotalAmount.HeaderText = "Total Amount"
+        Me.TotalAmount.Name = "TotalAmount"
+        Me.TotalAmount.ReadOnly = True
+        '
+        'MaterialLabel11
+        '
+        Me.MaterialLabel11.AutoSize = True
+        Me.MaterialLabel11.Depth = 0
+        Me.MaterialLabel11.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.MaterialLabel11.FontType = MaterialSkin.MaterialSkinManager.fontType.Body2
+        Me.MaterialLabel11.Location = New System.Drawing.Point(275, 154)
+        Me.MaterialLabel11.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel11.Name = "MaterialLabel11"
+        Me.MaterialLabel11.Size = New System.Drawing.Size(46, 17)
+        Me.MaterialLabel11.TabIndex = 32
+        Me.MaterialLabel11.Text = "Stocks:"
+        '
+        'LBL_stocks
+        '
+        Me.LBL_stocks.AutoSize = True
+        Me.LBL_stocks.Depth = 0
+        Me.LBL_stocks.Font = New System.Drawing.Font("Roboto Medium", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.LBL_stocks.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2
+        Me.LBL_stocks.Location = New System.Drawing.Point(329, 154)
+        Me.LBL_stocks.MouseState = MaterialSkin.MouseState.HOVER
+        Me.LBL_stocks.Name = "LBL_stocks"
+        Me.LBL_stocks.Size = New System.Drawing.Size(29, 17)
+        Me.LBL_stocks.TabIndex = 32
+        Me.LBL_stocks.Text = "0.00"
+        '
         'UC_transactions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -697,8 +734,8 @@ Partial Class UC_transactions
         Me.MaterialCard8.PerformLayout()
         Me.MaterialCard7.ResumeLayout(False)
         Me.MaterialCard7.PerformLayout()
-        Me.MaterialCard3.ResumeLayout(False)
-        Me.MaterialCard3.PerformLayout()
+        Me.PNL_student.ResumeLayout(False)
+        Me.PNL_student.PerformLayout()
         Me.MaterialCard10.ResumeLayout(False)
         Me.MaterialCard10.PerformLayout()
         Me.MaterialCard9.ResumeLayout(False)
@@ -720,17 +757,12 @@ Partial Class UC_transactions
     Friend WithEvents BTN_add As MaterialSkin.Controls.MaterialButton
     Friend WithEvents BTN_cancel As MaterialSkin.Controls.MaterialButton
     Friend WithEvents BTN_buy As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents TransactionIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ProductIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ProductNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents QuantityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Price As DataGridViewTextBoxColumn
     Friend WithEvents TblcartBindingSource As BindingSource
     Friend WithEvents Db_inventoryDataSet As db_inventoryDataSet
     Friend WithEvents Tbl_cartTableAdapter As db_inventoryDataSetTableAdapters.tbl_cartTableAdapter
     Friend WithEvents Panel2 As Panel
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents MaterialCard3 As MaterialSkin.Controls.MaterialCard
+    Friend WithEvents PNL_student As MaterialSkin.Controls.MaterialCard
     Friend WithEvents MaterialCard5 As MaterialSkin.Controls.MaterialCard
     Friend WithEvents TXT_quantity As MaterialSkin.Controls.MaterialTextBox2
     Friend WithEvents Panel1 As Panel
@@ -756,4 +788,12 @@ Partial Class UC_transactions
     Friend WithEvents Panel3 As Panel
     Friend WithEvents MaterialLabel8 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel7 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents TransactionIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ProductIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ProductNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents QuantityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Price As DataGridViewTextBoxColumn
+    Friend WithEvents TotalAmount As DataGridViewTextBoxColumn
+    Friend WithEvents LBL_stocks As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents MaterialLabel11 As MaterialSkin.Controls.MaterialLabel
 End Class

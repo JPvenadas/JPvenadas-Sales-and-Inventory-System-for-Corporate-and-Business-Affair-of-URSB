@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        ProgressBar.Value = ProgressBar.Value + 1
+        ProgressBar.Value = ProgressBar.Value + 10
         LBL_percentage.Text = CStr(ProgressBar.Value) + "%"
         If ProgressBar.Value = 100 Then
             Timer1.Enabled = False
