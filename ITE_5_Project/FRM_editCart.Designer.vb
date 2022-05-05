@@ -106,7 +106,7 @@ Partial Class FRM_editCart
         '
         Me.MaterialSlider1.Depth = 0
         Me.MaterialSlider1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialSlider1.Location = New System.Drawing.Point(47, 285)
+        Me.MaterialSlider1.Location = New System.Drawing.Point(47, 288)
         Me.MaterialSlider1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialSlider1.Name = "MaterialSlider1"
         Me.MaterialSlider1.RangeMax = 50

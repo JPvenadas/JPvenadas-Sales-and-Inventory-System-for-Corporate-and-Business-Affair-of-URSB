@@ -20,6 +20,18 @@
             MsgBox("Not enough Stocks", vbOKOnly + vbExclamation, "Transaction Problem")
             Exit Sub
         End If
+        openCon()
+        cmd.CommandText = "select * from tbl_cart where ProductID=@PID"
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("PID", TXT_productID.Text)
+        cmd.ExecuteNonQuery()
+        dr = cmd.ExecuteReader
+        If dr.HasRows Then
+            MsgBox("The Product is already on the cart", vbOKOnly + vbExclamation, "Transaction Problem")
+            con.Close()
+            Exit Sub
+        End If
+        con.Close()
         addtocart()
         Refreshdata()
         enableStudent(False)
