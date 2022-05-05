@@ -94,6 +94,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_inventoryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FRM_editCart.Designer.vb">
+      <DependentUpon>FRM_editCart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_editCart.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FRM_login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FRM_editCart.resx">
+      <DependentUpon>FRM_editCart.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRM_Loading.resx">
       <DependentUpon>FRM_Loading.vb</DependentUpon>
     </EmbeddedResource>

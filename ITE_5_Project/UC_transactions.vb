@@ -4,16 +4,16 @@
         Refreshdata()
     End Sub
     Private Sub BTN_add_Click(sender As Object, e As EventArgs) Handles BTN_add.Click
-        If TXT_quantity.Text = "0" Or TXT_quantity.Text = "" Then
-            MsgBox("Cannot add a product without Quantity", vbOKOnly + vbExclamation, "Transaction Problem")
-            Exit Sub
-        End If
         If TXT_studentID.Text = "" Or TXT_studentName.Text = "" Then
             MsgBox("Unidentified Student, Please make sure you input a valid customer", vbOKOnly + vbExclamation, "Transaction Problem")
             Exit Sub
         End If
         If TXT_productID.Text = "" Or TXT_productName.Text = "" Then
             MsgBox("Unidentified Product, Please make sure you input a valid Product", vbOKOnly + vbExclamation, "Transaction Problem")
+            Exit Sub
+        End If
+        If TXT_quantity.Text = "0" Or TXT_quantity.Text = "" Then
+            MsgBox("Cannot add a product without Quantity", vbOKOnly + vbExclamation, "Transaction Problem")
             Exit Sub
         End If
         If Val(TXT_quantity.Text) > Val(LBL_stocks.Text) Then
@@ -23,6 +23,15 @@
         addtocart()
         Refreshdata()
         enableStudent(False)
+    End Sub
+    Private Sub BTN_cancel_Click(sender As Object, e As EventArgs) Handles BTN_cancel.Click
+        Dim answer = MsgBox("Are you sure you want to cancel this transaction?", vbYesNo + vbQuestion, "Void Transaction")
+        If answer = vbYes Then
+            VoidCart()
+            Refreshdata()
+            enableStudent(True)
+            Clear()
+        End If
     End Sub
     Private Sub UC_transactions_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
         FillAutoComplete(TXT_productName, "select ProductName from tbl_products")
@@ -162,7 +171,16 @@
         textbox.AutoCompleteCustomSource = collection
         con.Close()
     End Sub
-
+    Sub Clear()
+        TXT_productID.Text = ""
+        TXT_productName.Text = ""
+        LBL_price.Text = "0.00"
+        LBL_stocks.Text = "0.00"
+        TXT_quantity.Text = "0"
+        SLD_quantity.Value = 0
+        TXT_studentID.Text = ""
+        TXT_studentName.Text = ""
+    End Sub
     Function GeneratenewId()
         openCon()
         cmd.CommandText = "select * from tbl_transactions"
@@ -195,6 +213,12 @@
             .AddWithValue("P", LBL_price.Text)
             .AddWithValue("TA", totalprice)
         End With
+        cmd.ExecuteNonQuery()
+        con.Close()
+    End Sub
+    Sub VoidCart()
+        openCon()
+        cmd.CommandText = "delete from tbl_cart"
         cmd.ExecuteNonQuery()
         con.Close()
     End Sub
