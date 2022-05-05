@@ -23,24 +23,28 @@ Partial Class UC_transactions
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.MaterialCard6 = New MaterialSkin.Controls.MaterialCard()
         Me.LBL_totalPrice = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialCard5 = New MaterialSkin.Controls.MaterialCard()
+        Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
+        Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialCard8 = New MaterialSkin.Controls.MaterialCard()
         Me.TXT_productID = New System.Windows.Forms.TextBox()
         Me.MaterialCard7 = New MaterialSkin.Controls.MaterialCard()
         Me.TXT_productName = New System.Windows.Forms.TextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.LBL_price = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.SLD_quantity = New MaterialSkin.Controls.MaterialSlider()
         Me.TXT_quantity = New MaterialSkin.Controls.MaterialTextBox2()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MaterialCard3 = New MaterialSkin.Controls.MaterialCard()
+        Me.MaterialLabel8 = New MaterialSkin.Controls.MaterialLabel()
+        Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialCard10 = New MaterialSkin.Controls.MaterialCard()
         Me.TXT_studentName = New System.Windows.Forms.TextBox()
         Me.MaterialCard9 = New MaterialSkin.Controls.MaterialCard()
@@ -49,6 +53,7 @@ Partial Class UC_transactions
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.BTN_add = New MaterialSkin.Controls.MaterialButton()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MaterialCard2 = New MaterialSkin.Controls.MaterialCard()
         Me.DGV_cart = New System.Windows.Forms.DataGridView()
         Me.TransactionIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -63,11 +68,6 @@ Partial Class UC_transactions
         Me.BTN_buy = New MaterialSkin.Controls.MaterialButton()
         Me.Tbl_cartTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_cartTableAdapter()
         Me.MaterialLabel6 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialLabel8 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.MaterialCard1.SuspendLayout()
         Me.MaterialCard6.SuspendLayout()
         Me.MaterialCard5.SuspendLayout()
@@ -167,6 +167,32 @@ Partial Class UC_transactions
         Me.MaterialCard5.Size = New System.Drawing.Size(459, 234)
         Me.MaterialCard5.TabIndex = 33
         '
+        'MaterialLabel10
+        '
+        Me.MaterialLabel10.AutoSize = True
+        Me.MaterialLabel10.Depth = 0
+        Me.MaterialLabel10.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.MaterialLabel10.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption
+        Me.MaterialLabel10.Location = New System.Drawing.Point(123, 82)
+        Me.MaterialLabel10.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel10.Name = "MaterialLabel10"
+        Me.MaterialLabel10.Size = New System.Drawing.Size(80, 14)
+        Me.MaterialLabel10.TabIndex = 35
+        Me.MaterialLabel10.Text = "Product Name"
+        '
+        'MaterialLabel9
+        '
+        Me.MaterialLabel9.AutoSize = True
+        Me.MaterialLabel9.Depth = 0
+        Me.MaterialLabel9.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.MaterialLabel9.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption
+        Me.MaterialLabel9.Location = New System.Drawing.Point(120, 12)
+        Me.MaterialLabel9.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel9.Name = "MaterialLabel9"
+        Me.MaterialLabel9.Size = New System.Drawing.Size(58, 14)
+        Me.MaterialLabel9.TabIndex = 35
+        Me.MaterialLabel9.Text = "Product ID"
+        '
         'MaterialCard8
         '
         Me.MaterialCard8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -218,6 +244,15 @@ Partial Class UC_transactions
         Me.TXT_productName.Name = "TXT_productName"
         Me.TXT_productName.Size = New System.Drawing.Size(284, 17)
         Me.TXT_productName.TabIndex = 32
+        '
+        'Panel3
+        '
+        Me.Panel3.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Product
+        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel3.Location = New System.Drawing.Point(1, 39)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(112, 83)
+        Me.Panel3.TabIndex = 21
         '
         'LBL_price
         '
@@ -301,15 +336,6 @@ Partial Class UC_transactions
         Me.TXT_quantity.TrailingIcon = Nothing
         Me.TXT_quantity.UseSystemPasswordChar = False
         '
-        'Panel1
-        '
-        Me.Panel1.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Product
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Location = New System.Drawing.Point(16, 246)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(108, 83)
-        Me.Panel1.TabIndex = 21
-        '
         'MaterialCard3
         '
         Me.MaterialCard3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -327,6 +353,32 @@ Partial Class UC_transactions
         Me.MaterialCard3.Padding = New System.Windows.Forms.Padding(14)
         Me.MaterialCard3.Size = New System.Drawing.Size(459, 152)
         Me.MaterialCard3.TabIndex = 32
+        '
+        'MaterialLabel8
+        '
+        Me.MaterialLabel8.AutoSize = True
+        Me.MaterialLabel8.Depth = 0
+        Me.MaterialLabel8.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.MaterialLabel8.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption
+        Me.MaterialLabel8.Location = New System.Drawing.Point(115, 75)
+        Me.MaterialLabel8.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel8.Name = "MaterialLabel8"
+        Me.MaterialLabel8.Size = New System.Drawing.Size(79, 14)
+        Me.MaterialLabel8.TabIndex = 35
+        Me.MaterialLabel8.Text = "Student Name"
+        '
+        'MaterialLabel7
+        '
+        Me.MaterialLabel7.AutoSize = True
+        Me.MaterialLabel7.Depth = 0
+        Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.MaterialLabel7.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption
+        Me.MaterialLabel7.Location = New System.Drawing.Point(115, 9)
+        Me.MaterialLabel7.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel7.Name = "MaterialLabel7"
+        Me.MaterialLabel7.Size = New System.Drawing.Size(57, 14)
+        Me.MaterialLabel7.TabIndex = 35
+        Me.MaterialLabel7.Text = "Student ID"
         '
         'MaterialCard10
         '
@@ -434,6 +486,15 @@ Partial Class UC_transactions
         Me.BTN_add.UseAccentColor = False
         Me.BTN_add.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Product
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Location = New System.Drawing.Point(16, 246)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(108, 83)
+        Me.Panel1.TabIndex = 21
+        '
         'MaterialCard2
         '
         Me.MaterialCard2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -460,28 +521,28 @@ Partial Class UC_transactions
         Me.DGV_cart.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGV_cart.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
         Me.DGV_cart.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_cart.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle9.Padding = New System.Windows.Forms.Padding(10)
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_cart.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.DGV_cart.ColumnHeadersHeight = 50
         Me.DGV_cart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DGV_cart.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TransactionIDDataGridViewTextBoxColumn, Me.ProductIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.Price})
         Me.DGV_cart.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DGV_cart.DataSource = Me.TblcartBindingSource
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGV_cart.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_cart.DefaultCellStyle = DataGridViewCellStyle10
         Me.DGV_cart.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DGV_cart.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
         Me.DGV_cart.EnableHeadersVisualStyles = False
@@ -614,67 +675,6 @@ Partial Class UC_transactions
         Me.MaterialLabel6.Size = New System.Drawing.Size(296, 14)
         Me.MaterialLabel6.TabIndex = 31
         Me.MaterialLabel6.Text = "Process and Record the daily Transactions of Students"
-        '
-        'MaterialLabel7
-        '
-        Me.MaterialLabel7.AutoSize = True
-        Me.MaterialLabel7.Depth = 0
-        Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.MaterialLabel7.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption
-        Me.MaterialLabel7.Location = New System.Drawing.Point(115, 9)
-        Me.MaterialLabel7.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel7.Name = "MaterialLabel7"
-        Me.MaterialLabel7.Size = New System.Drawing.Size(57, 14)
-        Me.MaterialLabel7.TabIndex = 35
-        Me.MaterialLabel7.Text = "Student ID"
-        '
-        'MaterialLabel8
-        '
-        Me.MaterialLabel8.AutoSize = True
-        Me.MaterialLabel8.Depth = 0
-        Me.MaterialLabel8.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.MaterialLabel8.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption
-        Me.MaterialLabel8.Location = New System.Drawing.Point(115, 75)
-        Me.MaterialLabel8.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel8.Name = "MaterialLabel8"
-        Me.MaterialLabel8.Size = New System.Drawing.Size(79, 14)
-        Me.MaterialLabel8.TabIndex = 35
-        Me.MaterialLabel8.Text = "Student Name"
-        '
-        'MaterialLabel9
-        '
-        Me.MaterialLabel9.AutoSize = True
-        Me.MaterialLabel9.Depth = 0
-        Me.MaterialLabel9.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.MaterialLabel9.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption
-        Me.MaterialLabel9.Location = New System.Drawing.Point(120, 12)
-        Me.MaterialLabel9.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel9.Name = "MaterialLabel9"
-        Me.MaterialLabel9.Size = New System.Drawing.Size(58, 14)
-        Me.MaterialLabel9.TabIndex = 35
-        Me.MaterialLabel9.Text = "Product ID"
-        '
-        'MaterialLabel10
-        '
-        Me.MaterialLabel10.AutoSize = True
-        Me.MaterialLabel10.Depth = 0
-        Me.MaterialLabel10.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.MaterialLabel10.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption
-        Me.MaterialLabel10.Location = New System.Drawing.Point(123, 82)
-        Me.MaterialLabel10.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel10.Name = "MaterialLabel10"
-        Me.MaterialLabel10.Size = New System.Drawing.Size(80, 14)
-        Me.MaterialLabel10.TabIndex = 35
-        Me.MaterialLabel10.Text = "Product Name"
-        '
-        'Panel3
-        '
-        Me.Panel3.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Product
-        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel3.Location = New System.Drawing.Point(1, 39)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(112, 83)
-        Me.Panel3.TabIndex = 21
         '
         'UC_transactions
         '
