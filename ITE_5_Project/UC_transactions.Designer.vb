@@ -23,8 +23,8 @@ Partial Class UC_transactions
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.MaterialCard6 = New MaterialSkin.Controls.MaterialCard()
         Me.LBL_totalPrice = New MaterialSkin.Controls.MaterialLabel()
@@ -213,11 +213,11 @@ Partial Class UC_transactions
         Me.TXT_productID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.TXT_productID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TXT_productID.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TXT_productID.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_productID.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_productID.Location = New System.Drawing.Point(14, 14)
         Me.TXT_productID.Name = "TXT_productID"
         Me.TXT_productID.Size = New System.Drawing.Size(284, 17)
-        Me.TXT_productID.TabIndex = 32
+        Me.TXT_productID.TabIndex = 0
         '
         'MaterialCard7
         '
@@ -239,11 +239,11 @@ Partial Class UC_transactions
         Me.TXT_productName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.TXT_productName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TXT_productName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TXT_productName.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_productName.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_productName.Location = New System.Drawing.Point(14, 14)
         Me.TXT_productName.Name = "TXT_productName"
         Me.TXT_productName.Size = New System.Drawing.Size(284, 17)
-        Me.TXT_productName.TabIndex = 32
+        Me.TXT_productName.TabIndex = 0
         '
         'Panel3
         '
@@ -400,11 +400,11 @@ Partial Class UC_transactions
         Me.TXT_studentName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.TXT_studentName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TXT_studentName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TXT_studentName.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_studentName.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_studentName.Location = New System.Drawing.Point(14, 14)
         Me.TXT_studentName.Name = "TXT_studentName"
         Me.TXT_studentName.Size = New System.Drawing.Size(284, 17)
-        Me.TXT_studentName.TabIndex = 32
+        Me.TXT_studentName.TabIndex = 0
         '
         'MaterialCard9
         '
@@ -426,11 +426,11 @@ Partial Class UC_transactions
         Me.TXT_studentID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.TXT_studentID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TXT_studentID.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TXT_studentID.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXT_studentID.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_studentID.Location = New System.Drawing.Point(14, 14)
         Me.TXT_studentID.Name = "TXT_studentID"
         Me.TXT_studentID.Size = New System.Drawing.Size(284, 17)
-        Me.TXT_studentID.TabIndex = 32
+        Me.TXT_studentID.TabIndex = 0
         '
         'Panel2
         '
@@ -521,28 +521,28 @@ Partial Class UC_transactions
         Me.DGV_cart.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGV_cart.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
         Me.DGV_cart.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle9.Padding = New System.Windows.Forms.Padding(10)
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DGV_cart.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(10)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(101, Byte), Integer), CType(CType(211, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DGV_cart.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DGV_cart.ColumnHeadersHeight = 50
         Me.DGV_cart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DGV_cart.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TransactionIDDataGridViewTextBoxColumn, Me.ProductIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.Price})
         Me.DGV_cart.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DGV_cart.DataSource = Me.TblcartBindingSource
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGV_cart.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGV_cart.DefaultCellStyle = DataGridViewCellStyle2
         Me.DGV_cart.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DGV_cart.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
         Me.DGV_cart.EnableHeadersVisualStyles = False
