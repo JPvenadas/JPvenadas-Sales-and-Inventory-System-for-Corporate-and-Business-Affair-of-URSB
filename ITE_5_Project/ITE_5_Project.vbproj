@@ -366,5 +366,11 @@
   <ItemGroup>
     <None Include="Resources\Cart.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wallpaper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wallpaper.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
