@@ -37,7 +37,12 @@ ITE_5_Project
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:ITE_5_Project.My.Resources.Resources.download_removebg_preview">
+<member name="P:ITE_5_Project.My.Resources.Resources.Cart">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ITE_5_Project.My.Resources.Resources.Logo">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -6,14 +6,14 @@
 
 
     Private Sub BTN_add_Click(sender As Object, e As EventArgs) Handles BTN_add.Click
-        SUBFRM_adduser.ShowDialog()
+        showDialogWithGray(SUBFRM_adduser, FRM_mainmenu)
     End Sub
 
     Private Sub DGV_users_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_users.CellDoubleClick
         Dim row As New DataGridViewRow
         row = DGV_users.Rows(e.RowIndex)
         clickedkey = row.Cells(0).Value
-        SUBFRM_edituser.ShowDialog()
+        showDialogWithGray(SUBFRM_edituser, FRM_mainmenu)
     End Sub
 
     Private Sub CBO_type_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBO_type.SelectedIndexChanged

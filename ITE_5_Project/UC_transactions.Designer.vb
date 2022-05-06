@@ -25,6 +25,7 @@ Partial Class UC_transactions
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UC_transactions))
         Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.MaterialCard6 = New MaterialSkin.Controls.MaterialCard()
         Me.LBL_totalPrice = New MaterialSkin.Controls.MaterialLabel()
@@ -36,7 +37,6 @@ Partial Class UC_transactions
         Me.TXT_productID = New System.Windows.Forms.TextBox()
         Me.MaterialCard7 = New MaterialSkin.Controls.MaterialCard()
         Me.TXT_productName = New System.Windows.Forms.TextBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.LBL_stocks = New MaterialSkin.Controls.MaterialLabel()
         Me.LBL_price = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel11 = New MaterialSkin.Controls.MaterialLabel()
@@ -51,11 +51,9 @@ Partial Class UC_transactions
         Me.TXT_studentName = New System.Windows.Forms.TextBox()
         Me.MaterialCard9 = New MaterialSkin.Controls.MaterialCard()
         Me.TXT_studentID = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.BTN_add = New MaterialSkin.Controls.MaterialButton()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MaterialCard2 = New MaterialSkin.Controls.MaterialCard()
         Me.MaterialLabel12 = New MaterialSkin.Controls.MaterialLabel()
         Me.DGV_cart = New System.Windows.Forms.DataGridView()
@@ -72,6 +70,10 @@ Partial Class UC_transactions
         Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TotalAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.MaterialCard1.SuspendLayout()
         Me.MaterialCard6.SuspendLayout()
         Me.MaterialCard5.SuspendLayout()
@@ -250,15 +252,6 @@ Partial Class UC_transactions
         Me.TXT_productName.Name = "TXT_productName"
         Me.TXT_productName.Size = New System.Drawing.Size(284, 17)
         Me.TXT_productName.TabIndex = 0
-        '
-        'Panel3
-        '
-        Me.Panel3.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Product
-        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel3.Location = New System.Drawing.Point(1, 39)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(112, 83)
-        Me.Panel3.TabIndex = 21
         '
         'LBL_stocks
         '
@@ -464,15 +457,6 @@ Partial Class UC_transactions
         Me.TXT_studentID.Size = New System.Drawing.Size(284, 17)
         Me.TXT_studentID.TabIndex = 0
         '
-        'Panel2
-        '
-        Me.Panel2.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.user
-        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel2.Location = New System.Drawing.Point(8, 21)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(88, 83)
-        Me.Panel2.TabIndex = 21
-        '
         'MaterialLabel1
         '
         Me.MaterialLabel1.AutoSize = True
@@ -518,18 +502,10 @@ Partial Class UC_transactions
         Me.BTN_add.UseAccentColor = False
         Me.BTN_add.UseVisualStyleBackColor = True
         '
-        'Panel1
-        '
-        Me.Panel1.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Product
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Location = New System.Drawing.Point(16, 246)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(108, 83)
-        Me.Panel1.TabIndex = 21
-        '
         'MaterialCard2
         '
         Me.MaterialCard2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MaterialCard2.Controls.Add(Me.Panel4)
         Me.MaterialCard2.Controls.Add(Me.MaterialLabel12)
         Me.MaterialCard2.Controls.Add(Me.DGV_cart)
         Me.MaterialCard2.Depth = 0
@@ -546,11 +522,12 @@ Partial Class UC_transactions
         '
         Me.MaterialLabel12.AutoSize = True
         Me.MaterialLabel12.Depth = 0
-        Me.MaterialLabel12.Font = New System.Drawing.Font("Roboto", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.MaterialLabel12.Location = New System.Drawing.Point(50, 31)
+        Me.MaterialLabel12.Font = New System.Drawing.Font("Roboto Medium", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel)
+        Me.MaterialLabel12.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2
+        Me.MaterialLabel12.Location = New System.Drawing.Point(71, 24)
         Me.MaterialLabel12.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel12.Name = "MaterialLabel12"
-        Me.MaterialLabel12.Size = New System.Drawing.Size(89, 19)
+        Me.MaterialLabel12.Size = New System.Drawing.Size(81, 17)
         Me.MaterialLabel12.TabIndex = 32
         Me.MaterialLabel12.Text = "Product Cart"
         '
@@ -591,14 +568,14 @@ Partial Class UC_transactions
         Me.DGV_cart.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
         Me.DGV_cart.EnableHeadersVisualStyles = False
         Me.DGV_cart.GridColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DGV_cart.Location = New System.Drawing.Point(14, 73)
+        Me.DGV_cart.Location = New System.Drawing.Point(14, 55)
         Me.DGV_cart.Name = "DGV_cart"
         Me.DGV_cart.ReadOnly = True
         Me.DGV_cart.RowHeadersVisible = False
         Me.DGV_cart.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DGV_cart.RowTemplate.Height = 50
         Me.DGV_cart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_cart.Size = New System.Drawing.Size(410, 355)
+        Me.DGV_cart.Size = New System.Drawing.Size(410, 373)
         Me.DGV_cart.TabIndex = 13
         '
         'TblcartBindingSource
@@ -727,6 +704,42 @@ Partial Class UC_transactions
         Me.TotalAmount.Name = "TotalAmount"
         Me.TotalAmount.ReadOnly = True
         '
+        'Panel3
+        '
+        Me.Panel3.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Product
+        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel3.Location = New System.Drawing.Point(1, 39)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(112, 83)
+        Me.Panel3.TabIndex = 21
+        '
+        'Panel2
+        '
+        Me.Panel2.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.user
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Location = New System.Drawing.Point(8, 21)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(88, 83)
+        Me.Panel2.TabIndex = 21
+        '
+        'Panel1
+        '
+        Me.Panel1.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Product
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Location = New System.Drawing.Point(16, 246)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(108, 83)
+        Me.Panel1.TabIndex = 21
+        '
+        'Panel4
+        '
+        Me.Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), System.Drawing.Image)
+        Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel4.Location = New System.Drawing.Point(16, 10)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(45, 39)
+        Me.Panel4.TabIndex = 33
+        '
         'UC_transactions
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -812,4 +825,5 @@ Partial Class UC_transactions
     Friend WithEvents QuantityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Price As DataGridViewTextBoxColumn
     Friend WithEvents TotalAmount As DataGridViewTextBoxColumn
+    Friend WithEvents Panel4 As Panel
 End Class

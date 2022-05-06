@@ -245,9 +245,13 @@
             TXT_studentName.Text = dr.GetString("Fullname")
             TXT_studentID.Enabled = False
             TXT_studentName.Enabled = False
+            BTN_buy.Enabled = True
+            BTN_cancel.Enabled = True
         Else
             TXT_studentID.Enabled = True
             TXT_studentName.Enabled = True
+            BTN_buy.Enabled = False
+            BTN_cancel.Enabled = False
         End If
         con.Close()
     End Sub

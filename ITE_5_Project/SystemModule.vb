@@ -58,7 +58,7 @@ Module SystemModule
         Dim background As New Form
         background.BackColor = Color.Black
         background.WindowState = FormWindowState.Maximized
-        background.Opacity = 0.7D
+        background.Opacity = 0.5D
         background.FormBorderStyle = FormBorderStyle.None
         background.Location = FormParent.Location
         background.Show()

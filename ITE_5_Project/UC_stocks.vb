@@ -14,7 +14,7 @@
     Private Sub DGV_products_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_products.CellDoubleClick
         Dim row = DGV_products.Rows(e.RowIndex)
         clickedkey = row.Cells(0).Value
-        SUBFRM_addstocks.ShowDialog()
+        showDialogWithGray(SUBFRM_addstocks, FRM_mainmenu)
     End Sub
 
 End Class

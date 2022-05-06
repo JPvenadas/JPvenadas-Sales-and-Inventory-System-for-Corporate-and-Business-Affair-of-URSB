@@ -343,9 +343,6 @@
     <None Include="Resources\2a585b3cbbe437f9b0ddc6d020743031.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\download-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\images-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
@@ -362,6 +359,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\953211-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

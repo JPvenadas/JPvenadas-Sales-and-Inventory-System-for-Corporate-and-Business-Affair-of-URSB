@@ -210,7 +210,7 @@ Partial Class FRM_login
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.download_removebg_preview
+        Me.Panel1.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Logo
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Location = New System.Drawing.Point(30, 588)
         Me.Panel1.Name = "Panel1"
