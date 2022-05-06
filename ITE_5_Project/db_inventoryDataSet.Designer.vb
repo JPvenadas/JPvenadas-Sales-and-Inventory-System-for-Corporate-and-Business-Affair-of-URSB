@@ -2783,6 +2783,8 @@ Partial Public Class db_inventoryDataSet
         
         Private columnTotalAmount As Global.System.Data.DataColumn
         
+        Private columnDate As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -2883,6 +2885,14 @@ Partial Public Class db_inventoryDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property DateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2919,9 +2929,9 @@ Partial Public Class db_inventoryDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_transactionsRow(ByVal TransactionID As Integer, ByVal StudentID As Integer, ByVal Fullname As String, ByVal ProductID As Integer, ByVal ProductName As String, ByVal Quantity As Integer, ByVal Price As Decimal, ByVal TotalAmount As Decimal) As tbl_transactionsRow
+        Public Overloads Function Addtbl_transactionsRow(ByVal TransactionID As Integer, ByVal StudentID As Integer, ByVal Fullname As String, ByVal ProductID As Integer, ByVal ProductName As String, ByVal Quantity As Integer, ByVal Price As Decimal, ByVal TotalAmount As Decimal, ByVal _Date As Date) As tbl_transactionsRow
             Dim rowtbl_transactionsRow As tbl_transactionsRow = CType(Me.NewRow,tbl_transactionsRow)
-            Dim columnValuesArray() As Object = New Object() {TransactionID, StudentID, Fullname, ProductID, ProductName, Quantity, Price, TotalAmount}
+            Dim columnValuesArray() As Object = New Object() {TransactionID, StudentID, Fullname, ProductID, ProductName, Quantity, Price, TotalAmount, _Date}
             rowtbl_transactionsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_transactionsRow)
             Return rowtbl_transactionsRow
@@ -2958,6 +2968,7 @@ Partial Public Class db_inventoryDataSet
             Me.columnQuantity = MyBase.Columns("Quantity")
             Me.columnPrice = MyBase.Columns("Price")
             Me.columnTotalAmount = MyBase.Columns("TotalAmount")
+            Me.columnDate = MyBase.Columns("Date")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2979,6 +2990,11 @@ Partial Public Class db_inventoryDataSet
             MyBase.Columns.Add(Me.columnPrice)
             Me.columnTotalAmount = New Global.System.Data.DataColumn("TotalAmount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTotalAmount)
+            Me.columnDate = New Global.System.Data.DataColumn("Date", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnDate.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "DateColumn")
+            Me.columnDate.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnDate")
+            Me.columnDate.ExtendedProperties.Add("Generator_UserColumnName", "Date")
+            MyBase.Columns.Add(Me.columnDate)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnTransactionID, Me.columnProductID}, true))
             Me.columnTransactionID.AllowDBNull = false
             Me.columnStudentID.AllowDBNull = false
@@ -2990,6 +3006,7 @@ Partial Public Class db_inventoryDataSet
             Me.columnQuantity.AllowDBNull = false
             Me.columnPrice.AllowDBNull = false
             Me.columnTotalAmount.AllowDBNull = false
+            Me.columnDate.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4037,6 +4054,17 @@ Partial Public Class db_inventoryDataSet
             End Get
             Set
                 Me(Me.tabletbl_transactions.TotalAmountColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property _Date() As Date
+            Get
+                Return CType(Me(Me.tabletbl_transactions.DateColumn),Date)
+            End Get
+            Set
+                Me(Me.tabletbl_transactions.DateColumn) = value
             End Set
         End Property
     End Class
@@ -8022,12 +8050,14 @@ Namespace db_inventoryDataSetTableAdapters
             tableMapping.ColumnMappings.Add("Quantity", "Quantity")
             tableMapping.ColumnMappings.Add("Price", "Price")
             tableMapping.ColumnMappings.Add("TotalAmount", "TotalAmount")
+            tableMapping.ColumnMappings.Add("Date", "Date")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `tbl_transactions` WHERE ((`TransactionID` = @p1) AND (`StudentID` = "& _ 
                 "@p2) AND (`Fullname` = @p3) AND (`ProductID` = @p4) AND (`ProductName` = @p5) AN"& _ 
-                "D (`Quantity` = @p6) AND (`Price` = @p7) AND (`TotalAmount` = @p8))"
+                "D (`Quantity` = @p6) AND (`Price` = @p7) AND (`TotalAmount` = @p8) AND (`Date` ="& _ 
+                " @p9))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Dim param As Global.MySql.Data.MySqlClient.MySqlParameter = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -8093,11 +8123,19 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceColumn = "TotalAmount"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.DeleteCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p9"
+            param.DbType = Global.System.Data.DbType.[Date]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
+            param.IsNullable = true
+            param.SourceColumn = "Date"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.DeleteCommand.Parameters.Add(param)
             Me._adapter.InsertCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `tbl_transactions` (`TransactionID`, `StudentID`, `Fullname`, `Produc"& _ 
-                "tID`, `ProductName`, `Quantity`, `Price`, `TotalAmount`) VALUES (@p1, @p2, @p3, "& _ 
-                "@p4, @p5, @p6, @p7, @p8)"
+                "tID`, `ProductName`, `Quantity`, `Price`, `TotalAmount`, `Date`) VALUES (@p1, @p"& _ 
+                "2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -8163,13 +8201,22 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceColumn = "TotalAmount"
             param.SourceVersion = Global.System.Data.DataRowVersion.Current
             Me._adapter.InsertCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p9"
+            param.DbType = Global.System.Data.DbType.[Date]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
+            param.IsNullable = true
+            param.SourceColumn = "Date"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.InsertCommand.Parameters.Add(param)
             Me._adapter.UpdateCommand = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `tbl_transactions` SET `TransactionID` = @p1, `StudentID` = @p2, `Fullname"& _ 
                 "` = @p3, `ProductID` = @p4, `ProductName` = @p5, `Quantity` = @p6, `Price` = @p7"& _ 
-                ", `TotalAmount` = @p8 WHERE ((`TransactionID` = @p9) AND (`StudentID` = @p10) AN"& _ 
-                "D (`Fullname` = @p11) AND (`ProductID` = @p12) AND (`ProductName` = @p13) AND (`"& _ 
-                "Quantity` = @p14) AND (`Price` = @p15) AND (`TotalAmount` = @p16))"
+                ", `TotalAmount` = @p8, `Date` = @p9 WHERE ((`TransactionID` = @p10) AND (`Studen"& _ 
+                "tID` = @p11) AND (`Fullname` = @p12) AND (`ProductID` = @p13) AND (`ProductName`"& _ 
+                " = @p14) AND (`Quantity` = @p15) AND (`Price` = @p16) AND (`TotalAmount` = @p17)"& _ 
+                " AND (`Date` = @p18))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p1"
@@ -8237,6 +8284,14 @@ Namespace db_inventoryDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
             param.ParameterName = "@p9"
+            param.DbType = Global.System.Data.DbType.[Date]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
+            param.IsNullable = true
+            param.SourceColumn = "Date"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Current
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p10"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -8244,7 +8299,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p10"
+            param.ParameterName = "@p11"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -8252,7 +8307,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p11"
+            param.ParameterName = "@p12"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -8260,7 +8315,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p12"
+            param.ParameterName = "@p13"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -8268,7 +8323,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p13"
+            param.ParameterName = "@p14"
             param.DbType = Global.System.Data.DbType.[String]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.VarChar
             param.IsNullable = true
@@ -8276,7 +8331,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p14"
+            param.ParameterName = "@p15"
             param.DbType = Global.System.Data.DbType.Int32
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.Int32
             param.IsNullable = true
@@ -8284,7 +8339,7 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p15"
+            param.ParameterName = "@p16"
             param.DbType = Global.System.Data.DbType.[Decimal]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.NewDecimal
             param.IsNullable = true
@@ -8292,11 +8347,19 @@ Namespace db_inventoryDataSetTableAdapters
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
             param = New Global.MySql.Data.MySqlClient.MySqlParameter()
-            param.ParameterName = "@p16"
+            param.ParameterName = "@p17"
             param.DbType = Global.System.Data.DbType.[Decimal]
             param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.NewDecimal
             param.IsNullable = true
             param.SourceColumn = "TotalAmount"
+            param.SourceVersion = Global.System.Data.DataRowVersion.Original
+            Me._adapter.UpdateCommand.Parameters.Add(param)
+            param = New Global.MySql.Data.MySqlClient.MySqlParameter()
+            param.ParameterName = "@p18"
+            param.DbType = Global.System.Data.DbType.[Date]
+            param.MySqlDbType = Global.MySql.Data.MySqlClient.MySqlDbType.[Date]
+            param.IsNullable = true
+            param.SourceColumn = "Date"
             param.SourceVersion = Global.System.Data.DataRowVersion.Original
             Me._adapter.UpdateCommand.Parameters.Add(param)
         End Sub
@@ -8315,7 +8378,7 @@ Namespace db_inventoryDataSetTableAdapters
             Me._commandCollection(0) = New Global.MySql.Data.MySqlClient.MySqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT `TransactionID`, `StudentID`, `Fullname`, `ProductID`, `ProductName`, `Qua"& _ 
-                "ntity`, `Price`, `TotalAmount` FROM `tbl_transactions`"
+                "ntity`, `Price`, `TotalAmount`, `Date` FROM `tbl_transactions`"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -8375,7 +8438,7 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal p1 As Integer, ByVal p2 As Integer, ByVal p3 As String, ByVal p4 As Integer, ByVal p5 As String, ByVal p6 As Integer, ByVal p7 As Decimal, ByVal p8 As Decimal) As Integer
+        Public Overloads Overridable Function Delete(ByVal p1 As Integer, ByVal p2 As Integer, ByVal p3 As String, ByVal p4 As Integer, ByVal p5 As String, ByVal p6 As Integer, ByVal p7 As Decimal, ByVal p8 As Decimal, ByVal p9 As Date) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(p1,Integer)
             Me.Adapter.DeleteCommand.Parameters(1).Value = CType(p2,Integer)
             If (p3 Is Nothing) Then
@@ -8392,6 +8455,7 @@ Namespace db_inventoryDataSetTableAdapters
             Me.Adapter.DeleteCommand.Parameters(5).Value = CType(p6,Integer)
             Me.Adapter.DeleteCommand.Parameters(6).Value = CType(p7,Decimal)
             Me.Adapter.DeleteCommand.Parameters(7).Value = CType(p8,Decimal)
+            Me.Adapter.DeleteCommand.Parameters(8).Value = CType(p9,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8411,7 +8475,7 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal p1 As Integer, ByVal p2 As Integer, ByVal p3 As String, ByVal p4 As Integer, ByVal p5 As String, ByVal p6 As Integer, ByVal p7 As Decimal, ByVal p8 As Decimal) As Integer
+        Public Overloads Overridable Function Insert(ByVal p1 As Integer, ByVal p2 As Integer, ByVal p3 As String, ByVal p4 As Integer, ByVal p5 As String, ByVal p6 As Integer, ByVal p7 As Decimal, ByVal p8 As Decimal, ByVal p9 As Date) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1,Integer)
             Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2,Integer)
             If (p3 Is Nothing) Then
@@ -8428,6 +8492,7 @@ Namespace db_inventoryDataSetTableAdapters
             Me.Adapter.InsertCommand.Parameters(5).Value = CType(p6,Integer)
             Me.Adapter.InsertCommand.Parameters(6).Value = CType(p7,Decimal)
             Me.Adapter.InsertCommand.Parameters(7).Value = CType(p8,Decimal)
+            Me.Adapter.InsertCommand.Parameters(8).Value = CType(p9,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8456,14 +8521,16 @@ Namespace db_inventoryDataSetTableAdapters
                     ByVal p6 As Integer,  _
                     ByVal p7 As Decimal,  _
                     ByVal p8 As Decimal,  _
-                    ByVal p9 As Integer,  _
+                    ByVal p9 As Date,  _
                     ByVal p10 As Integer,  _
-                    ByVal p11 As String,  _
-                    ByVal p12 As Integer,  _
-                    ByVal p13 As String,  _
-                    ByVal p14 As Integer,  _
-                    ByVal p15 As Decimal,  _
-                    ByVal p16 As Decimal) As Integer
+                    ByVal p11 As Integer,  _
+                    ByVal p12 As String,  _
+                    ByVal p13 As Integer,  _
+                    ByVal p14 As String,  _
+                    ByVal p15 As Integer,  _
+                    ByVal p16 As Decimal,  _
+                    ByVal p17 As Decimal,  _
+                    ByVal p18 As Date) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(p1,Integer)
             Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2,Integer)
             If (p3 Is Nothing) Then
@@ -8480,22 +8547,24 @@ Namespace db_inventoryDataSetTableAdapters
             Me.Adapter.UpdateCommand.Parameters(5).Value = CType(p6,Integer)
             Me.Adapter.UpdateCommand.Parameters(6).Value = CType(p7,Decimal)
             Me.Adapter.UpdateCommand.Parameters(7).Value = CType(p8,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(p9,Integer)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(p9,Date)
             Me.Adapter.UpdateCommand.Parameters(9).Value = CType(p10,Integer)
-            If (p11 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p11")
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(p11,Integer)
+            If (p12 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p12")
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(p11,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(p12,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(p12,Integer)
-            If (p13 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p13")
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(p13,Integer)
+            If (p14 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("p14")
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(p13,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(p14,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(p14,Integer)
-            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(p15,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(p15,Integer)
             Me.Adapter.UpdateCommand.Parameters(15).Value = CType(p16,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(16).Value = CType(p17,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(p18,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8515,8 +8584,24 @@ Namespace db_inventoryDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p2 As Integer, ByVal p3 As String, ByVal p5 As String, ByVal p6 As Integer, ByVal p7 As Decimal, ByVal p8 As Decimal, ByVal p9 As Integer, ByVal p10 As Integer, ByVal p11 As String, ByVal p12 As Integer, ByVal p13 As String, ByVal p14 As Integer, ByVal p15 As Decimal, ByVal p16 As Decimal) As Integer
-            Return Me.Update(p9, p2, p3, p12, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16)
+        Public Overloads Overridable Function Update( _
+                    ByVal p2 As Integer,  _
+                    ByVal p3 As String,  _
+                    ByVal p5 As String,  _
+                    ByVal p6 As Integer,  _
+                    ByVal p7 As Decimal,  _
+                    ByVal p8 As Decimal,  _
+                    ByVal p9 As Date,  _
+                    ByVal p10 As Integer,  _
+                    ByVal p11 As Integer,  _
+                    ByVal p12 As String,  _
+                    ByVal p13 As Integer,  _
+                    ByVal p14 As String,  _
+                    ByVal p15 As Integer,  _
+                    ByVal p16 As Decimal,  _
+                    ByVal p17 As Decimal,  _
+                    ByVal p18 As Date) As Integer
+            Return Me.Update(p10, p2, p3, p13, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18)
         End Function
     End Class
     

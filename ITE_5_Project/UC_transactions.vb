@@ -3,7 +3,6 @@
 
     Private Sub UC_transactions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Refreshdata()
-
     End Sub
     Private Sub BTN_add_Click(sender As Object, e As EventArgs) Handles BTN_add.Click
         If TXT_studentID.Text = "" Or TXT_studentName.Text = "" Then
@@ -262,6 +261,27 @@
         showDialogWithGray(SUBFRM_editCart, FRM_mainmenu)
     End Sub
     Private Sub BTN_buy_Click(sender As Object, e As EventArgs) Handles BTN_buy.Click
-
+        For i = 0 To DGV_cart.Rows.Count - 1
+            openCon()
+            cmd.CommandText = "insert into tbl_transactions values(@TID,@SID,@FN,@PID,@PN,@Q,@P,@TA,@DT)"
+            With cmd.Parameters
+                .Clear()
+                .AddWithValue("TID", DGV_cart.Rows(i).Cells(0).Value.ToString)
+                .AddWithValue("SID", TXT_studentID.Text)
+                .AddWithValue("FN", TXT_studentName.Text)
+                .AddWithValue("PID", DGV_cart.Rows(i).Cells(1).Value.ToString)
+                .AddWithValue("PN", DGV_cart.Rows(i).Cells(2).Value.ToString)
+                .AddWithValue("Q", DGV_cart.Rows(i).Cells(3).Value.ToString)
+                .AddWithValue("P", DGV_cart.Rows(i).Cells(4).Value.ToString)
+                .AddWithValue("TA", DGV_cart.Rows(i).Cells(5).Value.ToString)
+                .AddWithValue("DT", Format(Date.Now, "yyyy-MM-dd"))
+            End With
+            cmd.ExecuteNonQuery()
+            con.Close()
+        Next
+        MsgBox("Transaction Saved", vbOKOnly + vbInformation, "Success")
+        VoidCart()
+        Refreshdata()
+        Clear()
     End Sub
 End Class
