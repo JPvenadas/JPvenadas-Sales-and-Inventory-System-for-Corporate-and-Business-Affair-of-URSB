@@ -41,6 +41,10 @@ Partial Class UC_stocks
         Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.TAB_stocksrecord = New System.Windows.Forms.TabPage()
         Me.DGV_stocks = New System.Windows.Forms.DataGridView()
+        Me.StockIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AddedStocksDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TblstocksBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_productsTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_productsTableAdapter()
         Me.StockID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -48,10 +52,7 @@ Partial Class UC_stocks
         Me.AddedStocks = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tbl_stocksTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_stocksTableAdapter()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.StockIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddedStocksDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TAB_addstocks.SuspendLayout()
         CType(Me.DGV_products, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,6 +61,7 @@ Partial Class UC_stocks
         Me.TAB_stocksrecord.SuspendLayout()
         CType(Me.DGV_stocks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblstocksBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MaterialCard1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MaterialTabSelector1
@@ -92,9 +94,9 @@ Partial Class UC_stocks
         'TAB_addstocks
         '
         Me.TAB_addstocks.BackColor = System.Drawing.Color.White
+        Me.TAB_addstocks.Controls.Add(Me.MaterialCard1)
         Me.TAB_addstocks.Controls.Add(Me.BTN_search)
         Me.TAB_addstocks.Controls.Add(Me.TXT_filter)
-        Me.TAB_addstocks.Controls.Add(Me.DGV_products)
         Me.TAB_addstocks.ForeColor = System.Drawing.Color.Black
         Me.TAB_addstocks.Location = New System.Drawing.Point(4, 22)
         Me.TAB_addstocks.Name = "TAB_addstocks"
@@ -181,22 +183,23 @@ Partial Class UC_stocks
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGV_products.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DGV_products.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DGV_products.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
         Me.DGV_products.EnableHeadersVisualStyles = False
         Me.DGV_products.GridColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DGV_products.Location = New System.Drawing.Point(15, 72)
+        Me.DGV_products.Location = New System.Drawing.Point(14, 14)
         Me.DGV_products.Name = "DGV_products"
         Me.DGV_products.ReadOnly = True
         Me.DGV_products.RowHeadersVisible = False
         Me.DGV_products.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DGV_products.RowTemplate.Height = 50
         Me.DGV_products.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_products.Size = New System.Drawing.Size(962, 410)
+        Me.DGV_products.Size = New System.Drawing.Size(931, 384)
         Me.DGV_products.TabIndex = 13
         '
         'ProductIDDataGridViewTextBoxColumn
@@ -295,6 +298,34 @@ Partial Class UC_stocks
         Me.DGV_stocks.Size = New System.Drawing.Size(962, 456)
         Me.DGV_stocks.TabIndex = 14
         '
+        'StockIDDataGridViewTextBoxColumn
+        '
+        Me.StockIDDataGridViewTextBoxColumn.DataPropertyName = "StockID"
+        Me.StockIDDataGridViewTextBoxColumn.HeaderText = "StockID"
+        Me.StockIDDataGridViewTextBoxColumn.Name = "StockIDDataGridViewTextBoxColumn"
+        Me.StockIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProductNameDataGridViewTextBoxColumn1
+        '
+        Me.ProductNameDataGridViewTextBoxColumn1.DataPropertyName = "ProductName"
+        Me.ProductNameDataGridViewTextBoxColumn1.HeaderText = "ProductName"
+        Me.ProductNameDataGridViewTextBoxColumn1.Name = "ProductNameDataGridViewTextBoxColumn1"
+        Me.ProductNameDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'AddedStocksDataGridViewTextBoxColumn
+        '
+        Me.AddedStocksDataGridViewTextBoxColumn.DataPropertyName = "AddedStocks"
+        Me.AddedStocksDataGridViewTextBoxColumn.HeaderText = "AddedStocks"
+        Me.AddedStocksDataGridViewTextBoxColumn.Name = "AddedStocksDataGridViewTextBoxColumn"
+        Me.AddedStocksDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DateDataGridViewTextBoxColumn
+        '
+        Me.DateDataGridViewTextBoxColumn.DataPropertyName = "Date"
+        Me.DateDataGridViewTextBoxColumn.HeaderText = "Date"
+        Me.DateDataGridViewTextBoxColumn.Name = "DateDataGridViewTextBoxColumn"
+        Me.DateDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'TblstocksBindingSource
         '
         Me.TblstocksBindingSource.DataMember = "tbl_stocks"
@@ -338,33 +369,19 @@ Partial Class UC_stocks
         Me.Label1.Text = "Add and View the Stocks in your system. You can add stocks by double clicking the" &
     " record in the table" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'StockIDDataGridViewTextBoxColumn
+        'MaterialCard1
         '
-        Me.StockIDDataGridViewTextBoxColumn.DataPropertyName = "StockID"
-        Me.StockIDDataGridViewTextBoxColumn.HeaderText = "StockID"
-        Me.StockIDDataGridViewTextBoxColumn.Name = "StockIDDataGridViewTextBoxColumn"
-        Me.StockIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProductNameDataGridViewTextBoxColumn1
-        '
-        Me.ProductNameDataGridViewTextBoxColumn1.DataPropertyName = "ProductName"
-        Me.ProductNameDataGridViewTextBoxColumn1.HeaderText = "ProductName"
-        Me.ProductNameDataGridViewTextBoxColumn1.Name = "ProductNameDataGridViewTextBoxColumn1"
-        Me.ProductNameDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'AddedStocksDataGridViewTextBoxColumn
-        '
-        Me.AddedStocksDataGridViewTextBoxColumn.DataPropertyName = "AddedStocks"
-        Me.AddedStocksDataGridViewTextBoxColumn.HeaderText = "AddedStocks"
-        Me.AddedStocksDataGridViewTextBoxColumn.Name = "AddedStocksDataGridViewTextBoxColumn"
-        Me.AddedStocksDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DateDataGridViewTextBoxColumn
-        '
-        Me.DateDataGridViewTextBoxColumn.DataPropertyName = "Date"
-        Me.DateDataGridViewTextBoxColumn.HeaderText = "Date"
-        Me.DateDataGridViewTextBoxColumn.Name = "DateDataGridViewTextBoxColumn"
-        Me.DateDataGridViewTextBoxColumn.ReadOnly = True
+        Me.MaterialCard1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MaterialCard1.Controls.Add(Me.DGV_products)
+        Me.MaterialCard1.Depth = 0
+        Me.MaterialCard1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialCard1.Location = New System.Drawing.Point(14, 68)
+        Me.MaterialCard1.Margin = New System.Windows.Forms.Padding(14)
+        Me.MaterialCard1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialCard1.Name = "MaterialCard1"
+        Me.MaterialCard1.Padding = New System.Windows.Forms.Padding(14)
+        Me.MaterialCard1.Size = New System.Drawing.Size(959, 412)
+        Me.MaterialCard1.TabIndex = 16
         '
         'UC_stocks
         '
@@ -384,6 +401,7 @@ Partial Class UC_stocks
         Me.TAB_stocksrecord.ResumeLayout(False)
         CType(Me.DGV_stocks, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblstocksBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MaterialCard1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -414,4 +432,5 @@ Partial Class UC_stocks
     Friend WithEvents ProductNameDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents AddedStocksDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MaterialCard1 As MaterialSkin.Controls.MaterialCard
 End Class

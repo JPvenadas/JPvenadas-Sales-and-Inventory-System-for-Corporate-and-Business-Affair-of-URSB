@@ -38,9 +38,11 @@ Partial Class UC_products
         Me.TblproductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.Tbl_productsTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_productsTableAdapter()
+        Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         CType(Me.DGV_products, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblproductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MaterialCard1.SuspendLayout()
         Me.SuspendLayout()
         '
         'BTN_add
@@ -154,22 +156,23 @@ Partial Class UC_products
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(209, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DGV_products.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DGV_products.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DGV_products.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
         Me.DGV_products.EnableHeadersVisualStyles = False
         Me.DGV_products.GridColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DGV_products.Location = New System.Drawing.Point(24, 124)
+        Me.DGV_products.Location = New System.Drawing.Point(14, 14)
         Me.DGV_products.Name = "DGV_products"
         Me.DGV_products.ReadOnly = True
         Me.DGV_products.RowHeadersVisible = False
         Me.DGV_products.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DGV_products.RowTemplate.Height = 50
         Me.DGV_products.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_products.Size = New System.Drawing.Size(952, 404)
+        Me.DGV_products.Size = New System.Drawing.Size(934, 383)
         Me.DGV_products.TabIndex = 12
         '
         'ProductIDDataGridViewTextBoxColumn
@@ -221,21 +224,36 @@ Partial Class UC_products
         '
         Me.Tbl_productsTableAdapter.ClearBeforeFill = True
         '
+        'MaterialCard1
+        '
+        Me.MaterialCard1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MaterialCard1.Controls.Add(Me.DGV_products)
+        Me.MaterialCard1.Depth = 0
+        Me.MaterialCard1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialCard1.Location = New System.Drawing.Point(14, 126)
+        Me.MaterialCard1.Margin = New System.Windows.Forms.Padding(14)
+        Me.MaterialCard1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialCard1.Name = "MaterialCard1"
+        Me.MaterialCard1.Padding = New System.Windows.Forms.Padding(14)
+        Me.MaterialCard1.Size = New System.Drawing.Size(962, 411)
+        Me.MaterialCard1.TabIndex = 17
+        '
         'UC_products
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.Controls.Add(Me.MaterialCard1)
         Me.Controls.Add(Me.BTN_add)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BTN_search)
         Me.Controls.Add(Me.TXT_filter)
-        Me.Controls.Add(Me.DGV_products)
         Me.Name = "UC_products"
         Me.Size = New System.Drawing.Size(1039, 537)
         CType(Me.DGV_products, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblproductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MaterialCard1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -254,4 +272,5 @@ Partial Class UC_products
     Friend WithEvents TblproductsBindingSource As BindingSource
     Friend WithEvents Db_inventoryDataSet As db_inventoryDataSet
     Friend WithEvents Tbl_productsTableAdapter As db_inventoryDataSetTableAdapters.tbl_productsTableAdapter
+    Friend WithEvents MaterialCard1 As MaterialSkin.Controls.MaterialCard
 End Class
