@@ -4,6 +4,12 @@
     Private Sub UC_transactions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Refreshdata()
     End Sub
+    Private Sub UC_transactions_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
+        FillAutoComplete(TXT_productName, "select ProductName from tbl_products")
+        FillAutoComplete(TXT_productID, "select ProductID from tbl_products")
+        FillAutoComplete(TXT_studentName, "select CONCAT(Firstname, ' ', Middlename, ' ',Lastname ) as StudentName from tbl_students")
+        FillAutoComplete(TXT_studentID, "select StudentID from tbl_students")
+    End Sub
     Private Sub BTN_add_Click(sender As Object, e As EventArgs) Handles BTN_add.Click
         If TXT_studentID.Text = "" Or TXT_studentName.Text = "" Then
             MsgBox("Unidentified Student, Please make sure you input a valid customer", vbOKOnly + vbExclamation, "Transaction Problem")
@@ -43,12 +49,6 @@
             Refreshdata()
             Clear()
         End If
-    End Sub
-    Private Sub UC_transactions_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
-        FillAutoComplete(TXT_productName, "select ProductName from tbl_products")
-        FillAutoComplete(TXT_productID, "select ProductID from tbl_products")
-        FillAutoComplete(TXT_studentName, "select CONCAT(Firstname, ' ', Middlename, ' ',Lastname ) as StudentName from tbl_students")
-        FillAutoComplete(TXT_studentID, "select StudentID from tbl_students")
     End Sub
 
     Function Textmonitoring(textbox, column)
@@ -189,6 +189,7 @@
         LBL_stocks.Text = "0.00"
         TXT_quantity.Text = "0"
         SLD_quantity.Value = 0
+        SLD_quantity.Refresh()
         TXT_studentID.Text = ""
         TXT_studentName.Text = ""
     End Sub
@@ -261,6 +262,12 @@
         showDialogWithGray(SUBFRM_editCart, FRM_mainmenu)
     End Sub
     Private Sub BTN_buy_Click(sender As Object, e As EventArgs) Handles BTN_buy.Click
+        SaveTransactions()
+        VoidCart()
+        Refreshdata()
+        Clear()
+    End Sub
+    Sub SaveTransactions()
         For i = 0 To DGV_cart.Rows.Count - 1
             openCon()
             cmd.CommandText = "insert into tbl_transactions values(@TID,@SID,@FN,@PID,@PN,@Q,@P,@TA,@DT)"
@@ -278,10 +285,20 @@
             End With
             cmd.ExecuteNonQuery()
             con.Close()
+            UpdateStocks(DGV_cart.Rows(i).Cells(1).Value.ToString)
         Next
         MsgBox("Transaction Saved", vbOKOnly + vbInformation, "Success")
-        VoidCart()
-        Refreshdata()
-        Clear()
+    End Sub
+    Sub UpdateStocks(ProductID)
+        Dim UpdatedStocks = Val(LBL_stocks.Text) - Val(TXT_quantity.Text)
+        openCon()
+        cmd.CommandText = "Update tbl_products set Stocks=@stocks where ProductId = @ID"
+        With cmd.Parameters
+            .Clear()
+            .AddWithValue("stocks", UpdatedStocks)
+            .AddWithValue("ID", ProductID)
+        End With
+        cmd.ExecuteNonQuery()
+        con.Close()
     End Sub
 End Class
