@@ -38,6 +38,17 @@
         GetTotal()
     End Sub
 
+    Private Sub TXT_quantity_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_quantity.KeyPress
+        numberonly(e.KeyChar, e)
+    End Sub
+
+    Private Sub BTN_save_Click(sender As Object, e As EventArgs) Handles BTN_save.Click
+        If TXT_quantity.Text = 0 Or TXT_quantity.Text = "" Then
+            MsgBox("Cannot edit without a quantity, Click Remove if you want to remove the product", vbOKOnly + vbExclamation, "Editing Problem")
+            Exit Sub
+        End If
+        UpdateItem()
+    End Sub
     Private Sub BTN_remove_Click(sender As Object, e As EventArgs) Handles BTN_remove.Click
         openCon()
         cmd.CommandText = "delete from tbl_cart where ProductID = @ID"
@@ -47,14 +58,6 @@
         con.Close()
         Me.Close()
         Refreshdata()
-    End Sub
-
-    Private Sub TXT_quantity_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TXT_quantity.KeyPress
-        numberonly(e.KeyChar, e)
-    End Sub
-
-    Private Sub BTN_save_Click(sender As Object, e As EventArgs) Handles BTN_save.Click
-
     End Sub
 
     Sub GetTotal()
@@ -75,5 +78,19 @@
         Else
             BTN_save.Text = "Increase Quantity"
         End If
+    End Sub
+    Sub UpdateItem()
+        openCon()
+        cmd.CommandText = "Update tbl_cart set Quantity = @Q, TotalAmount = @TA where ProductID = @PID"
+        With cmd.Parameters
+            .Clear()
+            .AddWithValue("Q", TXT_quantity.Text)
+            .AddWithValue("TA", totalprice)
+            .AddWithValue("PID", productId)
+        End With
+        cmd.ExecuteNonQuery()
+        con.Close()
+        Refreshdata()
+        Me.Close()
     End Sub
 End Class

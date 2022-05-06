@@ -54,4 +54,16 @@ Module SystemModule
             cmd.Handled = True
         End If
     End Sub
+    Sub showDialogWithGray(FormToShow, FormParent)
+        Dim background As New Form
+        background.BackColor = Color.Black
+        background.WindowState = FormWindowState.Maximized
+        background.Opacity = 0.7D
+        background.FormBorderStyle = FormBorderStyle.None
+        background.Location = FormParent.Location
+        background.Show()
+        FormToShow.Owner = background
+        FormToShow.ShowDialog()
+        background.Dispose()
+    End Sub
 End Module

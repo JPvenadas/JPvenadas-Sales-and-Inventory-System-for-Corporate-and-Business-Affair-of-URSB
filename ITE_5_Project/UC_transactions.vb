@@ -1,7 +1,9 @@
 ﻿Public Class UC_transactions
     Dim totalprice = 0
+
     Private Sub UC_transactions_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Refreshdata()
+
     End Sub
     Private Sub BTN_add_Click(sender As Object, e As EventArgs) Handles BTN_add.Click
         If TXT_studentID.Text = "" Or TXT_studentName.Text = "" Then
@@ -257,6 +259,9 @@
         Dim row = DGV_cart.Rows(e.RowIndex)
         clickedkey = row.Cells(0).Value
         clickedkey2 = row.Cells(1).Value
-        SUBFRM_editCart.ShowDialog()
+        showDialogWithGray(SUBFRM_editCart, FRM_mainmenu)
+    End Sub
+    Private Sub BTN_buy_Click(sender As Object, e As EventArgs) Handles BTN_buy.Click
+
     End Sub
 End Class
