@@ -47,6 +47,11 @@ ITE_5_Project
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ITE_5_Project.My.Resources.Resources.logout">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ITE_5_Project.My.Resources.Resources.Peso">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

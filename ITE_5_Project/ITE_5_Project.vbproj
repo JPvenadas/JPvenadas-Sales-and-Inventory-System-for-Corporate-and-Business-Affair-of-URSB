@@ -384,5 +384,8 @@
   <ItemGroup>
     <None Include="Resources\Rectangle 286.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

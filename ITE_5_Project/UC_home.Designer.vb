@@ -22,13 +22,13 @@ Partial Class UC_home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UC_home))
         Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UC_home))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.MaterialCard2 = New MaterialSkin.Controls.MaterialCard()
@@ -38,28 +38,31 @@ Partial Class UC_home
         Me.MaterialCard3 = New MaterialSkin.Controls.MaterialCard()
         Me.MaterialCard4 = New MaterialSkin.Controls.MaterialCard()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LBL_username = New System.Windows.Forms.Label()
+        Me.LBL_usertype = New System.Windows.Forms.Label()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.LBL_students = New System.Windows.Forms.Label()
+        Me.LBL_products = New System.Windows.Forms.Label()
+        Me.LBL_users = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.LST_products = New MaterialSkin.Controls.MaterialListBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.LBL_greetings = New System.Windows.Forms.Label()
+        Me.MaterialButton1 = New MaterialSkin.Controls.MaterialButton()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.MaterialListBox1 = New MaterialSkin.Controls.MaterialListBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        Me.MaterialCard1.SuspendLayout()
         Me.MaterialCard2.SuspendLayout()
         Me.MaterialCard6.SuspendLayout()
         Me.MaterialCard7.SuspendLayout()
@@ -87,6 +90,7 @@ Partial Class UC_home
         'MaterialCard1
         '
         Me.MaterialCard1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MaterialCard1.Controls.Add(Me.LBL_greetings)
         Me.MaterialCard1.Depth = 0
         Me.MaterialCard1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.MaterialCard1.Location = New System.Drawing.Point(14, 9)
@@ -94,13 +98,13 @@ Partial Class UC_home
         Me.MaterialCard1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialCard1.Name = "MaterialCard1"
         Me.MaterialCard1.Padding = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard1.Size = New System.Drawing.Size(963, 41)
+        Me.MaterialCard1.Size = New System.Drawing.Size(901, 41)
         Me.MaterialCard1.TabIndex = 1
         '
         'MaterialCard2
         '
         Me.MaterialCard2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialCard2.Controls.Add(Me.Label4)
+        Me.MaterialCard2.Controls.Add(Me.LBL_students)
         Me.MaterialCard2.Controls.Add(Me.Panel8)
         Me.MaterialCard2.Controls.Add(Me.Panel5)
         Me.MaterialCard2.Depth = 0
@@ -116,8 +120,8 @@ Partial Class UC_home
         'MaterialCard6
         '
         Me.MaterialCard6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialCard6.Controls.Add(Me.Label3)
-        Me.MaterialCard6.Controls.Add(Me.Label2)
+        Me.MaterialCard6.Controls.Add(Me.LBL_usertype)
+        Me.MaterialCard6.Controls.Add(Me.LBL_username)
         Me.MaterialCard6.Controls.Add(Me.Panel4)
         Me.MaterialCard6.Depth = 0
         Me.MaterialCard6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -133,7 +137,7 @@ Partial Class UC_home
         '
         Me.MaterialCard7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.MaterialCard7.Controls.Add(Me.Label10)
-        Me.MaterialCard7.Controls.Add(Me.MaterialListBox1)
+        Me.MaterialCard7.Controls.Add(Me.LST_products)
         Me.MaterialCard7.Controls.Add(Me.Chart2)
         Me.MaterialCard7.Depth = 0
         Me.MaterialCard7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -162,7 +166,7 @@ Partial Class UC_home
         'MaterialCard3
         '
         Me.MaterialCard3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialCard3.Controls.Add(Me.Label5)
+        Me.MaterialCard3.Controls.Add(Me.LBL_products)
         Me.MaterialCard3.Controls.Add(Me.Panel9)
         Me.MaterialCard3.Controls.Add(Me.Panel6)
         Me.MaterialCard3.Depth = 0
@@ -178,7 +182,7 @@ Partial Class UC_home
         'MaterialCard4
         '
         Me.MaterialCard4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialCard4.Controls.Add(Me.Label6)
+        Me.MaterialCard4.Controls.Add(Me.LBL_users)
         Me.MaterialCard4.Controls.Add(Me.Panel10)
         Me.MaterialCard4.Controls.Add(Me.Panel7)
         Me.MaterialCard4.Depth = 0
@@ -202,85 +206,27 @@ Partial Class UC_home
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Sales and Inventory System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "for Corporate and Business affairs" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'Label2
+        'LBL_username
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(140, 28)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(104, 20)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Jp Venadas"
+        Me.LBL_username.AutoSize = True
+        Me.LBL_username.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBL_username.ForeColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.LBL_username.Location = New System.Drawing.Point(140, 28)
+        Me.LBL_username.Name = "LBL_username"
+        Me.LBL_username.Size = New System.Drawing.Size(91, 20)
+        Me.LBL_username.TabIndex = 2
+        Me.LBL_username.Text = "Username"
         '
-        'Label3
+        'LBL_usertype
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(140, 56)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 15)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "CBA Staff"
-        '
-        'Panel4
-        '
-        Me.Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), System.Drawing.Image)
-        Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel4.Location = New System.Drawing.Point(46, 18)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(72, 66)
-        Me.Panel4.TabIndex = 0
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.Transparent
-        Me.Panel7.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Rectangle_286
-        Me.Panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel7.Location = New System.Drawing.Point(125, 1)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(64, 52)
-        Me.Panel7.TabIndex = 2
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.Transparent
-        Me.Panel6.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Rectangle_275_removebg_preview
-        Me.Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel6.Location = New System.Drawing.Point(129, -3)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(64, 52)
-        Me.Panel6.TabIndex = 1
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.Transparent
-        Me.Panel5.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Rectangle_287_removebg_preview
-        Me.Panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel5.Location = New System.Drawing.Point(127, -4)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(64, 52)
-        Me.Panel5.TabIndex = 0
-        '
-        'Panel3
-        '
-        Me.Panel3.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Logo
-        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel3.Location = New System.Drawing.Point(16, 143)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(34, 43)
-        Me.Panel3.TabIndex = 2
-        '
-        'Panel2
-        '
-        Me.Panel2.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Wallpaper
-        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(274, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(328, 218)
-        Me.Panel2.TabIndex = 0
+        Me.LBL_usertype.AutoSize = True
+        Me.LBL_usertype.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBL_usertype.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LBL_usertype.Location = New System.Drawing.Point(140, 56)
+        Me.LBL_usertype.Name = "LBL_usertype"
+        Me.LBL_usertype.Size = New System.Drawing.Size(71, 15)
+        Me.LBL_usertype.TabIndex = 2
+        Me.LBL_usertype.Text = "User Type"
         '
         'Panel8
         '
@@ -309,41 +255,41 @@ Partial Class UC_home
         Me.Panel10.Size = New System.Drawing.Size(189, 47)
         Me.Panel10.TabIndex = 3
         '
-        'Label4
+        'LBL_students
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(8, 19)
-        Me.Label4.Name = "Label4"
-        Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label4.Size = New System.Drawing.Size(39, 20)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "100"
+        Me.LBL_students.AutoSize = True
+        Me.LBL_students.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBL_students.ForeColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.LBL_students.Location = New System.Drawing.Point(8, 19)
+        Me.LBL_students.Name = "LBL_students"
+        Me.LBL_students.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.LBL_students.Size = New System.Drawing.Size(19, 20)
+        Me.LBL_students.TabIndex = 3
+        Me.LBL_students.Text = "0"
         '
-        'Label5
+        'LBL_products
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(8, 19)
-        Me.Label5.Name = "Label5"
-        Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label5.Size = New System.Drawing.Size(39, 20)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "100"
+        Me.LBL_products.AutoSize = True
+        Me.LBL_products.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBL_products.ForeColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.LBL_products.Location = New System.Drawing.Point(8, 19)
+        Me.LBL_products.Name = "LBL_products"
+        Me.LBL_products.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.LBL_products.Size = New System.Drawing.Size(19, 20)
+        Me.LBL_products.TabIndex = 3
+        Me.LBL_products.Text = "0"
         '
-        'Label6
+        'LBL_users
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(15, 19)
-        Me.Label6.Name = "Label6"
-        Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label6.Size = New System.Drawing.Size(39, 20)
-        Me.Label6.TabIndex = 4
-        Me.Label6.Text = "100"
+        Me.LBL_users.AutoSize = True
+        Me.LBL_users.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBL_users.ForeColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(217, Byte), Integer))
+        Me.LBL_users.Location = New System.Drawing.Point(15, 19)
+        Me.LBL_users.Name = "LBL_users"
+        Me.LBL_users.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.LBL_users.Size = New System.Drawing.Size(19, 20)
+        Me.LBL_users.TabIndex = 4
+        Me.LBL_users.Text = "0"
         '
         'Label7
         '
@@ -363,9 +309,9 @@ Partial Class UC_home
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label8.Location = New System.Drawing.Point(17, 19)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(125, 15)
+        Me.Label8.Size = New System.Drawing.Size(102, 15)
         Me.Label8.TabIndex = 3
-        Me.Label8.Text = "Available Products"
+        Me.Label8.Text = "Product Stocks"
         '
         'Label9
         '
@@ -412,20 +358,21 @@ Partial Class UC_home
         Me.Chart2.TabIndex = 0
         Me.Chart2.Text = "Chart2"
         '
-        'MaterialListBox1
+        'LST_products
         '
-        Me.MaterialListBox1.BackColor = System.Drawing.Color.White
-        Me.MaterialListBox1.BorderColor = System.Drawing.Color.LightGray
-        Me.MaterialListBox1.Depth = 0
-        Me.MaterialListBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.MaterialListBox1.Font = New System.Drawing.Font("Roboto", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.MaterialListBox1.Location = New System.Drawing.Point(14, 198)
-        Me.MaterialListBox1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialListBox1.Name = "MaterialListBox1"
-        Me.MaterialListBox1.SelectedIndex = -1
-        Me.MaterialListBox1.SelectedItem = Nothing
-        Me.MaterialListBox1.Size = New System.Drawing.Size(316, 156)
-        Me.MaterialListBox1.TabIndex = 1
+        Me.LST_products.BackColor = System.Drawing.Color.White
+        Me.LST_products.BorderColor = System.Drawing.Color.Silver
+        Me.LST_products.Density = MaterialSkin.Controls.MaterialListBox.MaterialItemDensity.[Default]
+        Me.LST_products.Depth = 0
+        Me.LST_products.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.LST_products.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.LST_products.Location = New System.Drawing.Point(14, 198)
+        Me.LST_products.MouseState = MaterialSkin.MouseState.HOVER
+        Me.LST_products.Name = "LST_products"
+        Me.LST_products.SelectedIndex = -1
+        Me.LST_products.SelectedItem = Nothing
+        Me.LST_products.Size = New System.Drawing.Size(316, 156)
+        Me.LST_products.TabIndex = 1
         '
         'Label10
         '
@@ -438,11 +385,100 @@ Partial Class UC_home
         Me.Label10.TabIndex = 3
         Me.Label10.Text = "Products"
         '
+        'LBL_greetings
+        '
+        Me.LBL_greetings.AutoSize = True
+        Me.LBL_greetings.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBL_greetings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LBL_greetings.Location = New System.Drawing.Point(14, 12)
+        Me.LBL_greetings.Name = "LBL_greetings"
+        Me.LBL_greetings.Size = New System.Drawing.Size(69, 15)
+        Me.LBL_greetings.TabIndex = 4
+        Me.LBL_greetings.Text = "Greetings"
+        '
+        'MaterialButton1
+        '
+        Me.MaterialButton1.AutoSize = False
+        Me.MaterialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.MaterialButton1.Depth = 0
+        Me.MaterialButton1.HighEmphasis = True
+        Me.MaterialButton1.Icon = CType(resources.GetObject("MaterialButton1.Icon"), System.Drawing.Image)
+        Me.MaterialButton1.Location = New System.Drawing.Point(931, 13)
+        Me.MaterialButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.MaterialButton1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialButton1.Name = "MaterialButton1"
+        Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.MaterialButton1.Size = New System.Drawing.Size(41, 36)
+        Me.MaterialButton1.TabIndex = 5
+        Me.MaterialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.MaterialButton1.UseAccentColor = False
+        Me.MaterialButton1.UseVisualStyleBackColor = True
+        '
+        'Panel4
+        '
+        Me.Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), System.Drawing.Image)
+        Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel4.Location = New System.Drawing.Point(46, 18)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(72, 66)
+        Me.Panel4.TabIndex = 0
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.Transparent
+        Me.Panel7.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Rectangle_286
+        Me.Panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel7.Location = New System.Drawing.Point(134, -2)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(56, 52)
+        Me.Panel7.TabIndex = 2
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.Transparent
+        Me.Panel6.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Rectangle_275_removebg_preview
+        Me.Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel6.Location = New System.Drawing.Point(129, -3)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(64, 52)
+        Me.Panel6.TabIndex = 1
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.Transparent
+        Me.Panel5.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Rectangle_287_removebg_preview
+        Me.Panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel5.Location = New System.Drawing.Point(127, -4)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(64, 52)
+        Me.Panel5.TabIndex = 0
+        '
+        'Panel3
+        '
+        Me.Panel3.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Logo
+        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel3.Location = New System.Drawing.Point(16, 143)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(34, 43)
+        Me.Panel3.TabIndex = 2
+        '
+        'Panel2
+        '
+        Me.Panel2.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Wallpaper
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel2.Location = New System.Drawing.Point(274, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(328, 218)
+        Me.Panel2.TabIndex = 0
+        '
         'UC_home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.Controls.Add(Me.MaterialButton1)
         Me.Controls.Add(Me.MaterialCard8)
         Me.Controls.Add(Me.MaterialCard7)
         Me.Controls.Add(Me.MaterialCard6)
@@ -455,6 +491,8 @@ Partial Class UC_home
         Me.Size = New System.Drawing.Size(1048, 543)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.MaterialCard1.ResumeLayout(False)
+        Me.MaterialCard1.PerformLayout()
         Me.MaterialCard2.ResumeLayout(False)
         Me.MaterialCard2.PerformLayout()
         Me.MaterialCard6.ResumeLayout(False)
@@ -490,22 +528,24 @@ Partial Class UC_home
     Friend WithEvents MaterialCard4 As MaterialSkin.Controls.MaterialCard
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents LBL_usertype As Label
+    Friend WithEvents LBL_username As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Panel10 As Panel
-    Friend WithEvents Label4 As Label
+    Friend WithEvents LBL_students As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents LBL_products As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents LBL_users As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Chart2 As DataVisualization.Charting.Chart
     Friend WithEvents Chart1 As DataVisualization.Charting.Chart
     Friend WithEvents Label10 As Label
-    Friend WithEvents MaterialListBox1 As MaterialSkin.Controls.MaterialListBox
+    Friend WithEvents LST_products As MaterialSkin.Controls.MaterialListBox
+    Friend WithEvents LBL_greetings As Label
+    Friend WithEvents MaterialButton1 As MaterialSkin.Controls.MaterialButton
 End Class
