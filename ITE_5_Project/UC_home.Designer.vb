@@ -22,6 +22,7 @@ Partial Class UC_home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
@@ -49,8 +50,8 @@ Partial Class UC_home
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Bar = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Pie = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.LST_products = New MaterialSkin.Controls.MaterialListBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.LBL_greetings = New System.Windows.Forms.Label()
@@ -61,6 +62,13 @@ Partial Class UC_home
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.MaterialCard1.SuspendLayout()
         Me.MaterialCard2.SuspendLayout()
@@ -72,8 +80,10 @@ Partial Class UC_home
         Me.Panel8.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel10.SuspendLayout()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Bar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Pie, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel11.SuspendLayout()
+        Me.Panel13.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -120,39 +130,42 @@ Partial Class UC_home
         'MaterialCard6
         '
         Me.MaterialCard6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MaterialCard6.Controls.Add(Me.Panel11)
+        Me.MaterialCard6.Controls.Add(Me.Panel13)
         Me.MaterialCard6.Controls.Add(Me.LBL_usertype)
         Me.MaterialCard6.Controls.Add(Me.LBL_username)
         Me.MaterialCard6.Controls.Add(Me.Panel4)
         Me.MaterialCard6.Depth = 0
         Me.MaterialCard6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialCard6.Location = New System.Drawing.Point(14, 58)
+        Me.MaterialCard6.Location = New System.Drawing.Point(14, 57)
         Me.MaterialCard6.Margin = New System.Windows.Forms.Padding(14)
         Me.MaterialCard6.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialCard6.Name = "MaterialCard6"
         Me.MaterialCard6.Padding = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard6.Size = New System.Drawing.Size(344, 102)
+        Me.MaterialCard6.Size = New System.Drawing.Size(344, 78)
         Me.MaterialCard6.TabIndex = 3
         '
         'MaterialCard7
         '
         Me.MaterialCard7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MaterialCard7.Controls.Add(Me.Label2)
         Me.MaterialCard7.Controls.Add(Me.Label10)
         Me.MaterialCard7.Controls.Add(Me.LST_products)
-        Me.MaterialCard7.Controls.Add(Me.Chart2)
+        Me.MaterialCard7.Controls.Add(Me.Pie)
         Me.MaterialCard7.Depth = 0
         Me.MaterialCard7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialCard7.Location = New System.Drawing.Point(14, 175)
+        Me.MaterialCard7.Location = New System.Drawing.Point(14, 147)
         Me.MaterialCard7.Margin = New System.Windows.Forms.Padding(14)
         Me.MaterialCard7.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialCard7.Name = "MaterialCard7"
         Me.MaterialCard7.Padding = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard7.Size = New System.Drawing.Size(344, 368)
+        Me.MaterialCard7.Size = New System.Drawing.Size(344, 396)
         Me.MaterialCard7.TabIndex = 3
         '
         'MaterialCard8
         '
         Me.MaterialCard8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialCard8.Controls.Add(Me.Chart1)
+        Me.MaterialCard8.Controls.Add(Me.Bar)
         Me.MaterialCard8.Depth = 0
         Me.MaterialCard8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.MaterialCard8.Location = New System.Drawing.Point(375, 396)
@@ -211,7 +224,7 @@ Partial Class UC_home
         Me.LBL_username.AutoSize = True
         Me.LBL_username.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBL_username.ForeColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(217, Byte), Integer))
-        Me.LBL_username.Location = New System.Drawing.Point(140, 28)
+        Me.LBL_username.Location = New System.Drawing.Point(160, 17)
         Me.LBL_username.Name = "LBL_username"
         Me.LBL_username.Size = New System.Drawing.Size(91, 20)
         Me.LBL_username.TabIndex = 2
@@ -222,7 +235,7 @@ Partial Class UC_home
         Me.LBL_usertype.AutoSize = True
         Me.LBL_usertype.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBL_usertype.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.LBL_usertype.Location = New System.Drawing.Point(140, 56)
+        Me.LBL_usertype.Location = New System.Drawing.Point(160, 45)
         Me.LBL_usertype.Name = "LBL_usertype"
         Me.LBL_usertype.Size = New System.Drawing.Size(71, 15)
         Me.LBL_usertype.TabIndex = 2
@@ -324,39 +337,46 @@ Partial Class UC_home
         Me.Label9.TabIndex = 3
         Me.Label9.Text = "Number of Users"
         '
-        'Chart1
+        'Bar
         '
         ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
-        Me.Chart1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Bar.ChartAreas.Add(ChartArea2)
+        Me.Bar.Dock = System.Windows.Forms.DockStyle.Fill
         Legend2.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend2)
-        Me.Chart1.Location = New System.Drawing.Point(14, 14)
-        Me.Chart1.Name = "Chart1"
+        Me.Bar.Legends.Add(Legend2)
+        Me.Bar.Location = New System.Drawing.Point(14, 14)
+        Me.Bar.Name = "Bar"
         Series2.ChartArea = "ChartArea1"
         Series2.Legend = "Legend1"
         Series2.Name = "Series1"
-        Me.Chart1.Series.Add(Series2)
-        Me.Chart1.Size = New System.Drawing.Size(574, 119)
-        Me.Chart1.TabIndex = 0
-        Me.Chart1.Text = "Chart1"
+        Me.Bar.Series.Add(Series2)
+        Me.Bar.Size = New System.Drawing.Size(574, 119)
+        Me.Bar.TabIndex = 0
+        Me.Bar.Text = "Chart1"
         '
-        'Chart2
+        'Pie
         '
+        Me.Pie.BorderlineWidth = 0
         ChartArea1.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea1)
+        Me.Pie.ChartAreas.Add(ChartArea1)
         Legend1.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend1)
-        Me.Chart2.Location = New System.Drawing.Point(17, 17)
-        Me.Chart2.Name = "Chart2"
+        Me.Pie.Legends.Add(Legend1)
+        Me.Pie.Location = New System.Drawing.Point(17, 23)
+        Me.Pie.Name = "Pie"
+        Me.Pie.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
         Series1.ChartArea = "ChartArea1"
         Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series1.Color = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Series1.CustomProperties = "PieLabelStyle=Outside"
+        Series1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series1.IsVisibleInLegend = False
+        Series1.LabelBorderWidth = 0
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
-        Me.Chart2.Series.Add(Series1)
-        Me.Chart2.Size = New System.Drawing.Size(302, 133)
-        Me.Chart2.TabIndex = 0
-        Me.Chart2.Text = "Chart2"
+        Me.Pie.Series.Add(Series1)
+        Me.Pie.Size = New System.Drawing.Size(310, 187)
+        Me.Pie.TabIndex = 0
+        Me.Pie.Text = "Chart2"
         '
         'LST_products
         '
@@ -366,12 +386,12 @@ Partial Class UC_home
         Me.LST_products.Depth = 0
         Me.LST_products.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.LST_products.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.LST_products.Location = New System.Drawing.Point(14, 198)
+        Me.LST_products.Location = New System.Drawing.Point(14, 225)
         Me.LST_products.MouseState = MaterialSkin.MouseState.HOVER
         Me.LST_products.Name = "LST_products"
         Me.LST_products.SelectedIndex = -1
         Me.LST_products.SelectedItem = Nothing
-        Me.LST_products.Size = New System.Drawing.Size(316, 156)
+        Me.LST_products.Size = New System.Drawing.Size(316, 157)
         Me.LST_products.TabIndex = 1
         '
         'Label10
@@ -379,7 +399,7 @@ Partial Class UC_home
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(17, 176)
+        Me.Label10.Location = New System.Drawing.Point(17, 210)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(63, 15)
         Me.Label10.TabIndex = 3
@@ -419,7 +439,7 @@ Partial Class UC_home
         '
         Me.Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), System.Drawing.Image)
         Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel4.Location = New System.Drawing.Point(46, 18)
+        Me.Panel4.Location = New System.Drawing.Point(69, 7)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(72, 66)
         Me.Panel4.TabIndex = 0
@@ -473,6 +493,77 @@ Partial Class UC_home
         Me.Panel2.Size = New System.Drawing.Size(328, 218)
         Me.Panel2.TabIndex = 0
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(12, 5)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(129, 15)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Product Categories"
+        '
+        'Panel11
+        '
+        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Panel11.Controls.Add(Me.Panel12)
+        Me.Panel11.Controls.Add(Me.Label3)
+        Me.Panel11.Location = New System.Drawing.Point(0, 1)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(42, 77)
+        Me.Panel11.TabIndex = 4
+        '
+        'Panel12
+        '
+        Me.Panel12.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Logo
+        Me.Panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel12.Location = New System.Drawing.Point(16, 143)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(34, 43)
+        Me.Panel12.TabIndex = 2
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(53, 149)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(243, 32)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Sales and Inventory System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "for Corporate and Business affairs" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'Panel13
+        '
+        Me.Panel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel13.Controls.Add(Me.Panel14)
+        Me.Panel13.Controls.Add(Me.Label4)
+        Me.Panel13.Location = New System.Drawing.Point(37, 1)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Size = New System.Drawing.Size(13, 77)
+        Me.Panel13.TabIndex = 5
+        '
+        'Panel14
+        '
+        Me.Panel14.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Logo
+        Me.Panel14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel14.Location = New System.Drawing.Point(16, 143)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(34, 43)
+        Me.Panel14.TabIndex = 2
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(53, 149)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(243, 32)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Sales and Inventory System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "for Corporate and Business affairs" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
         'UC_home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -510,8 +601,12 @@ Partial Class UC_home
         Me.Panel9.PerformLayout()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Bar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Pie, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
+        Me.Panel13.ResumeLayout(False)
+        Me.Panel13.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -542,10 +637,17 @@ Partial Class UC_home
     Friend WithEvents Label8 As Label
     Friend WithEvents LBL_users As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Chart2 As DataVisualization.Charting.Chart
-    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
+    Friend WithEvents Pie As DataVisualization.Charting.Chart
+    Friend WithEvents Bar As DataVisualization.Charting.Chart
     Friend WithEvents Label10 As Label
     Friend WithEvents LST_products As MaterialSkin.Controls.MaterialListBox
     Friend WithEvents LBL_greetings As Label
     Friend WithEvents MaterialButton1 As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel13 As Panel
+    Friend WithEvents Panel14 As Panel
+    Friend WithEvents Label4 As Label
 End Class
