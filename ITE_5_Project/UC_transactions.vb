@@ -227,6 +227,13 @@
         End With
         cmd.ExecuteNonQuery()
         con.Close()
+        TXT_productID.Text = ""
+        TXT_productName.Text = ""
+        LBL_price.Text = "0.00"
+        LBL_stocks.Text = "0.00"
+        TXT_quantity.Text = "0"
+        SLD_quantity.Value = 0
+        SLD_quantity.Refresh()
     End Sub
     Sub VoidCart()
         openCon()

@@ -2,11 +2,18 @@
     Private Sub UC_home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DisplayProducts()
         SetUserInfo()
+        RenewData()
+    End Sub
+    Private Sub UC_home_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
+        RenewData()
+    End Sub
+    Sub RenewData()
         GetProductCategories()
         GetTotal("select sum(Stocks) from tbl_products", LBL_products)
         GetTotal("select count(*) from tbl_students", LBL_students)
         GetTotal("select count(*) from tbl_users", LBL_users)
         LBL_greetings.Text = "Welcome to Sales and Inventory system, " + loggedUserName
+        GenerateSales()
     End Sub
     Sub DisplayProducts()
         openCon()
@@ -43,12 +50,35 @@
         End While
         con.Close()
     End Sub
-
-    Private Sub UC_home_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
-        GetProductCategories()
-        GetTotal("select sum(Stocks) from tbl_products", LBL_products)
-        GetTotal("select count(*) from tbl_students", LBL_students)
-        GetTotal("select count(*) from tbl_users", LBL_users)
-        LBL_greetings.Text = "Welcome to Sales and Inventory system, " + loggedUserName
+    Function GetMonthBefore(num)
+        Dim before = Date.Now
+        before = DateAdd("m", -num, before)
+        Dim processeddate = Format(before, "dd-MM-yyyy")
+        Return processeddate
+    End Function
+    Sub GenerateSales()
+        Bar.Series("Series1").Points.Clear()
+        For i = 0 To 11
+            Dim dateinterval = GetMonthBefore(11 - i)
+            Dim year = Format(CDate(dateinterval), "yyyy")
+            Dim month = Format(CDate(dateinterval), "MM")
+            Dim monthString = Format(CDate(dateinterval), "MMMM")
+            openCon()
+            cmd.CommandText = "select sum(TotalAmount), month(Date), year(Date) from tbl_transactions where year(Date) = @year and month(date) = @month group by month(Date), year(Date)"
+            With cmd.Parameters
+                .Clear()
+                .AddWithValue("year", year)
+                .AddWithValue("month", month)
+            End With
+            cmd.ExecuteNonQuery()
+            dr = cmd.ExecuteReader
+            While dr.Read
+                Bar.Series("Series1").Points.AddXY(monthString, dr(0))
+            End While
+            If Not dr.HasRows Then
+                Bar.Series("Series1").Points.AddXY(monthString, "0")
+            End If
+            con.Close()
+        Next
     End Sub
 End Class

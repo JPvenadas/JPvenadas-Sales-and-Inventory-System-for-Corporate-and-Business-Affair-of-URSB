@@ -23,12 +23,12 @@ Partial Class UC_home
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UC_home))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
@@ -69,6 +69,7 @@ Partial Class UC_home
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.MaterialCard1.SuspendLayout()
         Me.MaterialCard2.SuspendLayout()
@@ -119,12 +120,12 @@ Partial Class UC_home
         Me.MaterialCard2.Controls.Add(Me.Panel5)
         Me.MaterialCard2.Depth = 0
         Me.MaterialCard2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialCard2.Location = New System.Drawing.Point(379, 286)
+        Me.MaterialCard2.Location = New System.Drawing.Point(375, 284)
         Me.MaterialCard2.Margin = New System.Windows.Forms.Padding(14)
         Me.MaterialCard2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialCard2.Name = "MaterialCard2"
         Me.MaterialCard2.Padding = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard2.Size = New System.Drawing.Size(185, 94)
+        Me.MaterialCard2.Size = New System.Drawing.Size(189, 90)
         Me.MaterialCard2.TabIndex = 2
         '
         'MaterialCard6
@@ -168,7 +169,7 @@ Partial Class UC_home
         Me.MaterialCard8.Controls.Add(Me.Bar)
         Me.MaterialCard8.Depth = 0
         Me.MaterialCard8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialCard8.Location = New System.Drawing.Point(375, 396)
+        Me.MaterialCard8.Location = New System.Drawing.Point(374, 400)
         Me.MaterialCard8.Margin = New System.Windows.Forms.Padding(14)
         Me.MaterialCard8.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialCard8.Name = "MaterialCard8"
@@ -184,12 +185,12 @@ Partial Class UC_home
         Me.MaterialCard3.Controls.Add(Me.Panel6)
         Me.MaterialCard3.Depth = 0
         Me.MaterialCard3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialCard3.Location = New System.Drawing.Point(581, 286)
+        Me.MaterialCard3.Location = New System.Drawing.Point(581, 284)
         Me.MaterialCard3.Margin = New System.Windows.Forms.Padding(14)
         Me.MaterialCard3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialCard3.Name = "MaterialCard3"
         Me.MaterialCard3.Padding = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard3.Size = New System.Drawing.Size(189, 94)
+        Me.MaterialCard3.Size = New System.Drawing.Size(189, 90)
         Me.MaterialCard3.TabIndex = 2
         '
         'MaterialCard4
@@ -200,12 +201,12 @@ Partial Class UC_home
         Me.MaterialCard4.Controls.Add(Me.Panel7)
         Me.MaterialCard4.Depth = 0
         Me.MaterialCard4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialCard4.Location = New System.Drawing.Point(788, 286)
+        Me.MaterialCard4.Location = New System.Drawing.Point(788, 284)
         Me.MaterialCard4.Margin = New System.Windows.Forms.Padding(14)
         Me.MaterialCard4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialCard4.Name = "MaterialCard4"
         Me.MaterialCard4.Padding = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard4.Size = New System.Drawing.Size(189, 94)
+        Me.MaterialCard4.Size = New System.Drawing.Size(189, 90)
         Me.MaterialCard4.TabIndex = 2
         '
         'Label1
@@ -309,7 +310,7 @@ Partial Class UC_home
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(12, 19)
+        Me.Label7.Location = New System.Drawing.Point(12, 18)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(137, 15)
         Me.Label7.TabIndex = 3
@@ -339,41 +340,44 @@ Partial Class UC_home
         '
         'Bar
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Bar.ChartAreas.Add(ChartArea2)
-        Me.Bar.Dock = System.Windows.Forms.DockStyle.Fill
-        Legend2.Name = "Legend1"
-        Me.Bar.Legends.Add(Legend2)
-        Me.Bar.Location = New System.Drawing.Point(14, 14)
+        ChartArea3.AxisX.Interval = 1.0R
+        ChartArea3.Name = "ChartArea1"
+        Me.Bar.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.Bar.Legends.Add(Legend3)
+        Me.Bar.Location = New System.Drawing.Point(-24, 2)
         Me.Bar.Name = "Bar"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.Bar.Series.Add(Series2)
-        Me.Bar.Size = New System.Drawing.Size(574, 119)
+        Series3.ChartArea = "ChartArea1"
+        Series3.IsVisibleInLegend = False
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.[Date]
+        Series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.[Double]
+        Me.Bar.Series.Add(Series3)
+        Me.Bar.Size = New System.Drawing.Size(659, 143)
         Me.Bar.TabIndex = 0
         Me.Bar.Text = "Chart1"
         '
         'Pie
         '
         Me.Pie.BorderlineWidth = 0
-        ChartArea1.Name = "ChartArea1"
-        Me.Pie.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Pie.Legends.Add(Legend1)
+        ChartArea4.Name = "ChartArea1"
+        Me.Pie.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.Pie.Legends.Add(Legend4)
         Me.Pie.Location = New System.Drawing.Point(17, 23)
         Me.Pie.Name = "Pie"
         Me.Pie.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
-        Series1.Color = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Series1.CustomProperties = "PieLabelStyle=Outside"
-        Series1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Series1.IsVisibleInLegend = False
-        Series1.LabelBorderWidth = 0
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Pie.Series.Add(Series1)
+        Series4.ChartArea = "ChartArea1"
+        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series4.Color = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Series4.CustomProperties = "PieLabelStyle=Outside"
+        Series4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series4.IsVisibleInLegend = False
+        Series4.LabelBorderWidth = 0
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Me.Pie.Series.Add(Series4)
         Me.Pie.Size = New System.Drawing.Size(310, 187)
         Me.Pie.TabIndex = 0
         Me.Pie.Text = "Chart2"
@@ -564,11 +568,23 @@ Partial Class UC_home
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "Sales and Inventory System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "for Corporate and Business affairs" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(386, 385)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(140, 13)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "Sales and Transactions"
+        '
         'UC_home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.MaterialButton1)
         Me.Controls.Add(Me.MaterialCard8)
         Me.Controls.Add(Me.MaterialCard7)
@@ -608,6 +624,7 @@ Partial Class UC_home
         Me.Panel13.ResumeLayout(False)
         Me.Panel13.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -650,4 +667,5 @@ Partial Class UC_home
     Friend WithEvents Panel13 As Panel
     Friend WithEvents Panel14 As Panel
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class
