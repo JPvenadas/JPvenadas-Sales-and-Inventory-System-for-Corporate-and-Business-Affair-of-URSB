@@ -18,13 +18,22 @@ Public Class FRM_mainmenu
         Dim transactions As New UC_transactions
 
         attachControls(home, TAB_home)
-        attachControls(users, TAB_user)
         attachControls(students, TAB_students)
-        attachControls(products, TAB_products)
-        attachControls(stocks, TAB_stocks)
         attachControls(reports, TAB_reports)
-        attachControls(settings, TAB_settings)
         attachControls(transactions, TAB_transaction)
+
+        If loggedUserType = "CBA Head" Then
+            attachControls(settings, TAB_settings)
+            attachControls(stocks, TAB_stocks)
+            attachControls(products, TAB_products)
+            attachControls(users, TAB_user)
+        End If
+        If loggedUserType = "CBA Staff" Then
+            MaterialTabControl1.TabPages.Remove(TAB_user)
+            MaterialTabControl1.TabPages.Remove(TAB_products)
+            MaterialTabControl1.TabPages.Remove(TAB_settings)
+            MaterialTabControl1.TabPages.Remove(TAB_stocks)
+        End If
     End Sub
 
 End Class
