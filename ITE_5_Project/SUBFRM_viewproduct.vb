@@ -10,8 +10,8 @@
         Me.Close()
     End Sub
 
-    Private Sub BTN_revert_Click(sender As Object, e As EventArgs) Handles BTN_revert.Click
-        attachinputvalues()
+    Private Sub BTN_delete_Click(sender As Object, e As EventArgs) Handles BTN_delete.Click
+        DeleteProduct()
     End Sub
 
     Private Sub BTN_save_Click(sender As Object, e As EventArgs) Handles BTN_save.Click
@@ -80,7 +80,16 @@
         Refreshtable()
         Me.Close()
     End Sub
-
+    Sub DeleteProduct()
+        openCon()
+        cmd.CommandText = "delete from tbl_products where ProductId = @ID"
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("ID", clickedkey)
+        cmd.ExecuteNonQuery()
+        con.Close()
+        Refreshtable()
+        Me.Close()
+    End Sub
     Sub Refreshtable()
         Dim uc As New UC_products
         FRM_mainmenu.TAB_products.Controls.Clear()

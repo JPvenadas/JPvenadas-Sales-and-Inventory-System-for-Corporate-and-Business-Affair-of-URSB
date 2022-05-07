@@ -26,7 +26,7 @@ Partial Class SUBFRM_viewproduct
         Me.BTN_back = New MaterialSkin.Controls.MaterialButton()
         Me.TXT_price = New MaterialSkin.Controls.MaterialMaskedTextBox()
         Me.CBO_category = New MaterialSkin.Controls.MaterialComboBox()
-        Me.BTN_revert = New MaterialSkin.Controls.MaterialButton()
+        Me.BTN_delete = New MaterialSkin.Controls.MaterialButton()
         Me.BTN_save = New MaterialSkin.Controls.MaterialButton()
         Me.TXT_stocks = New MaterialSkin.Controls.MaterialTextBox2()
         Me.TXT_productname = New MaterialSkin.Controls.MaterialTextBox2()
@@ -134,25 +134,25 @@ Partial Class SUBFRM_viewproduct
         Me.CBO_category.StartIndex = 0
         Me.CBO_category.TabIndex = 24
         '
-        'BTN_revert
+        'BTN_delete
         '
-        Me.BTN_revert.AutoSize = False
-        Me.BTN_revert.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.BTN_revert.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.BTN_revert.Depth = 0
-        Me.BTN_revert.HighEmphasis = True
-        Me.BTN_revert.Icon = Nothing
-        Me.BTN_revert.Location = New System.Drawing.Point(270, 470)
-        Me.BTN_revert.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.BTN_revert.MouseState = MaterialSkin.MouseState.HOVER
-        Me.BTN_revert.Name = "BTN_revert"
-        Me.BTN_revert.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.BTN_revert.Size = New System.Drawing.Size(94, 45)
-        Me.BTN_revert.TabIndex = 22
-        Me.BTN_revert.Text = "Revert"
-        Me.BTN_revert.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
-        Me.BTN_revert.UseAccentColor = False
-        Me.BTN_revert.UseVisualStyleBackColor = True
+        Me.BTN_delete.AutoSize = False
+        Me.BTN_delete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BTN_delete.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.BTN_delete.Depth = 0
+        Me.BTN_delete.HighEmphasis = True
+        Me.BTN_delete.Icon = Nothing
+        Me.BTN_delete.Location = New System.Drawing.Point(270, 470)
+        Me.BTN_delete.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.BTN_delete.MouseState = MaterialSkin.MouseState.HOVER
+        Me.BTN_delete.Name = "BTN_delete"
+        Me.BTN_delete.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.BTN_delete.Size = New System.Drawing.Size(94, 45)
+        Me.BTN_delete.TabIndex = 22
+        Me.BTN_delete.Text = "Delete"
+        Me.BTN_delete.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
+        Me.BTN_delete.UseAccentColor = False
+        Me.BTN_delete.UseVisualStyleBackColor = True
         '
         'BTN_save
         '
@@ -271,7 +271,7 @@ Partial Class SUBFRM_viewproduct
         Me.ClientSize = New System.Drawing.Size(534, 546)
         Me.Controls.Add(Me.TXT_price)
         Me.Controls.Add(Me.CBO_category)
-        Me.Controls.Add(Me.BTN_revert)
+        Me.Controls.Add(Me.BTN_delete)
         Me.Controls.Add(Me.BTN_save)
         Me.Controls.Add(Me.TXT_stocks)
         Me.Controls.Add(Me.TXT_productname)
@@ -293,7 +293,7 @@ Partial Class SUBFRM_viewproduct
     Friend WithEvents BTN_back As MaterialSkin.Controls.MaterialButton
     Friend WithEvents TXT_price As MaterialSkin.Controls.MaterialMaskedTextBox
     Friend WithEvents CBO_category As MaterialSkin.Controls.MaterialComboBox
-    Friend WithEvents BTN_revert As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents BTN_delete As MaterialSkin.Controls.MaterialButton
     Friend WithEvents BTN_save As MaterialSkin.Controls.MaterialButton
     Friend WithEvents TXT_stocks As MaterialSkin.Controls.MaterialTextBox2
     Friend WithEvents TXT_productname As MaterialSkin.Controls.MaterialTextBox2

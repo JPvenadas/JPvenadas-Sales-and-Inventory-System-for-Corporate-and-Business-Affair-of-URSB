@@ -20,5 +20,4 @@
             TblproductsBindingSource.Filter = "(Convert(ProductID,'System.String')) LIKE '%" & TXT_filter.Text & "%' OR ProductName LIKE '%" & TXT_filter.Text & "%' OR ProductCategory LIKE '%" & TXT_filter.Text & "%' "
         End If
     End Sub
-
 End Class
