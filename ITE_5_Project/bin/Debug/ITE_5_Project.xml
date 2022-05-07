@@ -57,12 +57,32 @@ ITE_5_Project
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:ITE_5_Project.My.Resources.Resources.Rectangle_275_removebg_preview">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ITE_5_Project.My.Resources.Resources.Rectangle_286">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ITE_5_Project.My.Resources.Resources.Rectangle_287_removebg_preview">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:ITE_5_Project.My.Resources.Resources.stocks">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:ITE_5_Project.My.Resources.Resources.user">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ITE_5_Project.My.Resources.Resources.User2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

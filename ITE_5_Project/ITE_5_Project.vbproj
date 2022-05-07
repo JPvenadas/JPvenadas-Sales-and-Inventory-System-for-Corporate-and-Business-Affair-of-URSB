@@ -372,5 +372,17 @@
   <ItemGroup>
     <None Include="Resources\Wallpaper.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Google_Contacts_icon.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle_287-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle_275-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 286.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
