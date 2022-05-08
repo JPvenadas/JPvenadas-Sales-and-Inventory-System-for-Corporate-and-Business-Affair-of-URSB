@@ -39,6 +39,7 @@ Partial Class FRM_mainmenu
         Me.Tbl_usersTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_usersTableAdapter()
         Me.TblproductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_productsTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_productsTableAdapter()
+        Me.BTN_logout = New System.Windows.Forms.Button()
         Me.MaterialTabControl1.SuspendLayout()
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblusersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -196,11 +197,25 @@ Partial Class FRM_mainmenu
         '
         Me.Tbl_productsTableAdapter.ClearBeforeFill = True
         '
+        'BTN_logout
+        '
+        Me.BTN_logout.BackColor = System.Drawing.Color.Transparent
+        Me.BTN_logout.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.logout
+        Me.BTN_logout.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.BTN_logout.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.BTN_logout.Location = New System.Drawing.Point(969, 30)
+        Me.BTN_logout.Name = "BTN_logout"
+        Me.BTN_logout.Size = New System.Drawing.Size(80, 31)
+        Me.BTN_logout.TabIndex = 1
+        Me.BTN_logout.Text = "Logout"
+        Me.BTN_logout.UseVisualStyleBackColor = False
+        '
         'FRM_mainmenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1059, 661)
+        Me.Controls.Add(Me.BTN_logout)
         Me.Controls.Add(Me.MaterialTabControl1)
         Me.DrawerShowIconsWhenHidden = True
         Me.DrawerTabControl = Me.MaterialTabControl1
@@ -234,4 +249,5 @@ Partial Class FRM_mainmenu
     Friend WithEvents TAB_products As TabPage
     Friend WithEvents TblproductsBindingSource As BindingSource
     Friend WithEvents Tbl_productsTableAdapter As db_inventoryDataSetTableAdapters.tbl_productsTableAdapter
+    Friend WithEvents BTN_logout As Button
 End Class

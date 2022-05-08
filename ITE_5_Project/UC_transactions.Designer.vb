@@ -23,9 +23,9 @@ Partial Class UC_transactions
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UC_transactions))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UC_transactions))
         Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.MaterialCard6 = New MaterialSkin.Controls.MaterialCard()
         Me.LBL_totalPrice = New MaterialSkin.Controls.MaterialLabel()
@@ -37,7 +37,6 @@ Partial Class UC_transactions
         Me.TXT_productID = New System.Windows.Forms.TextBox()
         Me.MaterialCard7 = New MaterialSkin.Controls.MaterialCard()
         Me.TXT_productName = New System.Windows.Forms.TextBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.LBL_stocks = New MaterialSkin.Controls.MaterialLabel()
         Me.LBL_price = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel11 = New MaterialSkin.Controls.MaterialLabel()
@@ -52,13 +51,10 @@ Partial Class UC_transactions
         Me.TXT_studentName = New System.Windows.Forms.TextBox()
         Me.MaterialCard9 = New MaterialSkin.Controls.MaterialCard()
         Me.TXT_studentID = New System.Windows.Forms.TextBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.BTN_add = New MaterialSkin.Controls.MaterialButton()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MaterialCard2 = New MaterialSkin.Controls.MaterialCard()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.MaterialLabel12 = New MaterialSkin.Controls.MaterialLabel()
         Me.DGV_cart = New System.Windows.Forms.DataGridView()
         Me.TransactionIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -74,6 +70,10 @@ Partial Class UC_transactions
         Me.BTN_buy = New MaterialSkin.Controls.MaterialButton()
         Me.Tbl_cartTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_cartTableAdapter()
         Me.MaterialLabel6 = New MaterialSkin.Controls.MaterialLabel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MaterialCard1.SuspendLayout()
         Me.MaterialCard6.SuspendLayout()
         Me.MaterialCard5.SuspendLayout()
@@ -252,15 +252,6 @@ Partial Class UC_transactions
         Me.TXT_productName.Name = "TXT_productName"
         Me.TXT_productName.Size = New System.Drawing.Size(284, 17)
         Me.TXT_productName.TabIndex = 0
-        '
-        'Panel3
-        '
-        Me.Panel3.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Product
-        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel3.Location = New System.Drawing.Point(1, 39)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(112, 83)
-        Me.Panel3.TabIndex = 21
         '
         'LBL_stocks
         '
@@ -466,15 +457,6 @@ Partial Class UC_transactions
         Me.TXT_studentID.Size = New System.Drawing.Size(284, 17)
         Me.TXT_studentID.TabIndex = 0
         '
-        'Panel2
-        '
-        Me.Panel2.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.user
-        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel2.Location = New System.Drawing.Point(8, 21)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(88, 83)
-        Me.Panel2.TabIndex = 21
-        '
         'MaterialLabel1
         '
         Me.MaterialLabel1.AutoSize = True
@@ -520,15 +502,6 @@ Partial Class UC_transactions
         Me.BTN_add.UseAccentColor = False
         Me.BTN_add.UseVisualStyleBackColor = True
         '
-        'Panel1
-        '
-        Me.Panel1.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Product
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Location = New System.Drawing.Point(16, 246)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(108, 83)
-        Me.Panel1.TabIndex = 21
-        '
         'MaterialCard2
         '
         Me.MaterialCard2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -544,15 +517,6 @@ Partial Class UC_transactions
         Me.MaterialCard2.Padding = New System.Windows.Forms.Padding(14)
         Me.MaterialCard2.Size = New System.Drawing.Size(438, 445)
         Me.MaterialCard2.TabIndex = 15
-        '
-        'Panel4
-        '
-        Me.Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), System.Drawing.Image)
-        Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel4.Location = New System.Drawing.Point(16, 10)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(45, 39)
-        Me.Panel4.TabIndex = 33
         '
         'MaterialLabel12
         '
@@ -739,6 +703,42 @@ Partial Class UC_transactions
         Me.MaterialLabel6.Size = New System.Drawing.Size(296, 14)
         Me.MaterialLabel6.TabIndex = 31
         Me.MaterialLabel6.Text = "Process and Record the daily Transactions of Students"
+        '
+        'Panel4
+        '
+        Me.Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), System.Drawing.Image)
+        Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel4.Location = New System.Drawing.Point(16, 10)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(45, 39)
+        Me.Panel4.TabIndex = 33
+        '
+        'Panel3
+        '
+        Me.Panel3.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.shopping_bag6504_removebg_preview
+        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel3.Location = New System.Drawing.Point(1, 39)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(112, 83)
+        Me.Panel3.TabIndex = 21
+        '
+        'Panel2
+        '
+        Me.Panel2.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.user
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.Location = New System.Drawing.Point(8, 21)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(88, 83)
+        Me.Panel2.TabIndex = 21
+        '
+        'Panel1
+        '
+        Me.Panel1.BackgroundImage = Global.ITE_5_Project.My.Resources.Resources.Product
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Location = New System.Drawing.Point(16, 246)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(108, 83)
+        Me.Panel1.TabIndex = 21
         '
         'UC_transactions
         '

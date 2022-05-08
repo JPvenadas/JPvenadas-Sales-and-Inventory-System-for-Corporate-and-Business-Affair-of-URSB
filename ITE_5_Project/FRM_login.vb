@@ -17,6 +17,7 @@
             dr.Read()
             loggedUserName = dr.GetString("LoginName")
             loggedUserType = dr.GetString("UserType")
+            destination = "Menu"
             FRM_Loading.Show()
             Me.Close()
             con.Close()

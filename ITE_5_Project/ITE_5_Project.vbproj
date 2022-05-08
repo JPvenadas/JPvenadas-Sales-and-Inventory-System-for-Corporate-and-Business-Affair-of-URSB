@@ -300,6 +300,9 @@
     <EmbeddedResource Include="UC_products.resx">
       <DependentUpon>UC_products.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_reports.resx">
+      <DependentUpon>UC_reports.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_settings.resx">
       <DependentUpon>UC_settings.vb</DependentUpon>
     </EmbeddedResource>
@@ -386,6 +389,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-bag6504-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

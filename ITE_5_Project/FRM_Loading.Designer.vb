@@ -25,7 +25,7 @@ Partial Class FRM_Loading
         Me.components = New System.ComponentModel.Container()
         Me.ProgressBar = New MaterialSkin.Controls.MaterialProgressBar()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.LBL_action = New System.Windows.Forms.Label()
         Me.LBL_percentage = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -42,17 +42,17 @@ Partial Class FRM_Loading
         '
         Me.Timer1.Interval = 40
         '
-        'Label6
+        'LBL_action
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Microsoft JhengHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(209, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(653, 436)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(219, 44)
-        Me.Label6.TabIndex = 7
-        Me.Label6.Text = "Logging in..."
+        Me.LBL_action.AutoSize = True
+        Me.LBL_action.BackColor = System.Drawing.Color.Transparent
+        Me.LBL_action.Font = New System.Drawing.Font("Microsoft JhengHei UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBL_action.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(209, Byte), Integer))
+        Me.LBL_action.Location = New System.Drawing.Point(751, 453)
+        Me.LBL_action.Name = "LBL_action"
+        Me.LBL_action.Size = New System.Drawing.Size(168, 35)
+        Me.LBL_action.TabIndex = 7
+        Me.LBL_action.Text = "Logging in..."
         '
         'LBL_percentage
         '
@@ -60,7 +60,7 @@ Partial Class FRM_Loading
         Me.LBL_percentage.BackColor = System.Drawing.Color.Transparent
         Me.LBL_percentage.Font = New System.Drawing.Font("Microsoft JhengHei UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBL_percentage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(209, Byte), Integer))
-        Me.LBL_percentage.Location = New System.Drawing.Point(886, 436)
+        Me.LBL_percentage.Location = New System.Drawing.Point(921, 450)
         Me.LBL_percentage.Name = "LBL_percentage"
         Me.LBL_percentage.Size = New System.Drawing.Size(73, 44)
         Me.LBL_percentage.TabIndex = 7
@@ -72,7 +72,7 @@ Partial Class FRM_Loading
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1059, 661)
         Me.Controls.Add(Me.LBL_percentage)
-        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.LBL_action)
         Me.Controls.Add(Me.ProgressBar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FRM_Loading"
@@ -85,6 +85,6 @@ Partial Class FRM_Loading
 
     Friend WithEvents ProgressBar As MaterialSkin.Controls.MaterialProgressBar
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents Label6 As Label
+    Friend WithEvents LBL_action As Label
     Friend WithEvents LBL_percentage As Label
 End Class

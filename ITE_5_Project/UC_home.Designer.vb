@@ -67,7 +67,6 @@ Partial Class UC_home
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.MaterialButton1 = New MaterialSkin.Controls.MaterialButton()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.MaterialCard1.SuspendLayout()
@@ -138,7 +137,7 @@ Partial Class UC_home
         Me.MaterialCard1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialCard1.Name = "MaterialCard1"
         Me.MaterialCard1.Padding = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard1.Size = New System.Drawing.Size(901, 41)
+        Me.MaterialCard1.Size = New System.Drawing.Size(964, 41)
         Me.MaterialCard1.TabIndex = 1
         '
         'LBL_greetings
@@ -548,25 +547,6 @@ Partial Class UC_home
         Me.Panel7.Size = New System.Drawing.Size(56, 52)
         Me.Panel7.TabIndex = 2
         '
-        'MaterialButton1
-        '
-        Me.MaterialButton1.AutoSize = False
-        Me.MaterialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.MaterialButton1.Depth = 0
-        Me.MaterialButton1.HighEmphasis = True
-        Me.MaterialButton1.Icon = CType(resources.GetObject("MaterialButton1.Icon"), System.Drawing.Image)
-        Me.MaterialButton1.Location = New System.Drawing.Point(931, 13)
-        Me.MaterialButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.MaterialButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialButton1.Name = "MaterialButton1"
-        Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.MaterialButton1.Size = New System.Drawing.Size(41, 36)
-        Me.MaterialButton1.TabIndex = 5
-        Me.MaterialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.MaterialButton1.UseAccentColor = False
-        Me.MaterialButton1.UseVisualStyleBackColor = True
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -584,7 +564,6 @@ Partial Class UC_home
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.MaterialButton1)
         Me.Controls.Add(Me.MaterialCard8)
         Me.Controls.Add(Me.MaterialCard7)
         Me.Controls.Add(Me.MaterialCard6)
@@ -658,7 +637,6 @@ Partial Class UC_home
     Friend WithEvents Label10 As Label
     Friend WithEvents LST_products As MaterialSkin.Controls.MaterialListBox
     Friend WithEvents LBL_greetings As Label
-    Friend WithEvents MaterialButton1 As MaterialSkin.Controls.MaterialButton
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel11 As Panel
     Friend WithEvents Panel12 As Panel

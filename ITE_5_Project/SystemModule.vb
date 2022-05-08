@@ -9,6 +9,9 @@ Module SystemModule
     Public clickedkey
     Public clickedkey2
 
+    'Loading destination'
+    Public destination
+
     Public dr As MySqlDataReader
     Sub openCon()
         con.ConnectionString = My.Settings.db_inventoryConnectionString

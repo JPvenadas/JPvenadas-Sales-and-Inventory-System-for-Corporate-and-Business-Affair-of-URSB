@@ -35,5 +35,12 @@ Public Class FRM_mainmenu
             MaterialTabControl1.TabPages.Remove(TAB_stocks)
         End If
     End Sub
-
+    Private Sub BTN_logout_Click(sender As Object, e As EventArgs) Handles BTN_logout.Click
+        Dim answer = MsgBox("Are you sure you want to log out your Account", vbYesNo + vbQuestion, "Logging Out")
+        If answer = vbYes Then
+            destination = "Login"
+            FRM_Loading.Show()
+            Me.Hide()
+        End If
+    End Sub
 End Class
