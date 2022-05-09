@@ -137,10 +137,10 @@ Partial Class UCRPT_users
         ReportDataSource1.Value = Me.tbl_usersBindingSource
         Me.RPTV_users.LocalReport.DataSources.Add(ReportDataSource1)
         Me.RPTV_users.LocalReport.ReportEmbeddedResource = "ITE_5_Project.RPT_users.rdlc"
-        Me.RPTV_users.Location = New System.Drawing.Point(259, 14)
+        Me.RPTV_users.Location = New System.Drawing.Point(259, 5)
         Me.RPTV_users.Name = "RPTV_users"
         Me.RPTV_users.ServerReport.BearerToken = Nothing
-        Me.RPTV_users.Size = New System.Drawing.Size(749, 497)
+        Me.RPTV_users.Size = New System.Drawing.Size(750, 506)
         Me.RPTV_users.TabIndex = 3
         '
         'db_inventoryDataSet
