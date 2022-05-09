@@ -196,6 +196,36 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SystemModule.vb" />
+    <Compile Include="UCRPT_activities.Designer.vb">
+      <DependentUpon>UCRPT_activities.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCRPT_activities.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRPT_products.Designer.vb">
+      <DependentUpon>UCRPT_products.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCRPT_products.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRPT_stocks.Designer.vb">
+      <DependentUpon>UCRPT_stocks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCRPT_stocks.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRPT_students.Designer.vb">
+      <DependentUpon>UCRPT_students.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCRPT_students.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRPT_transactions.Designer.vb">
+      <DependentUpon>UCRPT_transactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCRPT_transactions.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UCRPT_users.Designer.vb">
       <DependentUpon>UCRPT_users.vb</DependentUpon>
     </Compile>
@@ -309,6 +339,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SUBFRM_viewstudent.resx">
       <DependentUpon>SUBFRM_viewstudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRPT_activities.resx">
+      <DependentUpon>UCRPT_activities.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRPT_products.resx">
+      <DependentUpon>UCRPT_products.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRPT_stocks.resx">
+      <DependentUpon>UCRPT_stocks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRPT_students.resx">
+      <DependentUpon>UCRPT_students.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRPT_transactions.resx">
+      <DependentUpon>UCRPT_transactions.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCRPT_users.resx">
       <DependentUpon>UCRPT_users.vb</DependentUpon>

@@ -24,19 +24,29 @@ Partial Class UCRPT_users
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.tbl_usersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.CBO_usertype = New MaterialSkin.Controls.MaterialComboBox()
         Me.BTN_filteruser = New MaterialSkin.Controls.MaterialButton()
         Me.BTN_clear = New MaterialSkin.Controls.MaterialButton()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.RPTV_users = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
-        Me.tbl_usersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.tbl_usersTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_usersTableAdapter()
-        Me.MaterialCard1.SuspendLayout()
-        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbl_usersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MaterialCard1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'tbl_usersBindingSource
+        '
+        Me.tbl_usersBindingSource.DataMember = "tbl_users"
+        Me.tbl_usersBindingSource.DataSource = Me.db_inventoryDataSet
+        '
+        'db_inventoryDataSet
+        '
+        Me.db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
+        Me.db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'MaterialCard1
         '
@@ -143,16 +153,6 @@ Partial Class UCRPT_users
         Me.RPTV_users.Size = New System.Drawing.Size(750, 506)
         Me.RPTV_users.TabIndex = 3
         '
-        'db_inventoryDataSet
-        '
-        Me.db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
-        Me.db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'tbl_usersBindingSource
-        '
-        Me.tbl_usersBindingSource.DataMember = "tbl_users"
-        Me.tbl_usersBindingSource.DataSource = Me.db_inventoryDataSet
-        '
         'tbl_usersTableAdapter
         '
         Me.tbl_usersTableAdapter.ClearBeforeFill = True
@@ -165,11 +165,11 @@ Partial Class UCRPT_users
         Me.Controls.Add(Me.RPTV_users)
         Me.Controls.Add(Me.MaterialCard1)
         Me.Name = "UCRPT_users"
-        Me.Size = New System.Drawing.Size(1031, 525)
+        Me.Size = New System.Drawing.Size(1039, 530)
+        CType(Me.tbl_usersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MaterialCard1.ResumeLayout(False)
         Me.MaterialCard1.PerformLayout()
-        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tbl_usersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
