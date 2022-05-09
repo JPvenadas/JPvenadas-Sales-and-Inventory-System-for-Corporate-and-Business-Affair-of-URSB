@@ -91,6 +91,7 @@
         cmd.ExecuteNonQuery()
         con.Close()
         RefreshData()
+        SaveActivity("Added a Product Category: " + TXT_catID.Text)
     End Sub
     Sub Updatecategory()
         openCon()
@@ -103,6 +104,7 @@
         cmd.ExecuteNonQuery()
         con.Close()
         RefreshData()
+        SaveActivity("Updated a Product Category: " + prevcat + " to " + TXT_catID.Text)
     End Sub
     Sub Deletecategory()
         openCon()
@@ -112,6 +114,7 @@
         cmd.ExecuteNonQuery()
         con.Close()
         RefreshData()
+        SaveActivity("Deleted a Product Category: " + prevcat)
     End Sub
     Sub RefreshData()
         Me.Tbl_categoriesTableAdapter.Fill(Me.Db_inventoryDataSet.tbl_categories)

@@ -117,6 +117,7 @@
         End With
         cmd.ExecuteNonQuery()
         con.Close()
+        SaveActivity("Added a College with ID: " + TXT_collegeID.Text)
     End Sub
     Sub UpdateCollege()
         openCon()
@@ -129,6 +130,7 @@
         End With
         cmd.ExecuteNonQuery()
         con.Close()
+        SaveActivity("Updated a College with ID: " + previousId)
     End Sub
 
     Sub DeleteCollege()
@@ -140,6 +142,7 @@
         End With
         cmd.ExecuteNonQuery()
         con.Close()
+        SaveActivity("Deleted a College with ID: " + previousId)
     End Sub
 
 End Class

@@ -52,6 +52,7 @@
             CBO_college.Items.Add(dr.GetString("CollegeID"))
         End While
         con.Close()
+
     End Sub
     Sub ClearInputs()
         TXT_courseID.Text = ""
@@ -129,6 +130,7 @@
         cmd.ExecuteNonQuery()
         con.Close()
         RefreshData()
+        SaveActivity("Updated a Course with ID: " + prevId)
     End Sub
     Sub Addcourse()
         openCon()
@@ -142,6 +144,7 @@
         cmd.ExecuteNonQuery()
         con.Close()
         RefreshData()
+        SaveActivity("Added a course with ID: " + TXT_courseID.Text)
     End Sub
     Sub Deletecourse()
         openCon()
@@ -151,6 +154,7 @@
         cmd.ExecuteNonQuery()
         con.Close()
         RefreshData()
+        SaveActivity("Deleted a Course with ID: " + prevId)
     End Sub
     Sub RefreshData()
         Me.Tbl_coursesTableAdapter.Fill(Me.Db_inventoryDataSet.tbl_courses)
