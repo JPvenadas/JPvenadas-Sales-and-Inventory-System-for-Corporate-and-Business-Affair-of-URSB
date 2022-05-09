@@ -300,9 +300,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="RPT_activities.rdlc" />
     <EmbeddedResource Include="RPT_products.rdlc" />
     <EmbeddedResource Include="RPT_stocks.rdlc" />
     <EmbeddedResource Include="RPT_students.rdlc" />
+    <EmbeddedResource Include="RPT_transactions.rdlc" />
     <EmbeddedResource Include="RPT_users.rdlc" />
     <EmbeddedResource Include="SUBFRM_editCart.resx">
       <DependentUpon>SUBFRM_editCart.vb</DependentUpon>
