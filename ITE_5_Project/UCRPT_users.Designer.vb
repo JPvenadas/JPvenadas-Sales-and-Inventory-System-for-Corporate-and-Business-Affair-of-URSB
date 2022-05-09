@@ -57,7 +57,7 @@ Partial Class UCRPT_users
         Me.MaterialCard1.Controls.Add(Me.MaterialLabel1)
         Me.MaterialCard1.Depth = 0
         Me.MaterialCard1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialCard1.Location = New System.Drawing.Point(14, 5)
+        Me.MaterialCard1.Location = New System.Drawing.Point(14, 8)
         Me.MaterialCard1.Margin = New System.Windows.Forms.Padding(14)
         Me.MaterialCard1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialCard1.Name = "MaterialCard1"
@@ -147,10 +147,10 @@ Partial Class UCRPT_users
         ReportDataSource1.Value = Me.tbl_usersBindingSource
         Me.RPTV_users.LocalReport.DataSources.Add(ReportDataSource1)
         Me.RPTV_users.LocalReport.ReportEmbeddedResource = "ITE_5_Project.RPT_users.rdlc"
-        Me.RPTV_users.Location = New System.Drawing.Point(259, 5)
+        Me.RPTV_users.Location = New System.Drawing.Point(259, 8)
         Me.RPTV_users.Name = "RPTV_users"
         Me.RPTV_users.ServerReport.BearerToken = Nothing
-        Me.RPTV_users.Size = New System.Drawing.Size(750, 506)
+        Me.RPTV_users.Size = New System.Drawing.Size(680, 506)
         Me.RPTV_users.TabIndex = 3
         '
         'tbl_usersTableAdapter
