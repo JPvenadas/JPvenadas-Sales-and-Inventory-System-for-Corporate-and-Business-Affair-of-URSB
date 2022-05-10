@@ -23,7 +23,7 @@ Partial Class UCRPT_users
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.tbl_usersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
@@ -143,9 +143,9 @@ Partial Class UCRPT_users
         '
         'RPTV_users
         '
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.tbl_usersBindingSource
-        Me.RPTV_users.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.tbl_usersBindingSource
+        Me.RPTV_users.LocalReport.DataSources.Add(ReportDataSource2)
         Me.RPTV_users.LocalReport.ReportEmbeddedResource = "ITE_5_Project.RPT_users.rdlc"
         Me.RPTV_users.Location = New System.Drawing.Point(259, 8)
         Me.RPTV_users.Name = "RPTV_users"

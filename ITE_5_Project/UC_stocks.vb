@@ -17,4 +17,8 @@
         showDialogWithGray(SUBFRM_addstocks, FRM_mainmenu)
     End Sub
 
+    Private Sub UC_stocks_Enter(sender As Object, e As EventArgs) Handles MyBase.Enter
+        Me.Tbl_productsTableAdapter.Fill(Me.Db_inventoryDataSet.tbl_products)
+        Me.Tbl_stocksTableAdapter.Fill(Me.Db_inventoryDataSet.tbl_stocks)
+    End Sub
 End Class

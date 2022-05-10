@@ -30,8 +30,7 @@ Partial Class UC_stocks
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.MaterialTabControl1 = New MaterialSkin.Controls.MaterialTabControl()
         Me.TAB_addstocks = New System.Windows.Forms.TabPage()
-        Me.BTN_search = New MaterialSkin.Controls.MaterialButton()
-        Me.TXT_filter = New MaterialSkin.Controls.MaterialTextBox2()
+        Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.DGV_products = New System.Windows.Forms.DataGridView()
         Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,6 +38,8 @@ Partial Class UC_stocks
         Me.StocksDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TblproductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
+        Me.BTN_search = New MaterialSkin.Controls.MaterialButton()
+        Me.TXT_filter = New MaterialSkin.Controls.MaterialTextBox2()
         Me.TAB_stocksrecord = New System.Windows.Forms.TabPage()
         Me.DGV_stocks = New System.Windows.Forms.DataGridView()
         Me.StockIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -52,16 +53,15 @@ Partial Class UC_stocks
         Me.AddedStocks = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tbl_stocksTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_stocksTableAdapter()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MaterialCard1 = New MaterialSkin.Controls.MaterialCard()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TAB_addstocks.SuspendLayout()
+        Me.MaterialCard1.SuspendLayout()
         CType(Me.DGV_products, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblproductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TAB_stocksrecord.SuspendLayout()
         CType(Me.DGV_stocks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblstocksBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MaterialCard1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MaterialTabSelector1
@@ -105,54 +105,19 @@ Partial Class UC_stocks
         Me.TAB_addstocks.TabIndex = 0
         Me.TAB_addstocks.Text = "Add Stocks"
         '
-        'BTN_search
+        'MaterialCard1
         '
-        Me.BTN_search.AutoSize = False
-        Me.BTN_search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.BTN_search.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.BTN_search.Depth = 0
-        Me.BTN_search.HighEmphasis = True
-        Me.BTN_search.Icon = Nothing
-        Me.BTN_search.Location = New System.Drawing.Point(845, 6)
-        Me.BTN_search.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.BTN_search.MouseState = MaterialSkin.MouseState.HOVER
-        Me.BTN_search.Name = "BTN_search"
-        Me.BTN_search.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.BTN_search.Size = New System.Drawing.Size(128, 48)
-        Me.BTN_search.TabIndex = 15
-        Me.BTN_search.Text = "Search"
-        Me.BTN_search.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.BTN_search.UseAccentColor = False
-        Me.BTN_search.UseVisualStyleBackColor = True
-        '
-        'TXT_filter
-        '
-        Me.TXT_filter.AnimateReadOnly = False
-        Me.TXT_filter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.TXT_filter.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
-        Me.TXT_filter.Depth = 0
-        Me.TXT_filter.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.TXT_filter.HideSelection = True
-        Me.TXT_filter.Hint = "Search a Product here"
-        Me.TXT_filter.LeadingIcon = Nothing
-        Me.TXT_filter.Location = New System.Drawing.Point(288, 6)
-        Me.TXT_filter.MaxLength = 32767
-        Me.TXT_filter.MouseState = MaterialSkin.MouseState.OUT
-        Me.TXT_filter.Name = "TXT_filter"
-        Me.TXT_filter.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TXT_filter.PrefixSuffixText = Nothing
-        Me.TXT_filter.ReadOnly = False
-        Me.TXT_filter.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TXT_filter.SelectedText = ""
-        Me.TXT_filter.SelectionLength = 0
-        Me.TXT_filter.SelectionStart = 0
-        Me.TXT_filter.ShortcutsEnabled = True
-        Me.TXT_filter.Size = New System.Drawing.Size(550, 48)
-        Me.TXT_filter.TabIndex = 14
-        Me.TXT_filter.TabStop = False
-        Me.TXT_filter.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.TXT_filter.TrailingIcon = Nothing
-        Me.TXT_filter.UseSystemPasswordChar = False
+        Me.MaterialCard1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MaterialCard1.Controls.Add(Me.DGV_products)
+        Me.MaterialCard1.Depth = 0
+        Me.MaterialCard1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialCard1.Location = New System.Drawing.Point(14, 68)
+        Me.MaterialCard1.Margin = New System.Windows.Forms.Padding(14)
+        Me.MaterialCard1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialCard1.Name = "MaterialCard1"
+        Me.MaterialCard1.Padding = New System.Windows.Forms.Padding(14)
+        Me.MaterialCard1.Size = New System.Drawing.Size(959, 412)
+        Me.MaterialCard1.TabIndex = 16
         '
         'DGV_products
         '
@@ -239,6 +204,55 @@ Partial Class UC_stocks
         '
         Me.Db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
         Me.Db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BTN_search
+        '
+        Me.BTN_search.AutoSize = False
+        Me.BTN_search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BTN_search.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.BTN_search.Depth = 0
+        Me.BTN_search.HighEmphasis = True
+        Me.BTN_search.Icon = Nothing
+        Me.BTN_search.Location = New System.Drawing.Point(845, 6)
+        Me.BTN_search.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.BTN_search.MouseState = MaterialSkin.MouseState.HOVER
+        Me.BTN_search.Name = "BTN_search"
+        Me.BTN_search.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.BTN_search.Size = New System.Drawing.Size(128, 48)
+        Me.BTN_search.TabIndex = 15
+        Me.BTN_search.Text = "Search"
+        Me.BTN_search.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.BTN_search.UseAccentColor = False
+        Me.BTN_search.UseVisualStyleBackColor = True
+        '
+        'TXT_filter
+        '
+        Me.TXT_filter.AnimateReadOnly = False
+        Me.TXT_filter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.TXT_filter.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal
+        Me.TXT_filter.Depth = 0
+        Me.TXT_filter.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.TXT_filter.HideSelection = True
+        Me.TXT_filter.Hint = "Search a Product here"
+        Me.TXT_filter.LeadingIcon = Nothing
+        Me.TXT_filter.Location = New System.Drawing.Point(288, 6)
+        Me.TXT_filter.MaxLength = 32767
+        Me.TXT_filter.MouseState = MaterialSkin.MouseState.OUT
+        Me.TXT_filter.Name = "TXT_filter"
+        Me.TXT_filter.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXT_filter.PrefixSuffixText = Nothing
+        Me.TXT_filter.ReadOnly = False
+        Me.TXT_filter.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TXT_filter.SelectedText = ""
+        Me.TXT_filter.SelectionLength = 0
+        Me.TXT_filter.SelectionStart = 0
+        Me.TXT_filter.ShortcutsEnabled = True
+        Me.TXT_filter.Size = New System.Drawing.Size(550, 48)
+        Me.TXT_filter.TabIndex = 14
+        Me.TXT_filter.TabStop = False
+        Me.TXT_filter.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.TXT_filter.TrailingIcon = Nothing
+        Me.TXT_filter.UseSystemPasswordChar = False
         '
         'TAB_stocksrecord
         '
@@ -369,20 +383,6 @@ Partial Class UC_stocks
         Me.Label1.Text = "Add and View the Stocks in your system. You can add stocks by double clicking the" &
     " record in the table" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'MaterialCard1
-        '
-        Me.MaterialCard1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialCard1.Controls.Add(Me.DGV_products)
-        Me.MaterialCard1.Depth = 0
-        Me.MaterialCard1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialCard1.Location = New System.Drawing.Point(14, 68)
-        Me.MaterialCard1.Margin = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialCard1.Name = "MaterialCard1"
-        Me.MaterialCard1.Padding = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard1.Size = New System.Drawing.Size(959, 412)
-        Me.MaterialCard1.TabIndex = 16
-        '
         'UC_stocks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -395,13 +395,13 @@ Partial Class UC_stocks
         Me.Size = New System.Drawing.Size(1039, 537)
         Me.MaterialTabControl1.ResumeLayout(False)
         Me.TAB_addstocks.ResumeLayout(False)
+        Me.MaterialCard1.ResumeLayout(False)
         CType(Me.DGV_products, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblproductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TAB_stocksrecord.ResumeLayout(False)
         CType(Me.DGV_stocks, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblstocksBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MaterialCard1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
