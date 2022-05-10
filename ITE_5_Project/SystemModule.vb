@@ -4,6 +4,7 @@ Module SystemModule
     Public cmd As New MySqlCommand
 
     'Logged in User'
+    Public loggedUser
     Public loggedUserName
     Public loggedUserType
     Public clickedkey
@@ -68,5 +69,17 @@ Module SystemModule
         FormToShow.Owner = background
         FormToShow.ShowDialog()
         background.Dispose()
+    End Sub
+    Sub SaveActivity(Activity)
+        openCon()
+        cmd.CommandText = "Insert into tbl_activities(Activity, Username, Date) values(@act, @un, @dt)"
+        With cmd.Parameters
+            .Clear()
+            .AddWithValue("act", Activity)
+            .AddWithValue("un", loggedUser)
+            .AddWithValue("dt", Format(Date.Now, "yyyy-MM-dd HH:mm:ss"))
+        End With
+        cmd.ExecuteNonQuery()
+        con.Close()
     End Sub
 End Module

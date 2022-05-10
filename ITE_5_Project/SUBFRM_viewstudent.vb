@@ -93,6 +93,7 @@
         End With
         cmd.ExecuteNonQuery()
         con.Close()
+        SaveActivity("Updated a Student with ID: " + CStr(clickedkey))
         Refreshdata()
         Me.Close()
     End Sub

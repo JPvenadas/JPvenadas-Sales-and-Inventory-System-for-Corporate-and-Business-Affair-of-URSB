@@ -52,6 +52,7 @@
         End With
         cmd.ExecuteNonQuery()
         con.Close()
+        SaveActivity("Added a Product: " + TXT_productname.Text)
         RefreshData()
         Clear()
         Me.Close()

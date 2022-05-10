@@ -69,6 +69,7 @@
         End With
         cmd.ExecuteNonQuery()
         con.Close()
+        SaveActivity("Added a new Student: " + TXT_firstname.Text + " " + TXT_lastname.Text)
         Refreshdata()
         Clear()
         Me.Close()

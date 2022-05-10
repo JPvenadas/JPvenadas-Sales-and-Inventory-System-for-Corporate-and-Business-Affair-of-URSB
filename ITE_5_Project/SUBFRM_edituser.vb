@@ -56,6 +56,11 @@
         param.AddWithValue("un", TXT_username.Text)
         cmd.ExecuteNonQuery()
         con.Close()
+        If oppositeStatus = "Active" Then
+            SaveActivity("Activated an Account: " + CStr(clickedkey))
+        Else
+            SaveActivity("Deactivated an Account: " + CStr(clickedkey))
+        End If
         RefreshData()
         Me.Close()
     End Sub
@@ -79,6 +84,7 @@
         param.AddWithValue("un", TXT_username.Text)
         cmd.ExecuteNonQuery()
         con.Close()
+        SaveActivity("Updated a user with ID: " + clickedkey)
         RefreshData()
         Me.Close()
     End Sub

@@ -60,6 +60,7 @@
         End With
         cmd.ExecuteNonQuery()
         con.Close()
+        SaveActivity("Added Stocks to a Product with ID: " + CStr(clickedkey))
     End Sub
     Sub updatestocks()
         Dim totalstocks = Val(TXT_stocksno.Text) + Val(TXT_currentstocks.Text)

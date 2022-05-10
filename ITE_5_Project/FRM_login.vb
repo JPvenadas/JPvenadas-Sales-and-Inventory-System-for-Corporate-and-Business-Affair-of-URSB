@@ -15,12 +15,14 @@
         dr = cmd.ExecuteReader
         If dr.HasRows Then
             dr.Read()
+            loggedUser = dr.GetString("Username")
             loggedUserName = dr.GetString("LoginName")
             loggedUserType = dr.GetString("UserType")
             destination = "Menu"
             FRM_Loading.Show()
             Me.Close()
             con.Close()
+            SaveActivity("Logged in")
         Else
             MsgBox("Username and Password not Registered", vbOK + vbExclamation, "Login Error")
         End If

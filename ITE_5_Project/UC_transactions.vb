@@ -299,6 +299,7 @@
             UpdateStocks(DGV_cart.Rows(i).Cells(1).Value.ToString)
         Next
         MsgBox("Transaction Saved", vbOKOnly + vbInformation, "Success")
+        SaveActivity("Made a Transaction with ID: " + DGV_cart.Rows(0).Cells(0).Value.ToString)
     End Sub
     Sub UpdateStocks(ProductID)
         Dim UpdatedStocks = Val(LBL_stocks.Text) - Val(TXT_quantity.Text)

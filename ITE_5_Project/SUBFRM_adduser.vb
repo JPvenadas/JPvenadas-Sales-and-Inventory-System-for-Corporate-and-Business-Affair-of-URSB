@@ -70,6 +70,7 @@
         param.AddWithValue("as", "Active")
         cmd.ExecuteNonQuery()
         con.Close()
+        SaveActivity("Added a user with Username: " + TXT_username.Text)
         clear()
         Refreshdata()
         Me.Close()

@@ -77,6 +77,7 @@
         End With
         cmd.ExecuteNonQuery()
         con.Close()
+        SaveActivity("Updated a product with ID: " + CStr(clickedkey))
         Refreshtable()
         Me.Close()
     End Sub
@@ -87,6 +88,7 @@
         cmd.Parameters.AddWithValue("ID", clickedkey)
         cmd.ExecuteNonQuery()
         con.Close()
+        SaveActivity("Deleted a Product with ID: " + CStr(clickedkey))
         Refreshtable()
         Me.Close()
     End Sub

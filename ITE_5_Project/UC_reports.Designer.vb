@@ -29,7 +29,7 @@ Partial Class UC_reports
         Me.TAB_RPT_products = New System.Windows.Forms.TabPage()
         Me.TAB_RPT_stocks = New System.Windows.Forms.TabPage()
         Me.TAB_RPT_transactions = New System.Windows.Forms.TabPage()
-        Me.TAB_RPT_others = New System.Windows.Forms.TabPage()
+        Me.TAB_RPT_activities = New System.Windows.Forms.TabPage()
         Me.MaterialTabControl1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,7 +54,7 @@ Partial Class UC_reports
         Me.MaterialTabControl1.Controls.Add(Me.TAB_RPT_products)
         Me.MaterialTabControl1.Controls.Add(Me.TAB_RPT_stocks)
         Me.MaterialTabControl1.Controls.Add(Me.TAB_RPT_transactions)
-        Me.MaterialTabControl1.Controls.Add(Me.TAB_RPT_others)
+        Me.MaterialTabControl1.Controls.Add(Me.TAB_RPT_activities)
         Me.MaterialTabControl1.Depth = 0
         Me.MaterialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MaterialTabControl1.Location = New System.Drawing.Point(0, 30)
@@ -112,14 +112,14 @@ Partial Class UC_reports
         Me.TAB_RPT_transactions.Text = "Transactions"
         Me.TAB_RPT_transactions.UseVisualStyleBackColor = True
         '
-        'TAB_RPT_others
+        'TAB_RPT_activities
         '
-        Me.TAB_RPT_others.Location = New System.Drawing.Point(4, 22)
-        Me.TAB_RPT_others.Name = "TAB_RPT_others"
-        Me.TAB_RPT_others.Size = New System.Drawing.Size(1031, 525)
-        Me.TAB_RPT_others.TabIndex = 5
-        Me.TAB_RPT_others.Text = "Others"
-        Me.TAB_RPT_others.UseVisualStyleBackColor = True
+        Me.TAB_RPT_activities.Location = New System.Drawing.Point(4, 22)
+        Me.TAB_RPT_activities.Name = "TAB_RPT_activities"
+        Me.TAB_RPT_activities.Size = New System.Drawing.Size(1031, 525)
+        Me.TAB_RPT_activities.TabIndex = 5
+        Me.TAB_RPT_activities.Text = "Activity log"
+        Me.TAB_RPT_activities.UseVisualStyleBackColor = True
         '
         'UC_reports
         '
@@ -140,5 +140,5 @@ Partial Class UC_reports
     Friend WithEvents TAB_RPT_products As TabPage
     Friend WithEvents TAB_RPT_stocks As TabPage
     Friend WithEvents TAB_RPT_transactions As TabPage
-    Friend WithEvents TAB_RPT_others As TabPage
+    Friend WithEvents TAB_RPT_activities As TabPage
 End Class
