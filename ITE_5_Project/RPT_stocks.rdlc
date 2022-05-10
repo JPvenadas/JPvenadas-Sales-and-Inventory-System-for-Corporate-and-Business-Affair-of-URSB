@@ -259,6 +259,7 @@
                       <rd:DefaultName>StockID</rd:DefaultName>
                       <Style>
                         <Border>
+                          <Color>DimGray</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -294,6 +295,7 @@
                       <rd:DefaultName>ProductID</rd:DefaultName>
                       <Style>
                         <Border>
+                          <Color>DimGray</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -327,6 +329,7 @@
                       <rd:DefaultName>ProductName</rd:DefaultName>
                       <Style>
                         <Border>
+                          <Color>DimGray</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -362,6 +365,7 @@
                       <rd:DefaultName>AddedStocks</rd:DefaultName>
                       <Style>
                         <Border>
+                          <Color>DimGray</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -397,6 +401,7 @@
                       <rd:DefaultName>Date</rd:DefaultName>
                       <Style>
                         <Border>
+                          <Color>DimGray</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -435,7 +440,7 @@
         <Top>0.29104cm</Top>
         <Left>0.29104cm</Left>
         <Height>1.2cm</Height>
-        <Width>16.01216cm</Width>
+        <Width>16.01217cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -446,7 +451,7 @@
     <Height>0.70833in</Height>
     <Style />
   </Body>
-  <Width>6.78125in</Width>
+  <Width>6.47917in</Width>
   <Page>
     <PageHeader>
       <Height>4.91243cm</Height>

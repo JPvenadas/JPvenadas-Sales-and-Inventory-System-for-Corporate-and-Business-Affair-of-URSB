@@ -28,22 +28,22 @@ Partial Class UCRPT_stocks
         Me.MaterialCard8 = New MaterialSkin.Controls.MaterialCard()
         Me.TXT_product = New MaterialSkin.Controls.MaterialTextBox2()
         Me.MaterialCard13 = New MaterialSkin.Controls.MaterialCard()
-        Me.DT_endstocks = New System.Windows.Forms.DateTimePicker()
-        Me.DT_startstocks = New System.Windows.Forms.DateTimePicker()
+        Me.DT_endDate = New System.Windows.Forms.DateTimePicker()
+        Me.DT_startDate = New System.Windows.Forms.DateTimePicker()
         Me.dldkd = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
-        Me.BTN_stocksdatefilter = New MaterialSkin.Controls.MaterialButton()
+        Me.BTN_Datefilter = New MaterialSkin.Controls.MaterialButton()
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
         Me.BTN_productfilter = New MaterialSkin.Controls.MaterialButton()
-        Me.BTN_clearstocksfilter = New MaterialSkin.Controls.MaterialButton()
+        Me.BTN_clear = New MaterialSkin.Controls.MaterialButton()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
-        Me.db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.tbl_stocksBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.tbl_stocksTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_stocksTableAdapter()
         Me.MaterialCard8.SuspendLayout()
         Me.MaterialCard13.SuspendLayout()
-        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbl_stocksBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RPTV_stocks
@@ -63,10 +63,10 @@ Partial Class UCRPT_stocks
         Me.MaterialCard8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.MaterialCard8.Controls.Add(Me.TXT_product)
         Me.MaterialCard8.Controls.Add(Me.MaterialCard13)
-        Me.MaterialCard8.Controls.Add(Me.BTN_stocksdatefilter)
+        Me.MaterialCard8.Controls.Add(Me.BTN_Datefilter)
         Me.MaterialCard8.Controls.Add(Me.MaterialLabel9)
         Me.MaterialCard8.Controls.Add(Me.BTN_productfilter)
-        Me.MaterialCard8.Controls.Add(Me.BTN_clearstocksfilter)
+        Me.MaterialCard8.Controls.Add(Me.BTN_clear)
         Me.MaterialCard8.Controls.Add(Me.MaterialLabel4)
         Me.MaterialCard8.Depth = 0
         Me.MaterialCard8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -110,8 +110,8 @@ Partial Class UCRPT_stocks
         'MaterialCard13
         '
         Me.MaterialCard13.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialCard13.Controls.Add(Me.DT_endstocks)
-        Me.MaterialCard13.Controls.Add(Me.DT_startstocks)
+        Me.MaterialCard13.Controls.Add(Me.DT_endDate)
+        Me.MaterialCard13.Controls.Add(Me.DT_startDate)
         Me.MaterialCard13.Controls.Add(Me.dldkd)
         Me.MaterialCard13.Controls.Add(Me.MaterialLabel7)
         Me.MaterialCard13.Depth = 0
@@ -124,22 +124,22 @@ Partial Class UCRPT_stocks
         Me.MaterialCard13.Size = New System.Drawing.Size(181, 127)
         Me.MaterialCard13.TabIndex = 13
         '
-        'DT_endstocks
+        'DT_endDate
         '
-        Me.DT_endstocks.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DT_endstocks.Location = New System.Drawing.Point(9, 85)
-        Me.DT_endstocks.Name = "DT_endstocks"
-        Me.DT_endstocks.Size = New System.Drawing.Size(158, 20)
-        Me.DT_endstocks.TabIndex = 3
+        Me.DT_endDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DT_endDate.Location = New System.Drawing.Point(9, 85)
+        Me.DT_endDate.Name = "DT_endDate"
+        Me.DT_endDate.Size = New System.Drawing.Size(158, 20)
+        Me.DT_endDate.TabIndex = 3
         '
-        'DT_startstocks
+        'DT_startDate
         '
-        Me.DT_startstocks.CalendarTrailingForeColor = System.Drawing.SystemColors.ButtonShadow
-        Me.DT_startstocks.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DT_startstocks.Location = New System.Drawing.Point(11, 33)
-        Me.DT_startstocks.Name = "DT_startstocks"
-        Me.DT_startstocks.Size = New System.Drawing.Size(153, 20)
-        Me.DT_startstocks.TabIndex = 2
+        Me.DT_startDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ButtonShadow
+        Me.DT_startDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DT_startDate.Location = New System.Drawing.Point(11, 33)
+        Me.DT_startDate.Name = "DT_startDate"
+        Me.DT_startDate.Size = New System.Drawing.Size(153, 20)
+        Me.DT_startDate.TabIndex = 2
         '
         'dldkd
         '
@@ -169,25 +169,25 @@ Partial Class UCRPT_stocks
         Me.MaterialLabel7.TabIndex = 9
         Me.MaterialLabel7.Text = "Start Date"
         '
-        'BTN_stocksdatefilter
+        'BTN_Datefilter
         '
-        Me.BTN_stocksdatefilter.AutoSize = False
-        Me.BTN_stocksdatefilter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.BTN_stocksdatefilter.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.BTN_stocksdatefilter.Depth = 0
-        Me.BTN_stocksdatefilter.HighEmphasis = True
-        Me.BTN_stocksdatefilter.Icon = Nothing
-        Me.BTN_stocksdatefilter.Location = New System.Drawing.Point(21, 341)
-        Me.BTN_stocksdatefilter.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.BTN_stocksdatefilter.MouseState = MaterialSkin.MouseState.HOVER
-        Me.BTN_stocksdatefilter.Name = "BTN_stocksdatefilter"
-        Me.BTN_stocksdatefilter.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.BTN_stocksdatefilter.Size = New System.Drawing.Size(179, 36)
-        Me.BTN_stocksdatefilter.TabIndex = 10
-        Me.BTN_stocksdatefilter.Text = "Filter by Date "
-        Me.BTN_stocksdatefilter.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.BTN_stocksdatefilter.UseAccentColor = False
-        Me.BTN_stocksdatefilter.UseVisualStyleBackColor = True
+        Me.BTN_Datefilter.AutoSize = False
+        Me.BTN_Datefilter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BTN_Datefilter.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.BTN_Datefilter.Depth = 0
+        Me.BTN_Datefilter.HighEmphasis = True
+        Me.BTN_Datefilter.Icon = Nothing
+        Me.BTN_Datefilter.Location = New System.Drawing.Point(21, 341)
+        Me.BTN_Datefilter.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.BTN_Datefilter.MouseState = MaterialSkin.MouseState.HOVER
+        Me.BTN_Datefilter.Name = "BTN_Datefilter"
+        Me.BTN_Datefilter.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.BTN_Datefilter.Size = New System.Drawing.Size(179, 36)
+        Me.BTN_Datefilter.TabIndex = 10
+        Me.BTN_Datefilter.Text = "Filter by Date "
+        Me.BTN_Datefilter.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.BTN_Datefilter.UseAccentColor = False
+        Me.BTN_Datefilter.UseVisualStyleBackColor = True
         '
         'MaterialLabel9
         '
@@ -222,24 +222,24 @@ Partial Class UCRPT_stocks
         Me.BTN_productfilter.UseAccentColor = False
         Me.BTN_productfilter.UseVisualStyleBackColor = True
         '
-        'BTN_clearstocksfilter
+        'BTN_clear
         '
-        Me.BTN_clearstocksfilter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.BTN_clearstocksfilter.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.BTN_clearstocksfilter.Depth = 0
-        Me.BTN_clearstocksfilter.HighEmphasis = True
-        Me.BTN_clearstocksfilter.Icon = Nothing
-        Me.BTN_clearstocksfilter.Location = New System.Drawing.Point(146, 15)
-        Me.BTN_clearstocksfilter.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.BTN_clearstocksfilter.MouseState = MaterialSkin.MouseState.HOVER
-        Me.BTN_clearstocksfilter.Name = "BTN_clearstocksfilter"
-        Me.BTN_clearstocksfilter.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.BTN_clearstocksfilter.Size = New System.Drawing.Size(66, 36)
-        Me.BTN_clearstocksfilter.TabIndex = 11
-        Me.BTN_clearstocksfilter.Text = "Clear"
-        Me.BTN_clearstocksfilter.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
-        Me.BTN_clearstocksfilter.UseAccentColor = False
-        Me.BTN_clearstocksfilter.UseVisualStyleBackColor = True
+        Me.BTN_clear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BTN_clear.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.BTN_clear.Depth = 0
+        Me.BTN_clear.HighEmphasis = True
+        Me.BTN_clear.Icon = Nothing
+        Me.BTN_clear.Location = New System.Drawing.Point(146, 15)
+        Me.BTN_clear.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.BTN_clear.MouseState = MaterialSkin.MouseState.HOVER
+        Me.BTN_clear.Name = "BTN_clear"
+        Me.BTN_clear.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.BTN_clear.Size = New System.Drawing.Size(66, 36)
+        Me.BTN_clear.TabIndex = 11
+        Me.BTN_clear.Text = "Clear"
+        Me.BTN_clear.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
+        Me.BTN_clear.UseAccentColor = False
+        Me.BTN_clear.UseVisualStyleBackColor = True
         '
         'MaterialLabel4
         '
@@ -255,15 +255,15 @@ Partial Class UCRPT_stocks
         Me.MaterialLabel4.TabIndex = 9
         Me.MaterialLabel4.Text = "Filters"
         '
-        'db_inventoryDataSet
-        '
-        Me.db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
-        Me.db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'tbl_stocksBindingSource
         '
         Me.tbl_stocksBindingSource.DataMember = "tbl_stocks"
         Me.tbl_stocksBindingSource.DataSource = Me.db_inventoryDataSet
+        '
+        'db_inventoryDataSet
+        '
+        Me.db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
+        Me.db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'tbl_stocksTableAdapter
         '
@@ -282,8 +282,8 @@ Partial Class UCRPT_stocks
         Me.MaterialCard8.PerformLayout()
         Me.MaterialCard13.ResumeLayout(False)
         Me.MaterialCard13.PerformLayout()
-        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbl_stocksBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -292,14 +292,14 @@ Partial Class UCRPT_stocks
     Friend WithEvents MaterialCard8 As MaterialSkin.Controls.MaterialCard
     Friend WithEvents TXT_product As MaterialSkin.Controls.MaterialTextBox2
     Friend WithEvents MaterialCard13 As MaterialSkin.Controls.MaterialCard
-    Friend WithEvents DT_endstocks As DateTimePicker
-    Friend WithEvents DT_startstocks As DateTimePicker
+    Friend WithEvents DT_endDate As DateTimePicker
+    Friend WithEvents DT_startDate As DateTimePicker
     Friend WithEvents dldkd As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel7 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents BTN_stocksdatefilter As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents BTN_Datefilter As MaterialSkin.Controls.MaterialButton
     Friend WithEvents MaterialLabel9 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents BTN_productfilter As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents BTN_clearstocksfilter As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents BTN_clear As MaterialSkin.Controls.MaterialButton
     Friend WithEvents MaterialLabel4 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents tbl_stocksBindingSource As BindingSource
     Friend WithEvents db_inventoryDataSet As db_inventoryDataSet
