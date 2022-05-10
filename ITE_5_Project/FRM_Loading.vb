@@ -16,7 +16,8 @@
         If ProgressBar.Value = 100 Then
             Timer1.Enabled = False
             If destination = "Menu" Then
-                FRM_mainmenu.Show()
+                Dim form As New FRM_mainmenu
+                form.Show()
             Else
                 FRM_login.Show()
             End If

@@ -46,7 +46,7 @@ Partial Class UC_reports
         Me.BTN_activities.NoAccentTextColor = System.Drawing.Color.Empty
         Me.BTN_activities.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.BTN_activities.Size = New System.Drawing.Size(122, 36)
-        Me.BTN_activities.TabIndex = 0
+        Me.BTN_activities.TabIndex = 6
         Me.BTN_activities.Text = "Activity logs"
         Me.BTN_activities.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
         Me.BTN_activities.UseAccentColor = False
@@ -66,7 +66,7 @@ Partial Class UC_reports
         Me.BTN_students.Name = "BTN_students"
         Me.BTN_students.NoAccentTextColor = System.Drawing.Color.Empty
         Me.BTN_students.Size = New System.Drawing.Size(122, 36)
-        Me.BTN_students.TabIndex = 0
+        Me.BTN_students.TabIndex = 2
         Me.BTN_students.Text = "Students"
         Me.BTN_students.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
         Me.BTN_students.UseAccentColor = False
@@ -86,7 +86,7 @@ Partial Class UC_reports
         Me.BTN_products.Name = "BTN_products"
         Me.BTN_products.NoAccentTextColor = System.Drawing.Color.Empty
         Me.BTN_products.Size = New System.Drawing.Size(122, 36)
-        Me.BTN_products.TabIndex = 0
+        Me.BTN_products.TabIndex = 3
         Me.BTN_products.Text = "Products"
         Me.BTN_products.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
         Me.BTN_products.UseAccentColor = False
@@ -106,7 +106,7 @@ Partial Class UC_reports
         Me.BTN_stocks.Name = "BTN_stocks"
         Me.BTN_stocks.NoAccentTextColor = System.Drawing.Color.Empty
         Me.BTN_stocks.Size = New System.Drawing.Size(122, 36)
-        Me.BTN_stocks.TabIndex = 0
+        Me.BTN_stocks.TabIndex = 4
         Me.BTN_stocks.Text = "Stocks"
         Me.BTN_stocks.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
         Me.BTN_stocks.UseAccentColor = False
@@ -126,7 +126,7 @@ Partial Class UC_reports
         Me.BTN_transactions.Name = "BTN_transactions"
         Me.BTN_transactions.NoAccentTextColor = System.Drawing.Color.Empty
         Me.BTN_transactions.Size = New System.Drawing.Size(122, 36)
-        Me.BTN_transactions.TabIndex = 0
+        Me.BTN_transactions.TabIndex = 5
         Me.BTN_transactions.Text = "Transactions"
         Me.BTN_transactions.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
         Me.BTN_transactions.UseAccentColor = False
@@ -146,7 +146,7 @@ Partial Class UC_reports
         Me.BTN_users.Name = "BTN_users"
         Me.BTN_users.NoAccentTextColor = System.Drawing.Color.Empty
         Me.BTN_users.Size = New System.Drawing.Size(122, 36)
-        Me.BTN_users.TabIndex = 0
+        Me.BTN_users.TabIndex = 1
         Me.BTN_users.Text = "Users"
         Me.BTN_users.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
         Me.BTN_users.UseAccentColor = False

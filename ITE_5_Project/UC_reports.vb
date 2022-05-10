@@ -1,7 +1,16 @@
 ﻿Public Class UC_reports
     Private Sub UC_reports_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim users As New UCRPT_users
-        attachControls(users, PNL_reportcontainer)
+        If loggedUserType = "CBA Head" Then
+            Dim users As New UCRPT_users
+            attachControls(users, PNL_reportcontainer)
+        Else
+            Dim students As New UCRPT_students
+            attachControls(students, PNL_reportcontainer)
+            BTN_activities.Enabled = False
+            BTN_products.Enabled = False
+            BTN_users.Enabled = False
+            BTN_stocks.Enabled = False
+        End If
     End Sub
 
     Sub changeReport(UC)
