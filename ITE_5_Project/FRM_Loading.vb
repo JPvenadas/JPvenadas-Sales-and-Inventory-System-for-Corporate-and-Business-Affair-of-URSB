@@ -10,14 +10,13 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        ProgressBar.Value = ProgressBar.Value + 10
+        ProgressBar.Value = ProgressBar.Value + 1
         LBL_percentage.Text = CStr(ProgressBar.Value) + "%"
 
         If ProgressBar.Value = 100 Then
             Timer1.Enabled = False
             If destination = "Menu" Then
-                Dim form As New FRM_mainmenu
-                form.Show()
+                FRM_mainmenu.Show()
             Else
                 FRM_login.Show()
             End If

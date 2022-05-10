@@ -43,4 +43,8 @@ Public Class FRM_mainmenu
             Me.Hide()
         End If
     End Sub
+
+    Private Sub FRM_mainmenu_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+
+    End Sub
 End Class

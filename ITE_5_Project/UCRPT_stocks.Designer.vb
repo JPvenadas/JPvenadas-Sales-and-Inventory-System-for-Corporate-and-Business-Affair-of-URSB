@@ -96,7 +96,7 @@ Partial Class UCRPT_stocks
         Me.TXT_product.Depth = 0
         Me.TXT_product.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
         Me.TXT_product.HideSelection = True
-        Me.TXT_product.Hint = "Product Name"
+        Me.TXT_product.Hint = "Product ID"
         Me.TXT_product.LeadingIcon = Nothing
         Me.TXT_product.Location = New System.Drawing.Point(21, 60)
         Me.TXT_product.MaxLength = 32767

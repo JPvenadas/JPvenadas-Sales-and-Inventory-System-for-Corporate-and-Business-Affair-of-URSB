@@ -26,4 +26,7 @@
         Me.Tbl_productsTableAdapter.Fill(Me.Db_inventoryDataSet.tbl_products)
     End Sub
 
+    Private Sub TXT_filter_Click(sender As Object, e As EventArgs) Handles TXT_filter.Click
+
+    End Sub
 End Class
