@@ -23,28 +23,38 @@ Partial Class UCRPT_students
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.tbl_studentsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.RPTV_students = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.MaterialCard4 = New MaterialSkin.Controls.MaterialCard()
         Me.CBO_college = New MaterialSkin.Controls.MaterialComboBox()
         Me.CBO_course = New MaterialSkin.Controls.MaterialComboBox()
         Me.BTN_filterCollege = New MaterialSkin.Controls.MaterialButton()
         Me.BTN_FilterCourse = New MaterialSkin.Controls.MaterialButton()
-        Me.BTN_clearStudentsFilter = New MaterialSkin.Controls.MaterialButton()
+        Me.BTN_clear = New MaterialSkin.Controls.MaterialButton()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
-        Me.db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
-        Me.tbl_studentsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.tbl_studentsTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_studentsTableAdapter()
-        Me.MaterialCard4.SuspendLayout()
-        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbl_studentsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MaterialCard4.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'tbl_studentsBindingSource
+        '
+        Me.tbl_studentsBindingSource.DataMember = "tbl_students"
+        Me.tbl_studentsBindingSource.DataSource = Me.db_inventoryDataSet
+        '
+        'db_inventoryDataSet
+        '
+        Me.db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
+        Me.db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RPTV_students
         '
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.tbl_studentsBindingSource
-        Me.RPTV_students.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.tbl_studentsBindingSource
+        Me.RPTV_students.LocalReport.DataSources.Add(ReportDataSource2)
         Me.RPTV_students.LocalReport.ReportEmbeddedResource = "ITE_5_Project.RPT_students.rdlc"
         Me.RPTV_students.Location = New System.Drawing.Point(267, 12)
         Me.RPTV_students.Name = "RPTV_students"
@@ -59,7 +69,7 @@ Partial Class UCRPT_students
         Me.MaterialCard4.Controls.Add(Me.CBO_course)
         Me.MaterialCard4.Controls.Add(Me.BTN_filterCollege)
         Me.MaterialCard4.Controls.Add(Me.BTN_FilterCourse)
-        Me.MaterialCard4.Controls.Add(Me.BTN_clearStudentsFilter)
+        Me.MaterialCard4.Controls.Add(Me.BTN_clear)
         Me.MaterialCard4.Controls.Add(Me.MaterialLabel2)
         Me.MaterialCard4.Depth = 0
         Me.MaterialCard4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -157,24 +167,24 @@ Partial Class UCRPT_students
         Me.BTN_FilterCourse.UseAccentColor = False
         Me.BTN_FilterCourse.UseVisualStyleBackColor = True
         '
-        'BTN_clearStudentsFilter
+        'BTN_clear
         '
-        Me.BTN_clearStudentsFilter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.BTN_clearStudentsFilter.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.BTN_clearStudentsFilter.Depth = 0
-        Me.BTN_clearStudentsFilter.HighEmphasis = True
-        Me.BTN_clearStudentsFilter.Icon = Nothing
-        Me.BTN_clearStudentsFilter.Location = New System.Drawing.Point(153, 10)
-        Me.BTN_clearStudentsFilter.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.BTN_clearStudentsFilter.MouseState = MaterialSkin.MouseState.HOVER
-        Me.BTN_clearStudentsFilter.Name = "BTN_clearStudentsFilter"
-        Me.BTN_clearStudentsFilter.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.BTN_clearStudentsFilter.Size = New System.Drawing.Size(66, 36)
-        Me.BTN_clearStudentsFilter.TabIndex = 6
-        Me.BTN_clearStudentsFilter.Text = "Clear"
-        Me.BTN_clearStudentsFilter.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
-        Me.BTN_clearStudentsFilter.UseAccentColor = False
-        Me.BTN_clearStudentsFilter.UseVisualStyleBackColor = True
+        Me.BTN_clear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BTN_clear.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.BTN_clear.Depth = 0
+        Me.BTN_clear.HighEmphasis = True
+        Me.BTN_clear.Icon = Nothing
+        Me.BTN_clear.Location = New System.Drawing.Point(153, 10)
+        Me.BTN_clear.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.BTN_clear.MouseState = MaterialSkin.MouseState.HOVER
+        Me.BTN_clear.Name = "BTN_clear"
+        Me.BTN_clear.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.BTN_clear.Size = New System.Drawing.Size(66, 36)
+        Me.BTN_clear.TabIndex = 6
+        Me.BTN_clear.Text = "Clear"
+        Me.BTN_clear.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
+        Me.BTN_clear.UseAccentColor = False
+        Me.BTN_clear.UseVisualStyleBackColor = True
         '
         'MaterialLabel2
         '
@@ -190,16 +200,6 @@ Partial Class UCRPT_students
         Me.MaterialLabel2.TabIndex = 1
         Me.MaterialLabel2.Text = "Filters"
         '
-        'db_inventoryDataSet
-        '
-        Me.db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
-        Me.db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'tbl_studentsBindingSource
-        '
-        Me.tbl_studentsBindingSource.DataMember = "tbl_students"
-        Me.tbl_studentsBindingSource.DataSource = Me.db_inventoryDataSet
-        '
         'tbl_studentsTableAdapter
         '
         Me.tbl_studentsTableAdapter.ClearBeforeFill = True
@@ -213,10 +213,10 @@ Partial Class UCRPT_students
         Me.Controls.Add(Me.RPTV_students)
         Me.Name = "UCRPT_students"
         Me.Size = New System.Drawing.Size(1039, 530)
+        CType(Me.tbl_studentsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MaterialCard4.ResumeLayout(False)
         Me.MaterialCard4.PerformLayout()
-        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tbl_studentsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -227,7 +227,7 @@ Partial Class UCRPT_students
     Friend WithEvents CBO_course As MaterialSkin.Controls.MaterialComboBox
     Friend WithEvents BTN_filterCollege As MaterialSkin.Controls.MaterialButton
     Friend WithEvents BTN_FilterCourse As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents BTN_clearStudentsFilter As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents BTN_clear As MaterialSkin.Controls.MaterialButton
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents tbl_studentsBindingSource As BindingSource
     Friend WithEvents db_inventoryDataSet As db_inventoryDataSet

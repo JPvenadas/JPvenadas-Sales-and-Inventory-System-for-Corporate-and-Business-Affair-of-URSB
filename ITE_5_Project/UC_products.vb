@@ -26,5 +26,4 @@
         Me.Tbl_productsTableAdapter.Fill(Me.Db_inventoryDataSet.tbl_products)
     End Sub
 
-
 End Class
