@@ -259,6 +259,7 @@
                       <rd:DefaultName>ProductID</rd:DefaultName>
                       <Style>
                         <Border>
+                          <Color>DimGray</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -292,6 +293,7 @@
                       <rd:DefaultName>ProductName</rd:DefaultName>
                       <Style>
                         <Border>
+                          <Color>DimGray</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -325,6 +327,7 @@
                       <rd:DefaultName>ProductCategory</rd:DefaultName>
                       <Style>
                         <Border>
+                          <Color>DimGray</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -360,6 +363,7 @@
                       <rd:DefaultName>Price</rd:DefaultName>
                       <Style>
                         <Border>
+                          <Color>DimGray</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
@@ -395,6 +399,7 @@
                       <rd:DefaultName>Stocks</rd:DefaultName>
                       <Style>
                         <Border>
+                          <Color>DimGray</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>

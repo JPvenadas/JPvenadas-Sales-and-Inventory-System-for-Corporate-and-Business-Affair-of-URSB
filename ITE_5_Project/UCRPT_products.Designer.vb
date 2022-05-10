@@ -23,26 +23,36 @@ Partial Class UCRPT_products
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.tbl_productsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.RPTV_products = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.MaterialCard6 = New MaterialSkin.Controls.MaterialCard()
         Me.CBO_pcategory = New MaterialSkin.Controls.MaterialComboBox()
-        Me.BTN_pcategoryFilter = New MaterialSkin.Controls.MaterialButton()
-        Me.BTN_clearProductfilter = New MaterialSkin.Controls.MaterialButton()
+        Me.BTN_filter = New MaterialSkin.Controls.MaterialButton()
+        Me.BTN_clear = New MaterialSkin.Controls.MaterialButton()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
-        Me.db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
-        Me.tbl_productsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.tbl_productsTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_productsTableAdapter()
-        Me.MaterialCard6.SuspendLayout()
-        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbl_productsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MaterialCard6.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'tbl_productsBindingSource
+        '
+        Me.tbl_productsBindingSource.DataMember = "tbl_products"
+        Me.tbl_productsBindingSource.DataSource = Me.db_inventoryDataSet
+        '
+        'db_inventoryDataSet
+        '
+        Me.db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
+        Me.db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RPTV_products
         '
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.tbl_productsBindingSource
-        Me.RPTV_products.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.tbl_productsBindingSource
+        Me.RPTV_products.LocalReport.DataSources.Add(ReportDataSource2)
         Me.RPTV_products.LocalReport.ReportEmbeddedResource = "ITE_5_Project.RPT_products.rdlc"
         Me.RPTV_products.Location = New System.Drawing.Point(252, 10)
         Me.RPTV_products.Name = "RPTV_products"
@@ -54,8 +64,8 @@ Partial Class UCRPT_products
         '
         Me.MaterialCard6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.MaterialCard6.Controls.Add(Me.CBO_pcategory)
-        Me.MaterialCard6.Controls.Add(Me.BTN_pcategoryFilter)
-        Me.MaterialCard6.Controls.Add(Me.BTN_clearProductfilter)
+        Me.MaterialCard6.Controls.Add(Me.BTN_filter)
+        Me.MaterialCard6.Controls.Add(Me.BTN_clear)
         Me.MaterialCard6.Controls.Add(Me.MaterialLabel3)
         Me.MaterialCard6.Depth = 0
         Me.MaterialCard6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -90,44 +100,44 @@ Partial Class UCRPT_products
         Me.CBO_pcategory.StartIndex = 0
         Me.CBO_pcategory.TabIndex = 8
         '
-        'BTN_pcategoryFilter
+        'BTN_filter
         '
-        Me.BTN_pcategoryFilter.AutoSize = False
-        Me.BTN_pcategoryFilter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.BTN_pcategoryFilter.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.BTN_pcategoryFilter.Depth = 0
-        Me.BTN_pcategoryFilter.HighEmphasis = True
-        Me.BTN_pcategoryFilter.Icon = Nothing
-        Me.BTN_pcategoryFilter.Location = New System.Drawing.Point(35, 111)
-        Me.BTN_pcategoryFilter.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.BTN_pcategoryFilter.MouseState = MaterialSkin.MouseState.HOVER
-        Me.BTN_pcategoryFilter.Name = "BTN_pcategoryFilter"
-        Me.BTN_pcategoryFilter.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.BTN_pcategoryFilter.Size = New System.Drawing.Size(150, 36)
-        Me.BTN_pcategoryFilter.TabIndex = 6
-        Me.BTN_pcategoryFilter.Text = "Filter"
-        Me.BTN_pcategoryFilter.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.BTN_pcategoryFilter.UseAccentColor = False
-        Me.BTN_pcategoryFilter.UseVisualStyleBackColor = True
+        Me.BTN_filter.AutoSize = False
+        Me.BTN_filter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BTN_filter.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.BTN_filter.Depth = 0
+        Me.BTN_filter.HighEmphasis = True
+        Me.BTN_filter.Icon = Nothing
+        Me.BTN_filter.Location = New System.Drawing.Point(35, 111)
+        Me.BTN_filter.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.BTN_filter.MouseState = MaterialSkin.MouseState.HOVER
+        Me.BTN_filter.Name = "BTN_filter"
+        Me.BTN_filter.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.BTN_filter.Size = New System.Drawing.Size(150, 36)
+        Me.BTN_filter.TabIndex = 6
+        Me.BTN_filter.Text = "Filter"
+        Me.BTN_filter.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.BTN_filter.UseAccentColor = False
+        Me.BTN_filter.UseVisualStyleBackColor = True
         '
-        'BTN_clearProductfilter
+        'BTN_clear
         '
-        Me.BTN_clearProductfilter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.BTN_clearProductfilter.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.BTN_clearProductfilter.Depth = 0
-        Me.BTN_clearProductfilter.HighEmphasis = True
-        Me.BTN_clearProductfilter.Icon = Nothing
-        Me.BTN_clearProductfilter.Location = New System.Drawing.Point(146, 10)
-        Me.BTN_clearProductfilter.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.BTN_clearProductfilter.MouseState = MaterialSkin.MouseState.HOVER
-        Me.BTN_clearProductfilter.Name = "BTN_clearProductfilter"
-        Me.BTN_clearProductfilter.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.BTN_clearProductfilter.Size = New System.Drawing.Size(66, 36)
-        Me.BTN_clearProductfilter.TabIndex = 7
-        Me.BTN_clearProductfilter.Text = "Clear"
-        Me.BTN_clearProductfilter.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
-        Me.BTN_clearProductfilter.UseAccentColor = False
-        Me.BTN_clearProductfilter.UseVisualStyleBackColor = True
+        Me.BTN_clear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BTN_clear.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.BTN_clear.Depth = 0
+        Me.BTN_clear.HighEmphasis = True
+        Me.BTN_clear.Icon = Nothing
+        Me.BTN_clear.Location = New System.Drawing.Point(146, 10)
+        Me.BTN_clear.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.BTN_clear.MouseState = MaterialSkin.MouseState.HOVER
+        Me.BTN_clear.Name = "BTN_clear"
+        Me.BTN_clear.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.BTN_clear.Size = New System.Drawing.Size(66, 36)
+        Me.BTN_clear.TabIndex = 7
+        Me.BTN_clear.Text = "Clear"
+        Me.BTN_clear.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text
+        Me.BTN_clear.UseAccentColor = False
+        Me.BTN_clear.UseVisualStyleBackColor = True
         '
         'MaterialLabel3
         '
@@ -143,16 +153,6 @@ Partial Class UCRPT_products
         Me.MaterialLabel3.TabIndex = 5
         Me.MaterialLabel3.Text = "Filters"
         '
-        'db_inventoryDataSet
-        '
-        Me.db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
-        Me.db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'tbl_productsBindingSource
-        '
-        Me.tbl_productsBindingSource.DataMember = "tbl_products"
-        Me.tbl_productsBindingSource.DataSource = Me.db_inventoryDataSet
-        '
         'tbl_productsTableAdapter
         '
         Me.tbl_productsTableAdapter.ClearBeforeFill = True
@@ -166,10 +166,10 @@ Partial Class UCRPT_products
         Me.Controls.Add(Me.RPTV_products)
         Me.Name = "UCRPT_products"
         Me.Size = New System.Drawing.Size(1039, 530)
+        CType(Me.tbl_productsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MaterialCard6.ResumeLayout(False)
         Me.MaterialCard6.PerformLayout()
-        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tbl_productsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -177,8 +177,8 @@ Partial Class UCRPT_products
     Friend WithEvents RPTV_products As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents MaterialCard6 As MaterialSkin.Controls.MaterialCard
     Friend WithEvents CBO_pcategory As MaterialSkin.Controls.MaterialComboBox
-    Friend WithEvents BTN_pcategoryFilter As MaterialSkin.Controls.MaterialButton
-    Friend WithEvents BTN_clearProductfilter As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents BTN_filter As MaterialSkin.Controls.MaterialButton
+    Friend WithEvents BTN_clear As MaterialSkin.Controls.MaterialButton
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents tbl_productsBindingSource As BindingSource
     Friend WithEvents db_inventoryDataSet As db_inventoryDataSet
