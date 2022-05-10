@@ -296,13 +296,22 @@
             End With
             cmd.ExecuteNonQuery()
             con.Close()
-            UpdateStocks(DGV_cart.Rows(i).Cells(1).Value.ToString)
+            UpdateStocks(DGV_cart.Rows(i).Cells(1).Value.ToString, DGV_cart.Rows(i).Cells(3).Value.ToString)
         Next
         MsgBox("Transaction Saved", vbOKOnly + vbInformation, "Success")
         SaveActivity("Made a Transaction with ID: " + DGV_cart.Rows(0).Cells(0).Value.ToString)
     End Sub
-    Sub UpdateStocks(ProductID)
-        Dim UpdatedStocks = Val(LBL_stocks.Text) - Val(TXT_quantity.Text)
+    Sub UpdateStocks(ProductID, Quantity)
+        openCon()
+        cmd.CommandText = "Select Stocks from tbl_Products where ProductID=@ID"
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("ID", ProductID)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        Dim stocks = Val(dr(0))
+        con.Close()
+
+        Dim UpdatedStocks = stocks - Val(Quantity)
         openCon()
         cmd.CommandText = "Update tbl_products set Stocks=@stocks where ProductId = @ID"
         With cmd.Parameters
