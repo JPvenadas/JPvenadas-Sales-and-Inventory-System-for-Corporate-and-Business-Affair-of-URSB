@@ -24,6 +24,8 @@ Partial Class UCRPT_stocks
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.tbl_stocksBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.RPTV_stocks = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.MaterialCard8 = New MaterialSkin.Controls.MaterialCard()
         Me.TXT_product = New MaterialSkin.Controls.MaterialTextBox2()
@@ -37,14 +39,22 @@ Partial Class UCRPT_stocks
         Me.BTN_productfilter = New MaterialSkin.Controls.MaterialButton()
         Me.BTN_clear = New MaterialSkin.Controls.MaterialButton()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
-        Me.tbl_stocksBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.db_inventoryDataSet = New ITE_5_Project.db_inventoryDataSet()
         Me.tbl_stocksTableAdapter = New ITE_5_Project.db_inventoryDataSetTableAdapters.tbl_stocksTableAdapter()
-        Me.MaterialCard8.SuspendLayout()
-        Me.MaterialCard13.SuspendLayout()
         CType(Me.tbl_stocksBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MaterialCard8.SuspendLayout()
+        Me.MaterialCard13.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'tbl_stocksBindingSource
+        '
+        Me.tbl_stocksBindingSource.DataMember = "tbl_stocks"
+        Me.tbl_stocksBindingSource.DataSource = Me.db_inventoryDataSet
+        '
+        'db_inventoryDataSet
+        '
+        Me.db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
+        Me.db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RPTV_stocks
         '
@@ -217,7 +227,7 @@ Partial Class UCRPT_stocks
         Me.BTN_productfilter.NoAccentTextColor = System.Drawing.Color.Empty
         Me.BTN_productfilter.Size = New System.Drawing.Size(183, 36)
         Me.BTN_productfilter.TabIndex = 10
-        Me.BTN_productfilter.Text = "Filter by Product Name"
+        Me.BTN_productfilter.Text = "Filter by Product"
         Me.BTN_productfilter.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained
         Me.BTN_productfilter.UseAccentColor = False
         Me.BTN_productfilter.UseVisualStyleBackColor = True
@@ -255,16 +265,6 @@ Partial Class UCRPT_stocks
         Me.MaterialLabel4.TabIndex = 9
         Me.MaterialLabel4.Text = "Filters"
         '
-        'tbl_stocksBindingSource
-        '
-        Me.tbl_stocksBindingSource.DataMember = "tbl_stocks"
-        Me.tbl_stocksBindingSource.DataSource = Me.db_inventoryDataSet
-        '
-        'db_inventoryDataSet
-        '
-        Me.db_inventoryDataSet.DataSetName = "db_inventoryDataSet"
-        Me.db_inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'tbl_stocksTableAdapter
         '
         Me.tbl_stocksTableAdapter.ClearBeforeFill = True
@@ -278,12 +278,12 @@ Partial Class UCRPT_stocks
         Me.Controls.Add(Me.RPTV_stocks)
         Me.Name = "UCRPT_stocks"
         Me.Size = New System.Drawing.Size(1039, 530)
+        CType(Me.tbl_stocksBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MaterialCard8.ResumeLayout(False)
         Me.MaterialCard8.PerformLayout()
         Me.MaterialCard13.ResumeLayout(False)
         Me.MaterialCard13.PerformLayout()
-        CType(Me.tbl_stocksBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.db_inventoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
